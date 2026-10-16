@@ -25,3 +25,6 @@ TestResults*.xml
 !/Builds/*/
 /Builds/*/*
 !/Builds/*/LEEME.txt
+
+# Zips para Releases de GitHub
+/dist/
