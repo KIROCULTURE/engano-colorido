@@ -97,9 +97,9 @@ namespace EnganoColorido.EditorTools
             });
             Profile(ProfDorado, p =>
             {
-                var b = p.Add<Bloom>(true); b.threshold.Override(0.85f); b.intensity.Override(1.3f); b.tint.Override(new Color(1f, 0.85f, 0.6f));
+                var b = p.Add<Bloom>(true); b.threshold.Override(1.1f); b.intensity.Override(0.6f); b.tint.Override(new Color(1f, 0.85f, 0.6f));
                 var c = p.Add<ColorAdjustments>(true);
-                c.colorFilter.Override(new Color(1f, 0.88f, 0.68f)); c.saturation.Override(10f); c.postExposure.Override(0.2f);
+                c.colorFilter.Override(new Color(1f, 0.9f, 0.72f)); c.saturation.Override(0f); c.postExposure.Override(-0.6f);
                 var v = p.Add<Vignette>(true); v.intensity.Override(0.3f); v.color.Override(new Color(0.25f, 0.15f, 0.02f));
                 p.Add<Tonemapping>(true).mode.Override(TonemappingMode.ACES);
             });

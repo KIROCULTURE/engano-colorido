@@ -1,0 +1,9 @@
+ENGAÑO COLORIDO — Build M4 Mundo
+Incluye todo lo de M3 + el cambio de mundo: Mundo de Niebla (camanchaca, grano, viñeta, desaturado)
+y Mundo Dorado (pan de oro, velas, flores marchitas, inscripción latina, bloom moderado).
+Transición suave con la campana del liceo (sin destellos). Estática procedural en el celular
+cerca del espejo de El Retrato.
+Cómo se ve: Nueva sesión (o Recorrido libre: Camarín). Al despertar, El Retrato habla en el Mundo
+Dorado; al leer las notas del espejo suena la campana y se vuelve a la Niebla.
+Falta: zonas del Patio en adelante, puzzles, Juicio y finales. Las Horas van en la Entrega 2.
+Duración: 6–8 minutos. Copia la carpeta a una ruta corta antes de abrir EnganoColorido.exe.

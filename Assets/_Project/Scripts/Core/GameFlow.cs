@@ -200,6 +200,7 @@ namespace EnganoColorido.Core
             if (st != null && !st.Flag(seen) && !string.IsNullOrEmpty(z.intro))
             {
                 st.SetFlag(seen);
+                if (z.introEnDorado && WorldManager.I != null) WorldManager.I.RingBell(true, 3f);
                 UIManager.I.PlayDialogue(z.intro, () => { if (!string.IsNullOrEmpty(z.notif)) Game.Notify(z.notif); });
             }
             SceneReady?.Invoke(SceneManager.GetActiveScene().name);

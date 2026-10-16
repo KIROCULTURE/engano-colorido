@@ -35,7 +35,42 @@ namespace EnganoColorido.EditorTools
             var pc = go.AddComponent<PlayerController>();
             pc.cam = cam;
             pc.linterna = l;
+            go.AddComponent<PhoneStatic>();
             return pc;
+        }
+
+        static readonly Color PanDeOro = new Color(0.85f, 0.64f, 0.24f);
+
+        /// Volúmenes de los dos mundos + WorldManager. Tiñe de oro los renderers (no emisivos) bajo 'roots'.
+        public static WorldManager AddWorld(params GameObject[] roots)
+        {
+            var vn = AddVolume("Volumen_Niebla", ProfNiebla, 1f);
+            var vd = AddVolume("Volumen_Dorado", ProfDorado, 0f);
+            var wm = new GameObject("Mundo").AddComponent<WorldManager>();
+            wm.volNiebla = vn; wm.volDorado = vd;
+            foreach (var root in roots)
+                foreach (var r in root.GetComponentsInChildren<MeshRenderer>(true))
+                {
+                    var m = r.sharedMaterial;
+                    if (m == null || m.IsKeywordEnabled("_EMISSION") || r.GetComponent<WorldVariant>() != null) continue;
+                    var c = m.GetColor("_BaseColor");
+                    r.gameObject.AddComponent<WorldVariant>().dorado = Color.Lerp(c, PanDeOro, 0.75f);
+                }
+            return wm;
+        }
+
+        /// Decorado que solo aparece en el Mundo Dorado: inscripción latina, velas y flores marchitas.
+        public static GameObject DoradoDecor(Transform parent, Vector3 pos, float rotY, string latin)
+        {
+            var g = Group("SoloDorado", parent, pos);
+            g.transform.localEulerAngles = new Vector3(0, rotY, 0);
+            Text3D(latin, g.transform, new Vector3(0, 2.3f, 0), Vector3.zero, 1.8f, new Color(1f, 0.85f, 0.45f), 3f);
+            Candle(g.transform, new Vector3(-0.6f, 0, 0.1f), false);
+            Candle(g.transform, new Vector3(0.6f, 0, 0.1f), false);
+            for (int i = 0; i < 3; i++)
+                Prim(PrimitiveType.Sphere, "FlorMarchita", g.transform, new Vector3(-0.2f + i * 0.2f, 0.12f, 0.15f), Vector3.one * 0.12f, Marchita, false);
+            g.AddComponent<WorldOnly>().soloDorado = true;
+            return g;
         }
 
         public static ZoneController AddZone(string titulo, string intro, string notif, params string[] zonas)
@@ -88,7 +123,9 @@ namespace EnganoColorido.EditorTools
                 b.fichas = new[] { "hablante", "desengano" };
                 b.dialogoDespues = "camarin_listo";
                 b.flag = "camarin_notas";
+                b.campanaAlTerminar = true;
             });
+            espejo.AddComponent<StaticSource>().radio = 4f;
             var task = With<FlagTask>(espejo, f => { f.zona = "camarin"; f.flag = "camarin_notas"; f.objetivo = "Lee las notas de la profe Inés pegadas en el espejo."; });
             _ = board;
 
@@ -120,10 +157,11 @@ namespace EnganoColorido.EditorTools
 
             AddDoor(t, new Vector3(0, 0, -4f), 0, "Patio", "Antes de salir… las notas del espejo.");
 
+            DoradoDecor(t, new Vector3(2.0f, 0, 3.4f), 0, "VANITAS VANITATUM");
             var zone = AddZone("Prólogo · Camarín", "camarin_despertar", null, "camarin");
             zone.tasks = new ZoneTask[] { task };
-            AddVolume("Volumen_Niebla", ProfNiebla, 1f);
-            AddVolume("Volumen_Dorado", ProfDorado, 0f);
+            zone.introEnDorado = true;
+            AddWorld(room);
             return SaveScene("Camarin");
         }
     }

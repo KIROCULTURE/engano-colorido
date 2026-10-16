@@ -29,3 +29,10 @@
 - `PuzzleValidation` (puro): asignación, estante por repisa, preguntas, abba de Tu verso, Juicio con feedback por categoría de conector.
 - Tests EditMode (28): + contenido (Quevedo exclusivo de la salida, fichas ≤ 80 palabras, 3 pistas, Clotaldo), soluciones válidas y cada distractor rechazado en cada puzzle, abba, Juicio.
 - Menú docente: "Revisar contenidos".
+
+## M4 Mundo básico ✅ — `Builds/M4_Mundo/`
+- Niebla: fog exponencial² por escena + volumen `PP_Niebla` (grano, viñeta, desaturación, ACES).
+- `WorldManager`: Niebla ↔ Dorado con la campana (`RingBell`): interpola color de materiales (`WorldVariant`, pan de oro), luces, niebla, luz ambiente y peso de los volúmenes `PP_Niebla`/`PP_Dorado`; `WorldOnly` para decorado exclusivo del Dorado (inscripciones latinas, velas, flores marchitas). Nada más (sin shaders propios).
+- `BellCycle` (campana cada 20 s, para P1-B), `ProceduralAudio` (estática, campana y tono generados con `AudioClip.Create`), `PhoneStatic` + `StaticSource` (estática del celular cerca del espejo, el velo y las radios; en la Entrega 2 se suman Las Horas).
+- Camarín: la intro ocurre en el Mundo Dorado y la campana devuelve a la Niebla al leer las notas.
+- Las Horas no van en la Entrega 1.

@@ -12,6 +12,7 @@ namespace EnganoColorido.World
         public string titulo = "Camarín";
         public string intro;
         public string notif;
+        public bool introEnDorado; // la intro ocurre en el Mundo Dorado (El Retrato)
         public ZoneTask[] tasks = new ZoneTask[0];
 
         void Awake() { I = this; }

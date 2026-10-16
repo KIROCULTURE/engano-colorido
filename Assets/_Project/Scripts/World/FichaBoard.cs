@@ -11,6 +11,7 @@ namespace EnganoColorido.World
         public string dialogoAntes;
         public string dialogoDespues;
         public string flag;
+        public bool campanaAlTerminar; // vuelve al Mundo de Niebla al terminar de leer
 
         public override void Interact()
         {
@@ -19,6 +20,7 @@ namespace EnganoColorido.World
             void Fichas() => Game.ShowFichas(fichas, After);
             void After()
             {
+                if (first && campanaAlTerminar && WorldManager.I != null) WorldManager.I.RingBell(false, 3f);
                 if (first && !string.IsNullOrEmpty(dialogoDespues)) UIManager.I.PlayDialogue(dialogoDespues);
                 s?.SetFlag(flag);
             }
