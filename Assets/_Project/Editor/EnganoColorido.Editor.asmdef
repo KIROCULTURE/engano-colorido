@@ -1,0 +1,17 @@
+{
+    "name": "EnganoColorido.Editor",
+    "rootNamespace": "EnganoColorido.EditorTools",
+    "references": [
+        "EnganoColorido",
+        "Unity.InputSystem",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.RenderPipelines.Core.Runtime"
+    ],
+    "includePlatforms": ["Editor"],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
+}
