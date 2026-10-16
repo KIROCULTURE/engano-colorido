@@ -2,9 +2,16 @@
 
 **Estado:** Entrega 1 completa. El modo 45 se juega de punta a punta en greybox: diagnóstico → Camarín → Patio (P1) → Radios (H) → Galería (P3, P4 y el esqueleto) → Biblioteca (P5) → Teatro (P7, Juicio, Tu verso, final) → prueba de salida → CSV/JSON. Hitos M0–M6 con commit y etiqueta `hito-M0` … `hito-M6`. 28/28 tests EditMode en verde.
 
+**Actualización 16/10:**
+- El personaje se llama **Fran** (antes Ale). Se mantiene el género neutro.
+- Los menús de las mecánicas clave tienen un estilo visual común (ver "Estilo de menús").
+- Ajustes visuales: inscripción del Patio, esqueleto de frente y rótulos del estante.
+- Repositorio privado con una descarga por fase: https://github.com/KIROCULTURE/engano-colorido/releases
+- Las builds M1–M5 se regeneraron desde su etiqueta, solo con el nombre nuevo.
+
 ## 1. Tabla de builds
 
-Todas en `Builds/<hito>/EnganoColorido.exe`, cada una con su `LEEME.txt`. **Antes de abrir una build, copia su carpeta a una ruta corta** (Escritorio, pendrive). Desde la carpeta de esta sesión Windows usa una ruta virtualizada muy larga y el ejecutable no carga.
+Para descargar: **GitHub → Releases**, un zip por fase (`EnganoColorido_<hito>.zip`, ~38 MB). En local están en `Builds/<hito>/EnganoColorido.exe`, cada una con su `LEEME.txt`. **Antes de abrir una build, copia su carpeta a una ruta corta** (Escritorio, pendrive). Desde la carpeta de esta sesión Windows usa una ruta virtualizada muy larga y el ejecutable no carga.
 
 | Hito | Qué se ve al jugarla | Duración aprox. | ¿Sirve para presentar? |
 |---|---|---|---|
@@ -45,6 +52,26 @@ La duración real con estudiantes no está medida (ver pendientes). El ritmo sí
 
 **Para corregir contenido sin tocar C#:** fichas, poemas, pistas, preguntas, diálogos, PIN y presupuestos están en `Assets/_Project/Data/*.json`. Después de editar, usa Import Content, corre los tests y haz la build.
 
+## Estilo de menús (Entrega 1, parcial a propósito)
+
+Tres familias visuales en `Scripts/UI/Tema.cs`, una por voz del juego:
+- **Liceo / profe Inés** (ocre): acertijos, fichas, placas y menú principal.
+- **App de Fran** (celeste): Repasa+, diagnóstico, prueba de salida y resultados.
+- **El Retrato** (oro): Juicio, final y stories.
+
+Elementos comunes: paneles con esquinas redondeadas (sprite generado por código), encabezado con rótulo, botón primario y botón secundario.
+- El panel de acertijos muestra los pasos 1-2-3, huecos numerados y progreso.
+- Las preguntas llevan alternativas A–D y, en Repasa+, una barra de progreso.
+- En los diálogos, una placa con el nombre indica quién habla.
+
+El celular, el menú docente y la pantalla de pausa siguen con el estilo anterior (paleta Liceo) y quedan para la Entrega 2.
+
+## Presentación
+
+Hay una presentación de 14 diapositivas, aparte de este documento, con las decisiones de diseño, la narrativa, los referentes de los acertijos, el proceso y lo que falta. Usa solo capturas reales del juego y del editor.
+- **Capturas del juego:** las generé con la build de desarrollo (`-devscene`, `-devdone`, `-devdorado`, `-devpos`, `-devshot`).
+- **Vistas cenitales (planos) de las escenas:** con el método de Editor `EditorShowcase.RenderPlanos` (batch).
+
 ## 3. Pendiente para la Entrega 2
 
 - **Modo 90:** Capilla (P2, órgano del estribillo, Santa Teresa) y Torre del reloj (P6, las tres horas). Sus puertas en el Patio están cerradas con "solo en el modo 90" y el modo 90 aparece bloqueado en el menú docente. `SessionPacer` ya soporta el modo 90, incluido el salto de Capilla y Torre si la sesión va atrasada (está testeado). La ficha "Poesía mística" ya está escrita.
@@ -53,6 +80,7 @@ La duración real con estudiantes no está medida (ver pendientes). El ritmo sí
 - **Audio:** ambiente (zumbido, viento) y TTS de los poemas. Hoy solo hay campana, estática y un tono grave, todos procedurales. Los fragmentos de las radios van subtitulados, sin voz.
 - **Accesibilidad completa:** ya están los subtítulos siempre activos, el tamaño de texto, la sensibilidad, el FOV y el juego no tiene destellos. Faltan TTS, opción explícita "sin sustos" (hoy no hay sustos bruscos) y el modo Calma.
 - **Pulido visual** de los dos mundos y de las recreaciones de Pereda y Murillo (hoy son primitivas).
+- **Menús restantes con el estilo nuevo:** celular, menú docente y pausa.
 - **Jugar con mouse y teclado reales (sin verificar):** todas las pruebas de punta a punta usaron autoplay o modo guiado y capturas automáticas. Hay que jugar M6 a mano al menos una vez: escribir el alias, hacer clic en los paneles, cortar la rosa dentro de los 4 s, mover el dial de las radios y elegir el final.
 - **Prueba cronometrada con estudiantes** en cada modo. La duración de ~40 min es una estimación: el ritmo está verificado, pero no se midió jugando de verdad.
 - **Confirmar con la docente:**
