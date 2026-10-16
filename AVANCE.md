@@ -14,3 +14,11 @@
 - Autoguardado al terminar cada zona (`SaveSystem`, JSON local en `persistentDataPath`).
 - Escena Camarín generada por `Build Greybox Scenes`.
 - Probar: abrir la build → "Recorrido libre: Camarín".
+
+## M2 Sesión y evaluación ✅ — `Builds/M2_Sesion/`
+- Menú docente con PIN (`session.json` → `pinDocente`, por defecto 1234): curso, modo (90 bloqueado "Próximamente"), dificultad de acertijos, carpeta de export, resumen del curso por concepto.
+- Inicio con alias (sin nombres completos), diagnóstico D1–D5 y prueba de salida S1–S8 con alternativas barajadas; S6–S8 muestran el soneto de Quevedo (solo ahí).
+- `SessionManager` + `SessionPacer`: reloj de sesión, presupuestos por zona (GDD 4.1), pistas adelantadas al 100 %, Don Ruperto ofrece modo guiado al 130 %, salto de zonas opcionales, envío forzado al Teatro (min 29 / 47) y a la prueba de salida (min 37 / 56).
+- Export CSV (UTF-8 con BOM, `;`, apto para Excel en Chile, sin fórmulas) + JSON con todo el registro.
+- Tests EditMode (12): ritmo, puntaje y ganancia, CSV/JSON, guardado/carga, barajado.
+- Verificación automática: `EnganoColorido.exe -autoplay -exportdir <carpeta>` juega la sesión y exporta.

@@ -10,8 +10,11 @@ namespace EnganoColorido.Core
     ///   -devscene Patio      abre la escena en recorrido libre
     ///   -devshot salida.png  saca una captura a los 4 s y cierra
     ///   -devyaw 90           gira al jugador antes de la captura
+    ///   -autoplay            juega la sesión completa (modo guiado en todo), exporta y cierra
     public class DevTools : MonoBehaviour
     {
+        public static bool AutoPlay { get; private set; }
+
         public static string Arg(string name)
         {
             var a = Environment.GetCommandLineArgs();
@@ -23,7 +26,9 @@ namespace EnganoColorido.Core
 
         public static void Init()
         {
-            if (Arg("-devscene") == null && Arg("-devshot") == null) return;
+            AutoPlay = Has("-autoplay");
+            if (Arg("-exportdir") is string dir) Settings.ExportOverride = dir;
+            if (Arg("-devscene") == null && Arg("-devshot") == null && !AutoPlay) return;
             var go = new GameObject("DevTools");
             DontDestroyOnLoad(go);
             go.AddComponent<DevTools>();
@@ -32,6 +37,7 @@ namespace EnganoColorido.Core
         IEnumerator Start()
         {
             yield return null;
+            if (AutoPlay) { StartCoroutine(Auto()); yield break; }
             var scene = Arg("-devscene");
             if (scene != null && SceneManager.GetActiveScene().name != scene)
             {
@@ -40,13 +46,57 @@ namespace EnganoColorido.Core
             }
             if (Arg("-devyaw") is string yaw && Player.PlayerController.I != null)
                 Player.PlayerController.I.transform.rotation = Quaternion.Euler(0, float.Parse(yaw, System.Globalization.CultureInfo.InvariantCulture), 0);
+            if (Has("-devclose")) { yield return new WaitForSeconds(1f); UI.UIManager.I.CloseAllModals(); yield return null; }
+            switch (Arg("-devui"))
+            {
+                case "alias": UI.NewSessionPanel.Show(); break;
+                case "docente": UI.TeacherMenu.Show(); break;
+                case "celular": UI.PhoneUI.Open(Arg("-devtab") ?? "Mapa"); break;
+                case "pregunta":
+                    var q = Game.DB.evaluacion.salida[5];
+                    UI.UIManager.I.ShowQuestion("Repasa+ · Prueba de salida · pregunta 6 de 8", q.enunciado, Assessment.AssessmentRunner.Options(q),
+                        Data.ContentDatabase.PoemaTexto(Game.DB.Poema(q.contexto)), null);
+                    break;
+            }
             var shot = Arg("-devshot");
             if (shot == null) yield break;
             yield return new WaitForSeconds(4f);
-            if (Has("-devclose")) UI.UIManager.I.CloseAllModals();
             yield return new WaitForSeconds(0.5f);
             ScreenCapture.CaptureScreenshot(Path.GetFullPath(shot));
             yield return new WaitForSeconds(1f);
+            Application.Quit();
+        }
+
+        // ---------------- autoplay: recorre el modo completo usando el modo guiado
+        IEnumerator Auto()
+        {
+            Debug.Log("[AUTOPLAY] inicio");
+            GameFlow.SceneReady += _ => StartCoroutine(SolveZone());
+            yield return new WaitForSeconds(1f);
+            GameFlow.I.StartNewSession("autotest");
+        }
+
+        IEnumerator SolveZone()
+        {
+            yield return new WaitForSeconds(1.5f);
+            var z = World.ZoneController.I;
+            if (z == null) yield break;
+            Debug.Log("[AUTOPLAY] zona " + string.Join(",", z.zonas));
+            int guard = 0;
+            while (!z.AllDone && guard++ < 40)
+            {
+                var t = z.CurrentTask;
+                Debug.Log("[AUTOPLAY]   tarea " + t.name);
+                t.ForceComplete();
+                yield return new WaitForSeconds(0.6f);
+                if (z == null) yield break; // la tarea cambió de escena o terminó la sesión
+            }
+            if (z != null && World.ZoneController.I == z && GameFlow.InGameplay) GameFlow.I.ExitScene();
+        }
+
+        public static void AutoFinish(string csv)
+        {
+            Debug.Log("[AUTOPLAY] OK " + csv);
             Application.Quit();
         }
     }

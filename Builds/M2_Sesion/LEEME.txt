@@ -1,0 +1,9 @@
+ENGAÑO COLORIDO — Build M2 Sesión y evaluación
+Incluye: menú docente (PIN 1234: curso, modo, dificultad, carpeta de export, resumen del curso),
+inicio con alias, diagnóstico (D1–D5), Camarín, prueba de salida (S1–S8, con el soneto de Quevedo)
+y export CSV + JSON. Reloj de sesión con presupuestos por zona, pistas adelantadas al 100 %,
+modo guiado al 130 % y envío forzado al Teatro (min 29 en modo 45).
+Cómo se juega: "Nueva sesión" > alias > responder > Camarín (leer las notas del espejo y salir).
+Las zonas que aún no existen se omiten solas (quedan anotadas) y se pasa a la prueba de salida.
+Falta: zonas del Patio en adelante, puzzles, Juicio y finales.
+Duración: 6–8 minutos. Copia la carpeta a una ruta corta antes de abrir EnganoColorido.exe.

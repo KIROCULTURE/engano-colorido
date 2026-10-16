@@ -97,7 +97,7 @@ namespace EnganoColorido.UI
             h.childControlHeight = true;
             h.childForceExpandWidth = true;
             h.childForceExpandHeight = true;
-            Size(rt.gameObject, height);
+            Size(rt.gameObject, height, 0);
             return rt;
         }
 

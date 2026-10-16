@@ -20,12 +20,12 @@ namespace EnganoColorido.UI
             UIKit.Text(col, "Serious game del Siglo de Oro · 2° medio · Lengua y Literatura", 24, TextAlignmentOptions.Left, UIKit.Tenue);
             UIKit.Size(UIKit.Make("Espacio", col).gameObject, 24);
 
-            Locked(col, "Nueva sesión (modo 45)");
+            UIKit.Button(col, $"Nueva sesión (modo {Settings.Modo} · {Settings.Curso})", NewSessionPanel.Show, 62, 26, UIKit.BotonSel);
             var cont = UIKit.Button(col, "Continuar partida guardada", () => { Close(root.gameObject); GameFlow.I.Continue(); }, 62, 26);
             cont.interactable = SaveSystem.HasSave();
-            UIKit.Button(col, "Recorrido libre: Camarín (núcleo M1)", () => { Close(root.gameObject); GameFlow.I.StartFreeRoam("Camarin"); }, 62, 26);
+            UIKit.Button(col, "Recorrido libre: Camarín", () => { Close(root.gameObject); GameFlow.I.StartFreeRoam("Camarin"); }, 62, 26);
             UIKit.Button(col, "Ajustes", () => PhoneUI.Open("Ajustes"), 62, 26);
-            Locked(col, "Menú docente");
+            UIKit.Button(col, "Menú docente (PIN)", TeacherMenu.Ask, 62, 26);
             UIKit.Button(col, "Salir", Application.Quit, 62, 26);
             UIKit.Text(col, "Controles: WASD moverse · Mouse mirar · E interactuar · F linterna · C agacharse · Shift correr · Tab celular · Esc pausa", 20, TextAlignmentOptions.Left, UIKit.Tenue);
             ui.PushModal(root.gameObject);

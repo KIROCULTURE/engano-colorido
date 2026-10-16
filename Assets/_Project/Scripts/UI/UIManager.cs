@@ -149,9 +149,11 @@ namespace EnganoColorido.UI
                 var row = UIKit.HRow(c, 0, 24);
                 UIKit.Size(row.gameObject, -1, 1);
                 var left = UIKit.Scroll(row);
+                UIKit.Size(left.parent.parent.gameObject, -1, -1, 620, 0);
                 UIKit.Text(left, contexto, 23);
                 var rightRt = UIKit.Make("Derecha", row);
                 UIKit.VList(rightRt, 10);
+                UIKit.Size(rightRt.gameObject, -1, -1, 760, 1);
                 FillQuestion(rightRt, enunciado, opciones, root.gameObject, onAnswer);
             }
             else FillQuestion(c, enunciado, opciones, root.gameObject, onAnswer);
@@ -182,6 +184,7 @@ namespace EnganoColorido.UI
 
         public void PlayLines(Linea[] lineas, Action onDone = null)
         {
+            if (Core.DevTools.AutoPlay) { onDone?.Invoke(); return; }
             var root = UIKit.Stretch(UIKit.Make("Dialogo", Panels));
             var catcher = root.gameObject.AddComponent<UnityEngine.UI.Image>();
             catcher.color = new Color(0, 0, 0, 0.2f);

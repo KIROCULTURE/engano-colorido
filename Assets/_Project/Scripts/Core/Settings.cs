@@ -19,10 +19,12 @@ namespace EnganoColorido.Core
         // Menú docente
         public static string Curso { get => PlayerPrefs.GetString("ec.curso", "2°A"); set => PlayerPrefs.SetString("ec.curso", value); }
         public static int Modo { get => PlayerPrefs.GetInt("ec.modo", 45); set => PlayerPrefs.SetInt("ec.modo", value); }
+        public static string ExportOverride; // solo pruebas automáticas (-exportdir)
         public static string CarpetaExport
         {
             get
             {
+                if (!string.IsNullOrEmpty(ExportOverride)) return ExportOverride;
                 var def = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "EnganoColorido");
                 return PlayerPrefs.GetString("ec.export", def);
             }
