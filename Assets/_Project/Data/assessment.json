@@ -1,0 +1,46 @@
+{
+  "diagnostico": [
+    { "id": "D1", "enunciado": "¿Quién habla en un poema?", "correcta": "El hablante lírico, una voz ficticia", "distractores": ["Siempre el autor", "El narrador", "El lector"], "concepto": "hablante", "contexto": "" },
+    { "id": "D2", "enunciado": "En «la rosa es la vida: bella y breve», la palabra «rosa» se usa en sentido…", "correcta": "Connotativo", "distractores": ["Denotativo", "Literal", "Científico"], "concepto": "connotacion", "contexto": "" },
+    { "id": "D3", "enunciado": "Un soneto tiene…", "correcta": "14 versos: dos cuartetos y dos tercetos", "distractores": ["10 versos", "Cuatro estrofas de cuatro versos", "Versos libres sin rima"], "concepto": "soneto", "contexto": "" },
+    { "id": "D4", "enunciado": "«Carpe diem» significa…", "correcta": "Aprovecha el momento", "distractores": ["Desprecio del mundo", "La vida es sueño", "¿Dónde están?"], "concepto": "topicos", "contexto": "" },
+    { "id": "D5", "enunciado": "En el arte del Siglo de Oro, una calavera junto a un reloj simboliza…", "correcta": "La muerte y lo pasajero de la vida", "distractores": ["La riqueza", "La ciencia", "El amor"], "concepto": "simbolos", "contexto": "" }
+  ],
+  "salida": [
+    { "id": "S1", "enunciado": "En «Vivo sin vivir en mí», quien dice «que muero porque no muero» es…", "correcta": "El hablante lírico", "distractores": ["Santa Teresa contando un hecho real", "Un personaje de teatro", "El narrador"], "concepto": "hablante", "contexto": "" },
+    { "id": "S2", "enunciado": "En «A una rosa», «la robusta mano» connota…", "correcta": "La muerte", "distractores": ["Un jardinero", "La fuerza física", "El trabajo"], "concepto": "connotacion", "contexto": "" },
+    { "id": "S3", "enunciado": "Los cuartetos de un soneto clásico riman…", "correcta": "ABBA ABBA", "distractores": ["ABAB CDCD", "AABB", "No riman"], "concepto": "soneto", "contexto": "" },
+    { "id": "S4", "enunciado": "«¿Qué es la vida? Una ilusión, / una sombra, una ficción» expresa el tópico…", "correcta": "Vita somnium", "distractores": ["Carpe diem", "Ubi sunt?", "Contemptus mundi"], "concepto": "topicos", "contexto": "" },
+    { "id": "S5", "enunciado": "En un cuadro vanitas, el reloj representa…", "correcta": "La fugacidad del tiempo y de la vida", "distractores": ["La paciencia", "La riqueza", "El orden"], "concepto": "simbolos", "contexto": "" },
+    { "id": "S6", "enunciado": "Lee los cuartetos. Los dos primeros versos se asocian al tópico…", "correcta": "Tempus irreparabile fugit", "distractores": ["Carpe diem", "Tierra de Jauja", "Ubi sunt?"], "concepto": "transferencia", "contexto": "quevedo_fue" },
+    { "id": "S7", "enunciado": "Lee el poema completo. La actitud del hablante es…", "correcta": "Carmínica: expresa su mundo interior", "distractores": ["Enunciativa", "Apostrófica"], "concepto": "transferencia", "contexto": "quevedo_fue" },
+    { "id": "S8", "enunciado": "¿Qué visión del Barroco comparte el poema?", "correcta": "La vida es breve y el tiempo lleva a la muerte (desengaño)", "distractores": ["La vida es una fiesta sin fin", "El amor lo vence todo", "La naturaleza es armónica y eterna"], "concepto": "transferencia", "contexto": "quevedo_fue" }
+  ],
+  "poemaSalida": {
+    "id": "quevedo_fue",
+    "autor": "Francisco de Quevedo",
+    "titulo": "Fue sueño ayer, mañana será tierra…",
+    "pagina": "112",
+    "rima": "ABBA ABBA CDC DCD",
+    "glosario": "presumir = suponer; sumo = máximo; despeñado = arrojado al abismo; azada = herramienta para cavar; jornal = paga.",
+    "versos": [
+      "¡Fue sueño ayer, mañana será tierra!:",
+      "poco antes nada, y poco después humo,",
+      "¡y destino ambiciones! ¡y presumo,",
+      "apenas junto al cerco que me cierra!",
+      "",
+      "Breve combate de importuna guerra,",
+      "en mi defensa, soy peligro sumo;",
+      "y mientras con mis armas me consumo,",
+      "menos me hospeda el cuerpo, que me entierra.",
+      "",
+      "Ya no es ayer; mañana no ha llegado;",
+      "hoy pasa, y es, y fue, con movimiento",
+      "que a la muerte me lleva despeñado.",
+      "",
+      "Azadas son la hora y el momento",
+      "que, a jornal de mi pena y mi cuidado,",
+      "cavan en mi vivir mi monumento."
+    ]
+  }
+}

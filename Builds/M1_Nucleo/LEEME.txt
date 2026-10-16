@@ -1,0 +1,9 @@
+ENGAÑO COLORIDO — Build M1 Núcleo
+Incluye: menú principal, recorrido libre del Camarín (prólogo) en greybox con niebla y velas.
+Cómo se juega: menú > "Recorrido libre: Camarín". WASD moverse, mouse mirar, E interactuar,
+F linterna, C agacharse, Shift correr, Tab celular (Cuaderno, Mapa, Inventario, Stories,
+Pensar, Ajustes), Esc pausa. Lee las notas del espejo (fichas de la profe Inés) y sal por la
+puerta: la partida se autoguarda al terminar la zona ("Continuar" la retoma).
+Falta: sesión docente, diagnóstico, zonas, puzzles, Juicio y prueba de salida (bloqueados con "Próximamente").
+Duración: 3–5 minutos.
+Importante: copia la carpeta a una ruta corta (p. ej. el Escritorio) antes de abrir EnganoColorido.exe.

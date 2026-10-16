@@ -1,0 +1,100 @@
+{
+  "fichas": [
+    {
+      "id": "hablante",
+      "titulo": "Hablante lírico",
+      "pagina": "86",
+      "texto": "En un poema no habla directamente quien lo escribió: habla una voz creada para el poema, el <b>hablante lírico</b>. Puede parecerse al autor, pero no es la misma persona. El hablante expresa ideas y emociones; el autor es quien inventa esa voz.\n\nPregunta clave al leer: <i>¿quién habla aquí y qué siente?</i>"
+    },
+    {
+      "id": "desengano",
+      "titulo": "Desengaño y Barroco",
+      "pagina": "76–78",
+      "texto": "El <b>Siglo de Oro</b> (siglos XVI y XVII) fue la época de mayor brillo de la literatura española. En el <b>Renacimiento</b> (s. XVI) se confiaba en la razón; en el <b>Barroco</b> (s. XVII), con una España en crisis, la mirada se vuelve pesimista y contradictoria.\n\n<b>Desengañarse</b> es salir del engaño al conocer la verdad: la vida es breve, el tiempo todo lo destruye y la apariencia no es la realidad."
+    },
+    {
+      "id": "denotacion",
+      "titulo": "Denotación y connotación",
+      "pagina": "74",
+      "texto": "La <b>denotación</b> es el significado literal de una palabra, el del diccionario. La <b>connotación</b> es el sentido nuevo que la palabra toma dentro de un contexto. La poesía juega con la connotación.\n\nEn «A una rosa», de Góngora, la rosa no es solo una flor: connota la vida humana, bella pero breve. Y la «robusta mano» que la corta connota la muerte."
+    },
+    {
+      "id": "simbolos",
+      "titulo": "Símbolos barrocos",
+      "pagina": "86",
+      "texto": "Un <b>símbolo</b> es algo concreto que representa una idea compleja. Algunos los comparte una cultura; otros los crea cada autor.\n\n• <b>Calavera</b>: la muerte y lo pasajero de la vida.\n• <b>Reloj</b>: el tiempo que huye y, con él, la vida.\n• <b>Rosa</b>: la belleza y la juventud.\n• <b>Árbol caído</b>: el tiempo que todo lo derriba.\n• <b>Cárcel</b> (Santa Teresa): el cuerpo como prisión del alma."
+    },
+    {
+      "id": "actitudes",
+      "titulo": "Actitudes del hablante",
+      "pagina": "86",
+      "texto": "El hablante puede adoptar tres actitudes:\n\n• <b>Enunciativa</b>: cuenta o describe algo y muestra lo que siente frente a eso.\n• <b>Apostrófica</b>: se dirige a alguien o a algo (un «tú», un «vosotros») para expresarle su sentir.\n• <b>Carmínica</b> o de la canción: abre su mundo interior y expresa sus emociones.\n\nPista: fíjate a quién se habla y de qué se habla."
+    },
+    {
+      "id": "mistica",
+      "titulo": "Poesía mística",
+      "pagina": "80",
+      "texto": "La <b>poesía mística</b> del Renacimiento (Santa Teresa de Jesús, San Juan de la Cruz) tiene un solo tema: la unión del alma con Dios. Su estilo es sencillo, pero está lleno de símbolos.\n\nOjo: cuando Santa Teresa dice «muero porque no muero», ese «morir» expresa el anhelo de unirse con Dios, en el contexto religioso del siglo XVI. No es un deseo de muerte."
+    },
+    {
+      "id": "vanitas",
+      "titulo": "Vanitas",
+      "pagina": "64–66",
+      "texto": "La <b>vanitas</b> es un tipo de pintura barroca que recuerda lo breve y frágil de la vida con objetos simbólicos: calaveras, relojes, flores, coronas.\n\nEn <i>El sueño del caballero</i>, de Antonio de Pereda, un joven duerme junto a una mesa de riquezas y señales de muerte; un ángel muestra una cinta: <i>Aeterna pungit, cito volat et occidit</i> («eternamente hiere, rápido vuela y mata»). Murillo retrató a <i>Nicolás Omazur</i> con una calavera en la mano."
+    },
+    {
+      "id": "sorjuana",
+      "titulo": "«Este, que ves, engaño colorido…»",
+      "pagina": "82",
+      "texto": "<b>Sor Juana Inés de la Cruz</b>, la mayor figura del Barroco en Hispanoamérica, escribió este soneto sobre su propio retrato. El poema critica el arte que, con colores y halagos, intenta esconder la vejez y la muerte.\n\nMira el último verso: cada palabra vale menos que la anterior (<b>gradación</b>) y «es» se repite al inicio de cada parte (<b>anáfora</b>)."
+    },
+    {
+      "id": "magico",
+      "titulo": "El mágico prodigioso",
+      "pagina": "101",
+      "texto": "En esta obra de <b>Calderón de la Barca</b>, Cipriano vende su alma para conquistar a Justina. Cuando cree alcanzarla, descubre bajo el manto un esqueleto que le dice: «Así, Cipriano, son / todas las glorias del mundo».\n\nLa escena es una lección de <b>desengaño</b>: aquello que deseamos con tanta fuerza también es pasajero."
+    },
+    {
+      "id": "soneto",
+      "titulo": "El soneto",
+      "pagina": "87",
+      "texto": "Nació en Italia (Petrarca, s. XIV) y lo trajeron a España Garcilaso y Boscán. Tiene <b>14 versos endecasílabos</b> (11 sílabas): <b>dos cuartetos</b> que riman igual (<b>ABBA ABBA</b>) y <b>dos tercetos</b> de rima variable (por ejemplo, CDC DCD).\n\nCada estrofa tiene una función: 1° cuarteto, <b>presenta el tema</b>; 2° cuarteto, lo <b>amplía</b>; 1° terceto, <b>reflexiona</b>; 2° terceto, <b>concluye</b>."
+    },
+    {
+      "id": "topicos",
+      "titulo": "Tópicos literarios",
+      "pagina": "98",
+      "texto": "Un <b>tópico</b> es un tema que se repite desde la Antigüedad y tiene nombre en latín.\n\n• <i>Carpe diem</i>: aprovecha el momento, sobre todo la juventud.\n• <i>Tempus irreparabile fugit</i>: el tiempo huye sin remedio.\n• <i>Contemptus mundi</i>: desprecio de lo que ofrece el mundo.\n• <i>Vanitas vanitatum</i>: las cosas son engañosas y vanas.\n• <i>Vita somnium</i>: la vida como un sueño, una ficción pasajera.\n• <i>Ubi sunt?</i>: ¿dónde están los que ya no están?"
+    },
+    {
+      "id": "vidaessueno",
+      "titulo": "La vida es sueño",
+      "pagina": "88",
+      "texto": "Un oráculo anuncia que el príncipe <b>Segismundo</b> será un tirano y vencerá a su padre, el rey <b>Basilio</b> de Polonia. Basilio lo encierra en una torre, al cuidado de <b>Clotaldo</b>. Años después lo pone a prueba: lo duerme y lo lleva al palacio, donde Segismundo actúa con soberbia; vuelve a la torre creyendo que todo fue un sueño. Al final vence a su padre, lo perdona y demuestra que la voluntad puede más que el destino."
+    },
+    {
+      "id": "conflicto",
+      "titulo": "Conflicto dramático",
+      "pagina": "96",
+      "texto": "Hay <b>conflicto dramático</b> cuando un personaje persigue un fin y choca con un obstáculo. Puede ser un debate moral ante el destino, dos visiones de mundo, una lucha interna, el individuo contra la sociedad o una rivalidad.\n\nEn <i>La vida es sueño</i> el conflicto central es el <b>libre albedrío</b> (Segismundo) frente al <b>destino</b> (Basilio), junto con la lucha interna de Segismundo."
+    },
+    {
+      "id": "discurso",
+      "titulo": "Formas del discurso dramático",
+      "pagina": "97",
+      "texto": "• <b>Diálogo</b>: la forma principal; los personajes conversan.\n• <b>Acotación</b>: orienta la puesta en escena y va entre paréntesis, como «(Despierta.)».\n• <b>Aparte</b>: un personaje habla al público sin que los demás lo oigan.\n• <b>Monólogo</b>: un personaje expresa su interior sin esperar respuesta. El soliloquio es una forma parecida."
+    },
+    {
+      "id": "personajes",
+      "titulo": "Personajes tipo",
+      "pagina": "98",
+      "texto": "El teatro del Siglo de Oro usa personajes que se repiten de obra en obra:\n\n• <b>Galán</b>: Segismundo.\n• <b>Dama</b>: Rosaura.\n• <b>Gracioso</b>: hace reír y a veces dice verdades (Clarín).\n• <b>Rey</b>: Basilio.\n• <b>Caballero</b>.\n• <b>Poderoso</b>: el Comendador en <i>Fuente Ovejuna</i>.\n• <b>Villano</b>: en esa época, el campesino (Frondoso)."
+    },
+    {
+      "id": "conectores",
+      "titulo": "Conectores",
+      "pagina": "108",
+      "texto": "Los conectores unen ideas y muestran cómo se relacionan.\n\n• <b>De ordenación</b> (en primer lugar, para empezar, a continuación, finalmente): ordenan los argumentos; van al inicio y seguidos de coma.\n• <b>Consecutivos</b> (por lo tanto, por ende, en consecuencia, así pues): introducen una consecuencia.\n• <b>Adversativos</b> (sin embargo, no obstante, en cambio, por el contrario): oponen una idea a otra."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "pinDocente": "1234",
+  "toleranciaAtrasoMin": 2,
+  "umbralPistas": 1.0,
+  "umbralGuiado": 1.3,
+  "zonas": [
+    { "id": "diagnostico", "nombre": "Diagnóstico", "escena": "Arranque", "opcional": false },
+    { "id": "camarin", "nombre": "Camarín", "escena": "Camarin", "opcional": false },
+    { "id": "patio", "nombre": "Patio de las rosas", "escena": "Patio", "opcional": false },
+    { "id": "radios", "nombre": "Las tres radios", "escena": "Patio", "opcional": false },
+    { "id": "capilla", "nombre": "Capilla", "escena": "Capilla", "opcional": true },
+    { "id": "galeria", "nombre": "Galería", "escena": "Galeria", "opcional": false },
+    { "id": "biblioteca", "nombre": "Biblioteca", "escena": "Biblioteca", "opcional": false },
+    { "id": "torre", "nombre": "Torre del reloj", "escena": "Torre", "opcional": true },
+    { "id": "teatro", "nombre": "Teatro", "escena": "Teatro", "opcional": false },
+    { "id": "salida", "nombre": "Prueba de salida", "escena": "Teatro", "opcional": false }
+  ],
+  "modos": [
+    {
+      "minutos": 45,
+      "envioTeatroMin": 29,
+      "salidaMin": 37,
+      "disponible": true,
+      "zonas": [
+        { "zona": "diagnostico", "minutos": 2 },
+        { "zona": "camarin", "minutos": 2 },
+        { "zona": "patio", "minutos": 7 },
+        { "zona": "radios", "minutos": 3 },
+        { "zona": "galeria", "minutos": 8 },
+        { "zona": "biblioteca", "minutos": 7 },
+        { "zona": "teatro", "minutos": 8 },
+        { "zona": "salida", "minutos": 3 }
+      ]
+    },
+    {
+      "minutos": 90,
+      "envioTeatroMin": 47,
+      "salidaMin": 56,
+      "disponible": false,
+      "zonas": [
+        { "zona": "diagnostico", "minutos": 3 },
+        { "zona": "camarin", "minutos": 3 },
+        { "zona": "patio", "minutos": 8 },
+        { "zona": "radios", "minutos": 3 },
+        { "zona": "capilla", "minutos": 7 },
+        { "zona": "galeria", "minutos": 9 },
+        { "zona": "biblioteca", "minutos": 8 },
+        { "zona": "torre", "minutos": 6 },
+        { "zona": "teatro", "minutos": 9 },
+        { "zona": "salida", "minutos": 4 }
+      ]
+    }
+  ]
+}

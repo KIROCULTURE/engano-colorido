@@ -13,6 +13,7 @@ namespace EnganoColorido.Core
             AudioListener.volume = Settings.Volumen;
             UIManager.Ensure();
             GameFlow.Ensure();
+            DevTools.Init();
         }
     }
 }

@@ -8,5 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Arranque.unity
     guid: a8fcef33cc20d3f4daa3814a6dfaac05
+  - enabled: 1
+    path: Assets/_Project/Scenes/Camarin.unity
+    guid: c086617fe277f4d428a96c90d91c2cb9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

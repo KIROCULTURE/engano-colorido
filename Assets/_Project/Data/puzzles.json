@@ -1,0 +1,442 @@
+{
+  "puzzles": [
+    {
+      "id": "P1",
+      "zona": "patio",
+      "titulo": "El candado de las rosas",
+      "fichas": ["denotacion", "simbolos"],
+      "conceptTags": ["connotacion", "simbolos", "topicos"],
+      "pistas": [
+        "¿Qué estación del año es la juventud?",
+        "Las canas son blancas como la nieve.",
+        "Rosa → «Ayer naciste y morirás mañana». Robusta mano → «Cuando te corte la robusta mano». Primavera → «coged de vuestra alegre primavera». Nieve → «cubra de nieve la hermosa cumbre»."
+      ],
+      "pasos": [
+        {
+          "id": "candado",
+          "tipo": "asignar",
+          "titulo": "Candado de cuatro diales",
+          "enunciado": "La placa muestra «A una rosa» (Góngora) y el primer terceto del Soneto XXIII (Garcilaso). Gira cada dial hasta el <b>sentido connotativo</b> de la imagen.",
+          "opciones": [
+            { "texto": "La existencia humana: bella y breve", "tag": "" },
+            { "texto": "La muerte", "tag": "" },
+            { "texto": "La juventud", "tag": "" },
+            { "texto": "La vejez (las canas)", "tag": "" },
+            { "texto": "Un jardinero", "tag": "" },
+            { "texto": "El invierno", "tag": "" },
+            { "texto": "El amor", "tag": "" },
+            { "texto": "La riqueza", "tag": "" }
+          ],
+          "slots": [
+            { "etiqueta": "Rosa", "correcta": "La existencia humana: bella y breve" },
+            { "etiqueta": "Robusta mano / tirano", "correcta": "La muerte" },
+            { "etiqueta": "Primavera", "correcta": "La juventud" },
+            { "etiqueta": "Nieve en la cumbre", "correcta": "La vejez (las canas)" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "H",
+      "zona": "radios",
+      "titulo": "Las tres radios",
+      "fichas": ["actitudes"],
+      "conceptTags": ["actitud"],
+      "pistas": [
+        "Pregúntate a quién se habla en cada fragmento.",
+        "Si el fragmento le habla a un «vosotros», es apostrófica. Si describe algo que ocurre, es enunciativa.",
+        "Boscán habla de su propio sueño y de lo que siente: mira hacia adentro."
+      ],
+      "pasos": [
+        {
+          "id": "radios",
+          "tipo": "asignar",
+          "titulo": "Etiquetas de las radios",
+          "enunciado": "Pega en cada radio la etiqueta con la <b>actitud del hablante</b>.",
+          "opciones": [
+            { "texto": "Carmínica", "tag": "" },
+            { "texto": "Apostrófica", "tag": "" },
+            { "texto": "Enunciativa", "tag": "" }
+          ],
+          "slots": [
+            { "etiqueta": "Radio 1 — «Durmiendo, en fin, fui bienaventurado, / y es justo en la mentira ser dichoso / quien siempre en la verdad fue desdichado.» (Boscán)", "correcta": "Carmínica" },
+            { "etiqueta": "Radio 2 — «coged de vuestra alegre primavera / el dulce fruto» (Garcilaso)", "correcta": "Apostrófica" },
+            { "etiqueta": "Radio 3 — «Estas que fueron pompa y alegría / despertando al albor de la mañana, / a la tarde serán lástima vana» (Calderón)", "correcta": "Enunciativa" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "zona": "galeria",
+      "titulo": "El bodegón del caballero",
+      "fichas": ["vanitas", "simbolos"],
+      "conceptTags": ["simbolos", "vanitas"],
+      "pistas": [
+        "Abre la ficha «Símbolos barrocos» en tu Cuaderno.",
+        "Recuerda la rosa del patio.",
+        "Calavera: laboratorio. Reloj: sala de profesores. Corona: bodega de utilería del teatro. Rosa: el invernadero del patio."
+      ],
+      "pasos": [
+        {
+          "id": "mesa",
+          "tipo": "asignar",
+          "usaInventario": true,
+          "titulo": "La mesa del caballero",
+          "enunciado": "Cinta del ángel: <i>Aeterna pungit, cito volat et occidit</i>.\nNota: «Pon lo que dice que todo termina, que el tiempo huye, que la belleza se marchita y que el poder no dura».",
+          "opciones": [
+            { "texto": "Calavera", "tag": "calavera" },
+            { "texto": "Reloj", "tag": "reloj" },
+            { "texto": "Rosa", "tag": "rosa" },
+            { "texto": "Corona", "tag": "corona" },
+            { "texto": "Paloma", "tag": "paloma" },
+            { "texto": "Ancla", "tag": "ancla" },
+            { "texto": "Llave", "tag": "llave" },
+            { "texto": "Pelota", "tag": "pelota" }
+          ],
+          "slots": [
+            { "etiqueta": "Que todo termina", "correcta": "Calavera" },
+            { "etiqueta": "Que el tiempo huye", "correcta": "Reloj" },
+            { "etiqueta": "Que la belleza se marchita", "correcta": "Rosa" },
+            { "etiqueta": "Que el poder no dura", "correcta": "Corona" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P4",
+      "zona": "galeria",
+      "titulo": "El retrato que miente",
+      "fichas": ["sorjuana"],
+      "conceptTags": ["simbolos", "topicos", "lenguaje_figurado"],
+      "pistas": [
+        "Cada palabra es menos que la anterior.",
+        "El último verso dice: «es cadáver, es polvo, es sombra, es nada».",
+        "El primer gancho va con el rostro pálido y sin vida («cadáver»)."
+      ],
+      "pasos": [
+        {
+          "id": "marcos",
+          "tipo": "asignar",
+          "titulo": "Los cuatro retratos",
+          "enunciado": "Cuelga los retratos de Ale en el orden del último verso del soneto de Sor Juana.",
+          "opciones": [
+            { "texto": "El rostro pálido y sin vida", "tag": "" },
+            { "texto": "La figura deshecha en polvo", "tag": "" },
+            { "texto": "Solo una silueta oscura", "tag": "" },
+            { "texto": "El marco vacío", "tag": "" }
+          ],
+          "slots": [
+            { "etiqueta": "Gancho 1", "correcta": "El rostro pálido y sin vida" },
+            { "etiqueta": "Gancho 2", "correcta": "La figura deshecha en polvo" },
+            { "etiqueta": "Gancho 3", "correcta": "Solo una silueta oscura" },
+            { "etiqueta": "Gancho 4", "correcta": "El marco vacío" }
+          ]
+        },
+        {
+          "id": "cuartetos",
+          "tipo": "pregunta",
+          "titulo": "Lo que hace el retrato",
+          "enunciado": "Según los cuartetos, ¿qué hace el retrato?",
+          "correcta": "Aparenta vencer al tiempo y al olvido",
+          "distractores": ["Muestra la verdad del rostro", "Celebra la vejez"],
+          "pistas": [
+            "Relee el segundo cuarteto.",
+            "«y venciendo del tiempo los rigores / triunfar de la vejez y del olvido».",
+            "El retrato pretende algo que no puede lograr: solo lo aparenta."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P5",
+      "zona": "biblioteca",
+      "titulo": "El estante del soneto",
+      "fichas": ["soneto", "topicos"],
+      "conceptTags": ["soneto", "topicos"],
+      "pistas": [
+        "«Dulce» abre los versos 1, 3, 5 y 7.",
+        "Los cuartetos riman ABBA: -arme, -aba, -aba, -arme. Los tercetos, CDC DCD: -oso, -ado, -oso / -ado, -oso, -ado.",
+        "El primer verso es «Dulce soñar y dulce congojarme,» y el último «quien siempre en la verdad fue desdichado.»"
+      ],
+      "pasos": [
+        {
+          "id": "estante",
+          "tipo": "asignar",
+          "estante": true,
+          "titulo": "Estante de cuatro repisas (4 / 4 / 3 / 3)",
+          "enunciado": "Ordena los 14 libros: cada lomo tiene un verso de Boscán. Se revisa repisa por repisa.",
+          "opciones": [
+            { "texto": "Dulce soñar y dulce congojarme,", "tag": "A" },
+            { "texto": "cuando estaba soñando que soñaba;", "tag": "B" },
+            { "texto": "dulce gozar con lo que me engañaba,", "tag": "B" },
+            { "texto": "si un poco más durara el engañarme;", "tag": "A" },
+            { "texto": "dulce no estar en mí, que figurarme", "tag": "A" },
+            { "texto": "podía cuanto bien yo deseaba,", "tag": "B" },
+            { "texto": "dulce placer, aunque me importunaba", "tag": "B" },
+            { "texto": "que alguna vez llegaba a despertarme.", "tag": "A" },
+            { "texto": "¡Oh sueño, cuánto más leve y sabroso", "tag": "C" },
+            { "texto": "me fueras si vinieras tan pesado", "tag": "D" },
+            { "texto": "que asentaras en mí con más reposo!", "tag": "C" },
+            { "texto": "Durmiendo, en fin, fui bienaventurado,", "tag": "D" },
+            { "texto": "y es justo en la mentira ser dichoso", "tag": "C" },
+            { "texto": "quien siempre en la verdad fue desdichado.", "tag": "D" }
+          ],
+          "slots": [
+            { "etiqueta": "Repisa 1 · verso 1", "correcta": "Dulce soñar y dulce congojarme,", "grupo": 1 },
+            { "etiqueta": "Repisa 1 · verso 2", "correcta": "cuando estaba soñando que soñaba;", "grupo": 1 },
+            { "etiqueta": "Repisa 1 · verso 3", "correcta": "dulce gozar con lo que me engañaba,", "grupo": 1 },
+            { "etiqueta": "Repisa 1 · verso 4", "correcta": "si un poco más durara el engañarme;", "grupo": 1 },
+            { "etiqueta": "Repisa 2 · verso 5", "correcta": "dulce no estar en mí, que figurarme", "grupo": 2 },
+            { "etiqueta": "Repisa 2 · verso 6", "correcta": "podía cuanto bien yo deseaba,", "grupo": 2 },
+            { "etiqueta": "Repisa 2 · verso 7", "correcta": "dulce placer, aunque me importunaba", "grupo": 2 },
+            { "etiqueta": "Repisa 2 · verso 8", "correcta": "que alguna vez llegaba a despertarme.", "grupo": 2 },
+            { "etiqueta": "Repisa 3 · verso 9", "correcta": "¡Oh sueño, cuánto más leve y sabroso", "grupo": 3 },
+            { "etiqueta": "Repisa 3 · verso 10", "correcta": "me fueras si vinieras tan pesado", "grupo": 3 },
+            { "etiqueta": "Repisa 3 · verso 11", "correcta": "que asentaras en mí con más reposo!", "grupo": 3 },
+            { "etiqueta": "Repisa 4 · verso 12", "correcta": "Durmiendo, en fin, fui bienaventurado,", "grupo": 4 },
+            { "etiqueta": "Repisa 4 · verso 13", "correcta": "y es justo en la mentira ser dichoso", "grupo": 4 },
+            { "etiqueta": "Repisa 4 · verso 14", "correcta": "quien siempre en la verdad fue desdichado.", "grupo": 4 }
+          ]
+        },
+        {
+          "id": "funciones",
+          "tipo": "asignar",
+          "titulo": "Función de cada estrofa",
+          "enunciado": "Rotula cada repisa con la función de su estrofa.",
+          "opciones": [
+            { "texto": "Presenta el tema", "tag": "" },
+            { "texto": "Amplía el tema", "tag": "" },
+            { "texto": "Reflexión", "tag": "" },
+            { "texto": "Conclusión", "tag": "" }
+          ],
+          "slots": [
+            { "etiqueta": "1° cuarteto", "correcta": "Presenta el tema" },
+            { "etiqueta": "2° cuarteto", "correcta": "Amplía el tema" },
+            { "etiqueta": "1° terceto", "correcta": "Reflexión" },
+            { "etiqueta": "2° terceto", "correcta": "Conclusión" }
+          ],
+          "pistas": [
+            "Tema → lo amplía → reflexiona → concluye.",
+            "El 1° terceto empieza con «¡Oh sueño…!»: es una reflexión emocionada.",
+            "«Durmiendo, en fin…»: «en fin» anuncia la conclusión."
+          ]
+        },
+        {
+          "id": "dulce",
+          "tipo": "pregunta",
+          "titulo": "La repetición",
+          "enunciado": "¿Por qué se repite «dulce» en el soneto?",
+          "correcta": "Para enfatizar el placer del sueño",
+          "distractores": ["Por error del poeta", "Solo para rimar"],
+          "pistas": [
+            "«Dulce» nunca está al final del verso: no sirve para la rima.",
+            "La repetición insiste en una idea.",
+            "¿Qué siente el hablante mientras sueña?"
+          ]
+        },
+        {
+          "id": "topico",
+          "tipo": "pregunta",
+          "titulo": "El tópico",
+          "enunciado": "¿Qué tópico expresa el soneto de Boscán?",
+          "correcta": "Vita somnium",
+          "distractores": ["Carpe diem", "Contemptus mundi", "Ubi sunt?"],
+          "pistas": [
+            "Revisa la ficha «Tópicos literarios».",
+            "El hablante es feliz soñando, aunque sea un engaño.",
+            "Es el mismo tópico de La vida es sueño."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P7",
+      "zona": "teatro",
+      "titulo": "El libreto de Segismundo",
+      "fichas": ["vidaessueno", "conflicto", "discurso", "personajes"],
+      "conceptTags": ["teatro"],
+      "pistas": [
+        "Lo que va entre paréntesis orienta la puesta en escena.",
+        "En el aparte el personaje habla sin que los demás lo oigan; en el monólogo nadie le responde; en el diálogo hay dos que conversan.",
+        "(Despierta.) es acotación. «¿Qué es la vida? Un frenesí…» es el monólogo de Segismundo."
+      ],
+      "pasos": [
+        {
+          "id": "libreto",
+          "tipo": "asignar",
+          "titulo": "Las cuatro hojas del libreto",
+          "enunciado": "Pega la etiqueta correcta en cada hoja.",
+          "opciones": [
+            { "texto": "Acotación", "tag": "" },
+            { "texto": "Aparte", "tag": "" },
+            { "texto": "Diálogo", "tag": "" },
+            { "texto": "Monólogo", "tag": "" }
+          ],
+          "slots": [
+            { "etiqueta": "Hoja 1 — «(Despierta.)»", "correcta": "Acotación" },
+            { "etiqueta": "Hoja 2 — «CLOTALDO (Aparte.).— A mí me toca llegar / a hacer la deshecha ahora.»", "correcta": "Aparte" },
+            { "etiqueta": "Hoja 3 — «CLOTALDO.— ¿Es ya de despertar hora? / SEGISMUNDO.— Sí, hora es ya de despertar.»", "correcta": "Diálogo" },
+            { "etiqueta": "Hoja 4 — «SEGISMUNDO.— ¿Qué es la vida? Un frenesí. / ¿Qué es la vida? Una ilusión, / una sombra, una ficción…»", "correcta": "Monólogo" }
+          ]
+        },
+        {
+          "id": "mascaras",
+          "tipo": "asignar",
+          "titulo": "Los maniquíes",
+          "enunciado": "Ponle a cada maniquí la máscara de su personaje tipo.",
+          "opciones": [
+            { "texto": "Galán", "tag": "" },
+            { "texto": "Dama", "tag": "" },
+            { "texto": "Gracioso", "tag": "" },
+            { "texto": "Rey", "tag": "" },
+            { "texto": "Villano", "tag": "" }
+          ],
+          "slots": [
+            { "etiqueta": "Segismundo", "correcta": "Galán" },
+            { "etiqueta": "Rosaura", "correcta": "Dama" },
+            { "etiqueta": "Clarín", "correcta": "Gracioso" },
+            { "etiqueta": "Basilio", "correcta": "Rey" }
+          ],
+          "pistas": [
+            "Revisa la ficha «Personajes tipo».",
+            "Basilio es el rey de Polonia; Clarín es el que hace reír.",
+            "Segismundo es el galán y Rosaura la dama."
+          ]
+        },
+        {
+          "id": "conflicto",
+          "tipo": "pregunta",
+          "titulo": "El conflicto",
+          "enunciado": "¿Cuál es el conflicto central de La vida es sueño?",
+          "correcta": "Libre albedrío (Segismundo) vs. destino (Basilio)",
+          "distractores": ["El amor de Rosaura vs. la amistad de Clarín", "La pobreza vs. la riqueza del reino", "Polonia vs. un reino enemigo"],
+          "pistas": [
+            "Revisa la ficha «Conflicto dramático».",
+            "El oráculo anuncia un destino; Segismundo decide cómo actuar.",
+            "Al final, la voluntad vence al destino."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JUICIO",
+      "zona": "teatro",
+      "titulo": "El Juicio del Espejo",
+      "fichas": ["conectores"],
+      "conceptTags": ["argumentacion", "conectores"],
+      "pistas": [
+        "Si la idea que sigue se opone a la anterior, va un conector adversativo.",
+        "Si lo que sigue es un resultado, va un consecutivo. Para abrir una enumeración, uno de ordenación.",
+        "Elige el verso que responde directamente a la tesis de El Retrato."
+      ],
+      "pasos": [
+        {
+          "id": "r1",
+          "tipo": "juicio",
+          "titulo": "Ronda 1",
+          "voz": "La juventud es lo único que vale: congélala en una foto.",
+          "plantilla": "Es cierto que la juventud es bella; {0}, Garcilaso advierte que {1}; {2}, hay que vivirla, no congelarla.",
+          "opciones": [
+            { "texto": "sin embargo", "tag": "adversativo" },
+            { "texto": "por lo tanto", "tag": "consecutivo" },
+            { "texto": "en primer lugar", "tag": "ordenacion" },
+            { "texto": "para empezar", "tag": "ordenacion" },
+            { "texto": "en cambio", "tag": "adversativo" },
+            { "texto": "así pues", "tag": "consecutivo" },
+            { "texto": "«todo lo mudará la edad ligera»", "tag": "evidencia" },
+            { "texto": "«hace a Dios ser mi cautivo»", "tag": "irrelevante" },
+            { "texto": "«dulce gozar con lo que me engañaba»", "tag": "irrelevante" }
+          ],
+          "slots": [
+            { "etiqueta": "Conector 1", "correcta": "sin embargo", "opciones": ["sin embargo", "por lo tanto", "en primer lugar"] },
+            { "etiqueta": "Evidencia (verso del Cuaderno)", "correcta": "«todo lo mudará la edad ligera»", "opciones": ["«todo lo mudará la edad ligera»", "«hace a Dios ser mi cautivo»", "«dulce gozar con lo que me engañaba»"] },
+            { "etiqueta": "Conector 2", "correcta": "por lo tanto", "opciones": ["en cambio", "por lo tanto", "para empezar"] }
+          ]
+        },
+        {
+          "id": "r2",
+          "tipo": "juicio",
+          "titulo": "Ronda 2",
+          "voz": "Un retrato perfecto vence al tiempo y al olvido.",
+          "plantilla": "{0}, Sor Juana dice que el retrato es {1}; {2}, la imagen solo aparenta vencer al tiempo.",
+          "opciones": [
+            { "texto": "en primer lugar", "tag": "ordenacion" },
+            { "texto": "sin embargo", "tag": "adversativo" },
+            { "texto": "por ende", "tag": "consecutivo" },
+            { "texto": "en consecuencia", "tag": "consecutivo" },
+            { "texto": "no obstante", "tag": "adversativo" },
+            { "texto": "finalmente", "tag": "ordenacion" },
+            { "texto": "«un resguardo inútil para el hado»", "tag": "evidencia" },
+            { "texto": "«con clara luz la tempestad serena»", "tag": "irrelevante" },
+            { "texto": "«Mas ¡ay de mí!, ¿dónde estoy?»", "tag": "irrelevante" }
+          ],
+          "slots": [
+            { "etiqueta": "Conector 1", "correcta": "en primer lugar", "opciones": ["en primer lugar", "sin embargo", "por ende"] },
+            { "etiqueta": "Evidencia (verso del Cuaderno)", "correcta": "«un resguardo inútil para el hado»", "opciones": ["«con clara luz la tempestad serena»", "«un resguardo inútil para el hado»", "«Mas ¡ay de mí!, ¿dónde estoy?»"] },
+            { "etiqueta": "Conector 2", "correcta": "en consecuencia", "opciones": ["no obstante", "finalmente", "en consecuencia"] }
+          ]
+        },
+        {
+          "id": "r3",
+          "tipo": "juicio",
+          "titulo": "Ronda 3",
+          "voz": "Es justo en la mentira ser dichoso.",
+          "plantilla": "Puede que la vida sea sueño; {0}, como dice Clotaldo, {1}; {2}, lo que hacemos importa aunque todo sea apariencia.",
+          "opciones": [
+            { "texto": "no obstante", "tag": "adversativo" },
+            { "texto": "en consecuencia", "tag": "consecutivo" },
+            { "texto": "a continuación", "tag": "ordenacion" },
+            { "texto": "por ende", "tag": "consecutivo" },
+            { "texto": "por el contrario", "tag": "adversativo" },
+            { "texto": "en primer lugar", "tag": "ordenacion" },
+            { "texto": "«aun en sueños / no se pierde el hacer bien»", "tag": "evidencia" },
+            { "texto": "«el viento mueve, esparce y desordena»", "tag": "irrelevante" },
+            { "texto": "«es justo en la mentira ser dichoso»", "tag": "irrelevante" }
+          ],
+          "slots": [
+            { "etiqueta": "Conector 1", "correcta": "no obstante", "opciones": ["en consecuencia", "no obstante", "a continuación"] },
+            { "etiqueta": "Evidencia (verso del Cuaderno)", "correcta": "«aun en sueños / no se pierde el hacer bien»", "opciones": ["«el viento mueve, esparce y desordena»", "«es justo en la mentira ser dichoso»", "«aun en sueños / no se pierde el hacer bien»"] },
+            { "etiqueta": "Conector 2", "correcta": "por ende", "opciones": ["por ende", "por el contrario", "en primer lugar"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TUVERSO",
+      "zona": "teatro",
+      "titulo": "Tu verso",
+      "fichas": ["soneto"],
+      "conceptTags": ["rima", "escritura"],
+      "pistas": [
+        "En una rima abba, el verso 1 rima con el 4 y el verso 2 con el 3.",
+        "Los versos terminados en -ado riman entre sí; los terminados en -ida, también.",
+        "Prueba: versos 1 y 4 en -ado; versos 2 y 3 en -ida."
+      ],
+      "pasos": [
+        {
+          "id": "cuarteto",
+          "tipo": "abba",
+          "titulo": "Tu verso",
+          "enunciado": "Arma una estrofa de cuatro versos sobre cómo percibes la vida, con rima <b>abba</b>.",
+          "opciones": [
+            { "texto": "No quiero un rostro pintado", "tag": "ado" },
+            { "texto": "el reloj sigue a mi lado", "tag": "ado" },
+            { "texto": "y el ayer ya se ha marchado", "tag": "ado" },
+            { "texto": "prefiero vivir mi vida", "tag": "ida" },
+            { "texto": "con la luz que no se olvida", "tag": "ida" },
+            { "texto": "aunque el filtro me lo pida", "tag": "ida" },
+            { "texto": "quiero quedarme en el sueño", "tag": "" },
+            { "texto": "todo lo cambia el tiempo", "tag": "" }
+          ],
+          "slots": [
+            { "etiqueta": "Verso 1 (a)", "correcta": "" },
+            { "etiqueta": "Verso 2 (b)", "correcta": "" },
+            { "etiqueta": "Verso 3 (b)", "correcta": "" },
+            { "etiqueta": "Verso 4 (a)", "correcta": "" }
+          ]
+        }
+      ]
+    }
+  ]
+}

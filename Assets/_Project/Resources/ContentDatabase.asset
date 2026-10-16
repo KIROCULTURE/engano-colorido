@@ -13,30 +13,1586 @@ MonoBehaviour:
   m_Name: ContentDatabase
   m_EditorClassIdentifier: EnganoColorido::EnganoColorido.Data.ContentDatabase
   fichas:
-    fichas: []
+    fichas:
+    - id: hablante
+      titulo: "Hablante l\xEDrico"
+      pagina: 86
+      texto: "En un poema no habla directamente quien lo escribi\xF3: habla una voz
+        creada para el poema, el <b>hablante l\xEDrico</b>. Puede parecerse al autor,
+        pero no es la misma persona. El hablante expresa ideas y emociones; el autor
+        es quien inventa esa voz.\n\nPregunta clave al leer: <i>\xBFqui\xE9n habla
+        aqu\xED y qu\xE9 siente?</i>"
+    - id: desengano
+      titulo: "Desenga\xF1o y Barroco"
+      pagina: "76\u201378"
+      texto: "El <b>Siglo de Oro</b> (siglos XVI y XVII) fue la \xE9poca de mayor
+        brillo de la literatura espa\xF1ola. En el <b>Renacimiento</b> (s. XVI) se
+        confiaba en la raz\xF3n; en el <b>Barroco</b> (s. XVII), con una Espa\xF1a
+        en crisis, la mirada se vuelve pesimista y contradictoria.\n\n<b>Desenga\xF1arse</b>
+        es salir del enga\xF1o al conocer la verdad: la vida es breve, el tiempo
+        todo lo destruye y la apariencia no es la realidad."
+    - id: denotacion
+      titulo: "Denotaci\xF3n y connotaci\xF3n"
+      pagina: 74
+      texto: "La <b>denotaci\xF3n</b> es el significado literal de una palabra, el
+        del diccionario. La <b>connotaci\xF3n</b> es el sentido nuevo que la palabra
+        toma dentro de un contexto. La poes\xEDa juega con la connotaci\xF3n.\n\nEn
+        \xABA una rosa\xBB, de G\xF3ngora, la rosa no es solo una flor: connota la
+        vida humana, bella pero breve. Y la \xABrobusta mano\xBB que la corta connota
+        la muerte."
+    - id: simbolos
+      titulo: "S\xEDmbolos barrocos"
+      pagina: 86
+      texto: "Un <b>s\xEDmbolo</b> es algo concreto que representa una idea compleja.
+        Algunos los comparte una cultura; otros los crea cada autor.\n\n\u2022 <b>Calavera</b>:
+        la muerte y lo pasajero de la vida.\n\u2022 <b>Reloj</b>: el tiempo que huye
+        y, con \xE9l, la vida.\n\u2022 <b>Rosa</b>: la belleza y la juventud.\n\u2022
+        <b>\xC1rbol ca\xEDdo</b>: el tiempo que todo lo derriba.\n\u2022 <b>C\xE1rcel</b>
+        (Santa Teresa): el cuerpo como prisi\xF3n del alma."
+    - id: actitudes
+      titulo: Actitudes del hablante
+      pagina: 86
+      texto: "El hablante puede adoptar tres actitudes:\n\n\u2022 <b>Enunciativa</b>:
+        cuenta o describe algo y muestra lo que siente frente a eso.\n\u2022 <b>Apostr\xF3fica</b>:
+        se dirige a alguien o a algo (un \xABt\xFA\xBB, un \xABvosotros\xBB) para
+        expresarle su sentir.\n\u2022 <b>Carm\xEDnica</b> o de la canci\xF3n: abre
+        su mundo interior y expresa sus emociones.\n\nPista: f\xEDjate a qui\xE9n
+        se habla y de qu\xE9 se habla."
+    - id: mistica
+      titulo: "Poes\xEDa m\xEDstica"
+      pagina: 80
+      texto: "La <b>poes\xEDa m\xEDstica</b> del Renacimiento (Santa Teresa de Jes\xFAs,
+        San Juan de la Cruz) tiene un solo tema: la uni\xF3n del alma con Dios. Su
+        estilo es sencillo, pero est\xE1 lleno de s\xEDmbolos.\n\nOjo: cuando Santa
+        Teresa dice \xABmuero porque no muero\xBB, ese \xABmorir\xBB expresa el anhelo
+        de unirse con Dios, en el contexto religioso del siglo XVI. No es un deseo
+        de muerte."
+    - id: vanitas
+      titulo: Vanitas
+      pagina: "64\u201366"
+      texto: "La <b>vanitas</b> es un tipo de pintura barroca que recuerda lo breve
+        y fr\xE1gil de la vida con objetos simb\xF3licos: calaveras, relojes, flores,
+        coronas.\n\nEn <i>El sue\xF1o del caballero</i>, de Antonio de Pereda, un
+        joven duerme junto a una mesa de riquezas y se\xF1ales de muerte; un \xE1ngel
+        muestra una cinta: <i>Aeterna pungit, cito volat et occidit</i> (\xABeternamente
+        hiere, r\xE1pido vuela y mata\xBB). Murillo retrat\xF3 a <i>Nicol\xE1s Omazur</i>
+        con una calavera en la mano."
+    - id: sorjuana
+      titulo: "\xABEste, que ves, enga\xF1o colorido\u2026\xBB"
+      pagina: 82
+      texto: "<b>Sor Juana In\xE9s de la Cruz</b>, la mayor figura del Barroco en
+        Hispanoam\xE9rica, escribi\xF3 este soneto sobre su propio retrato. El poema
+        critica el arte que, con colores y halagos, intenta esconder la vejez y la
+        muerte.\n\nMira el \xFAltimo verso: cada palabra vale menos que la anterior
+        (<b>gradaci\xF3n</b>) y \xABes\xBB se repite al inicio de cada parte (<b>an\xE1fora</b>)."
+    - id: magico
+      titulo: "El m\xE1gico prodigioso"
+      pagina: 101
+      texto: "En esta obra de <b>Calder\xF3n de la Barca</b>, Cipriano vende su alma
+        para conquistar a Justina. Cuando cree alcanzarla, descubre bajo el manto
+        un esqueleto que le dice: \xABAs\xED, Cipriano, son / todas las glorias del
+        mundo\xBB.\n\nLa escena es una lecci\xF3n de <b>desenga\xF1o</b>: aquello
+        que deseamos con tanta fuerza tambi\xE9n es pasajero."
+    - id: soneto
+      titulo: El soneto
+      pagina: 87
+      texto: "Naci\xF3 en Italia (Petrarca, s. XIV) y lo trajeron a Espa\xF1a Garcilaso
+        y Bosc\xE1n. Tiene <b>14 versos endecas\xEDlabos</b> (11 s\xEDlabas): <b>dos
+        cuartetos</b> que riman igual (<b>ABBA ABBA</b>) y <b>dos tercetos</b> de
+        rima variable (por ejemplo, CDC DCD).\n\nCada estrofa tiene una funci\xF3n:
+        1\xB0 cuarteto, <b>presenta el tema</b>; 2\xB0 cuarteto, lo <b>ampl\xEDa</b>;
+        1\xB0 terceto, <b>reflexiona</b>; 2\xB0 terceto, <b>concluye</b>."
+    - id: topicos
+      titulo: "T\xF3picos literarios"
+      pagina: 98
+      texto: "Un <b>t\xF3pico</b> es un tema que se repite desde la Antig\xFCedad
+        y tiene nombre en lat\xEDn.\n\n\u2022 <i>Carpe diem</i>: aprovecha el momento,
+        sobre todo la juventud.\n\u2022 <i>Tempus irreparabile fugit</i>: el tiempo
+        huye sin remedio.\n\u2022 <i>Contemptus mundi</i>: desprecio de lo que ofrece
+        el mundo.\n\u2022 <i>Vanitas vanitatum</i>: las cosas son enga\xF1osas y
+        vanas.\n\u2022 <i>Vita somnium</i>: la vida como un sue\xF1o, una ficci\xF3n
+        pasajera.\n\u2022 <i>Ubi sunt?</i>: \xBFd\xF3nde est\xE1n los que ya no est\xE1n?"
+    - id: vidaessueno
+      titulo: "La vida es sue\xF1o"
+      pagina: 88
+      texto: "Un or\xE1culo anuncia que el pr\xEDncipe <b>Segismundo</b> ser\xE1
+        un tirano y vencer\xE1 a su padre, el rey <b>Basilio</b> de Polonia. Basilio
+        lo encierra en una torre, al cuidado de <b>Clotaldo</b>. A\xF1os despu\xE9s
+        lo pone a prueba: lo duerme y lo lleva al palacio, donde Segismundo act\xFAa
+        con soberbia; vuelve a la torre creyendo que todo fue un sue\xF1o. Al final
+        vence a su padre, lo perdona y demuestra que la voluntad puede m\xE1s que
+        el destino."
+    - id: conflicto
+      titulo: "Conflicto dram\xE1tico"
+      pagina: 96
+      texto: "Hay <b>conflicto dram\xE1tico</b> cuando un personaje persigue un fin
+        y choca con un obst\xE1culo. Puede ser un debate moral ante el destino, dos
+        visiones de mundo, una lucha interna, el individuo contra la sociedad o una
+        rivalidad.\n\nEn <i>La vida es sue\xF1o</i> el conflicto central es el <b>libre
+        albedr\xEDo</b> (Segismundo) frente al <b>destino</b> (Basilio), junto con
+        la lucha interna de Segismundo."
+    - id: discurso
+      titulo: "Formas del discurso dram\xE1tico"
+      pagina: 97
+      texto: "\u2022 <b>Di\xE1logo</b>: la forma principal; los personajes conversan.\n\u2022
+        <b>Acotaci\xF3n</b>: orienta la puesta en escena y va entre par\xE9ntesis,
+        como \xAB(Despierta.)\xBB.\n\u2022 <b>Aparte</b>: un personaje habla al p\xFAblico
+        sin que los dem\xE1s lo oigan.\n\u2022 <b>Mon\xF3logo</b>: un personaje expresa
+        su interior sin esperar respuesta. El soliloquio es una forma parecida."
+    - id: personajes
+      titulo: Personajes tipo
+      pagina: 98
+      texto: "El teatro del Siglo de Oro usa personajes que se repiten de obra en
+        obra:\n\n\u2022 <b>Gal\xE1n</b>: Segismundo.\n\u2022 <b>Dama</b>: Rosaura.\n\u2022
+        <b>Gracioso</b>: hace re\xEDr y a veces dice verdades (Clar\xEDn).\n\u2022
+        <b>Rey</b>: Basilio.\n\u2022 <b>Caballero</b>.\n\u2022 <b>Poderoso</b>: el
+        Comendador en <i>Fuente Ovejuna</i>.\n\u2022 <b>Villano</b>: en esa \xE9poca,
+        el campesino (Frondoso)."
+    - id: conectores
+      titulo: Conectores
+      pagina: 108
+      texto: "Los conectores unen ideas y muestran c\xF3mo se relacionan.\n\n\u2022
+        <b>De ordenaci\xF3n</b> (en primer lugar, para empezar, a continuaci\xF3n,
+        finalmente): ordenan los argumentos; van al inicio y seguidos de coma.\n\u2022
+        <b>Consecutivos</b> (por lo tanto, por ende, en consecuencia, as\xED pues):
+        introducen una consecuencia.\n\u2022 <b>Adversativos</b> (sin embargo, no
+        obstante, en cambio, por el contrario): oponen una idea a otra."
   poemas:
-    poemas: []
-  topicos:
-    topicos: []
-  puzzles:
-    puzzles: []
-  dialogos:
-    dialogos: []
-  evaluacion:
-    diagnostico: []
-    salida: []
-    poemaSalida:
-      id: 
-      autor: 
-      titulo: 
-      pagina: 
+    poemas:
+    - id: gongora_rosa
+      autor: "Luis de G\xF3ngora"
+      titulo: A una rosa
+      pagina: 67
+      rima: ABBA ABBA CDE CDE
+      glosario: lucido = llamativo por su belleza; lozano = vigoroso, juvenil; vano
+        = ilusorio; desvanecido = deshecho; dilatar = aplazar.
+      versos:
+      - "Ayer naciste y morir\xE1s ma\xF1ana."
+      - "Para tan breve ser, \xBFqui\xE9n te dio vida?"
+      - "\xBFPara vivir tan poco est\xE1s lucida,"
+      - "y para no ser nada est\xE1s lozana?"
+      - 
+      - "Si te enga\xF1\xF3 tu hermosura vana,"
+      - "bien presto la ver\xE1s desvanecida,"
+      - "porque en tu hermosura est\xE1 escondida"
+      - "la ocasi\xF3n de morir muerte temprana."
+      - 
+      - Cuando te corte la robusta mano,
+      - ley de la agricultura permitida,
+      - "grosero aliento acabar\xE1 tu suerte."
+      - 
+      - "No salgas, que te aguarda alg\xFAn tirano;"
+      - dilata tu nacer para tu vida,
+      - que anticipas tu ser para tu muerte.
+    - id: garcilaso_xxiii
+      autor: Garcilaso de la Vega
+      titulo: Soneto XXIII
+      pagina: 79
+      rima: ABBA ABBA CDE DCE
+      glosario: vena = parte de una materia que se distingue por su calidad o color;
+        enhiesto = erguido.
+      versos:
+      - En tanto que de rosa y azucena
+      - se muestra la color en vuestro gesto,
+      - y que vuestro mirar ardiente, honesto,
+      - con clara luz la tempestad serena;
+      - 
+      - y en tanto que el cabello, que en la vena
+      - "del oro se escogi\xF3, con vuelo presto,"
+      - por el hermoso cuello blanco, enhiesto,
+      - el viento mueve, esparce y desordena;
+      - 
+      - coged de vuestra alegre primavera
+      - el dulce fruto, antes que el tiempo airado
+      - cubra de nieve la hermosa cumbre.
+      - 
+      - "Marchitar\xE1 la rosa el viento helado,"
+      - "todo lo mudar\xE1 la edad ligera,"
+      - por no hacer mudanza en su costumbre.
+    - id: teresa_vivo
+      autor: "Santa Teresa de Jes\xFAs"
+      titulo: "Vivo sin vivir en m\xED (fragmento)"
+      pagina: 80
       rima: 
-      glosario: 
-      versos: []
+      glosario: "aquesta = esta; cautivo = prisionero; do = donde. El \xABmorir\xBB
+        de la m\xEDstica es el anhelo de uni\xF3n con Dios."
+      versos:
+      - "Vivo sin vivir en m\xED,"
+      - y tan alta vida espero,
+      - que muero porque no muero.
+      - 
+      - "Aquesta divina uni\xF3n,"
+      - del amor con que yo vivo,
+      - hace a Dios ser mi cautivo,
+      - "y libre mi coraz\xF3n;"
+      - "mas causa en m\xED tal pasi\xF3n,"
+      - ver a Dios mi prisionero,
+      - que muero porque no muero.
+      - 
+      - "\xA1Ay, qu\xE9 larga es esta vida!"
+      - "\xA1Qu\xE9 duros estos destierros,"
+      - "esta c\xE1rcel, estos hierros"
+      - "en que el alma est\xE1 metida!"
+      - Solo esperar la salida
+      - me causa dolor tan fiero,
+      - que muero porque no muero.
+    - id: sorjuana_este
+      autor: "Sor Juana In\xE9s de la Cruz"
+      titulo: "Este, que ves, enga\xF1o colorido\u2026"
+      pagina: 82
+      rima: ABBA ABBA CDC DCD
+      glosario: "primor = destreza; silogismo = razonamiento de dos premisas a una
+        conclusi\xF3n; vano artificio = enga\xF1o sin sentido; caduco = destinado
+        a caer."
+      versos:
+      - "Este, que ves, enga\xF1o colorido,"
+      - que del arte ostentando los primores,
+      - con falsos silogismos de colores
+      - "es cauteloso enga\xF1o del sentido;"
+      - 
+      - este, en quien la lisonja ha pretendido
+      - "excusar de los a\xF1os los horrores"
+      - y venciendo del tiempo los rigores
+      - triunfar de la vejez y del olvido,
+      - 
+      - es un vano artificio del cuidado,
+      - es una flor al viento delicada,
+      - "es un resguardo in\xFAtil para el hado:"
+      - 
+      - es una necia diligencia errada,
+      - "es un af\xE1n caduco y, bien mirado,"
+      - "es cad\xE1ver, es polvo, es sombra, es nada."
+    - id: boscan_dulce
+      autor: "Juan Bosc\xE1n"
+      titulo: "Dulce so\xF1ar y dulce congojarme\u2026"
+      pagina: 83
+      rima: ABBA ABBA CDC DCD
+      glosario: congojarme = angustiarme; figurarme = imaginarme; importunar = molestar;
+        asentar = instalar; bienaventurado = feliz.
+      versos:
+      - "Dulce so\xF1ar y dulce congojarme,"
+      - "cuando estaba so\xF1ando que so\xF1aba;"
+      - "dulce gozar con lo que me enga\xF1aba,"
+      - "si un poco m\xE1s durara el enga\xF1arme;"
+      - 
+      - "dulce no estar en m\xED, que figurarme"
+      - "pod\xEDa cuanto bien yo deseaba,"
+      - dulce placer, aunque me importunaba
+      - que alguna vez llegaba a despertarme.
+      - 
+      - "\xA1Oh sue\xF1o, cu\xE1nto m\xE1s leve y sabroso"
+      - me fueras si vinieras tan pesado
+      - "que asentaras en m\xED con m\xE1s reposo!"
+      - 
+      - Durmiendo, en fin, fui bienaventurado,
+      - y es justo en la mentira ser dichoso
+      - quien siempre en la verdad fue desdichado.
+    - id: calderon_vida
+      autor: "Pedro Calder\xF3n de la Barca"
+      titulo: "La vida es sue\xF1o, Jornada II (fragmentos)"
+      pagina: "89\u201394"
+      rima: 
+      glosario: "hacer la deshecha = disimular. \xABQue aun en sue\xF1os / no se
+        pierde el hacer bien\xBB lo dice Clotaldo (p. 93)."
+      versos:
+      - (Despierta.)
+      - "SEGISMUNDO.\u2014 Mas \xA1ay de m\xED!, \xBFd\xF3nde estoy?"
+      - 
+      - "CLOTALDO (Aparte.).\u2014 A m\xED me toca llegar"
+      - a hacer la deshecha ahora.
+      - "\xBFEs ya de despertar hora?"
+      - "SEGISMUNDO.\u2014 S\xED, hora es ya de despertar."
+      - 
+      - "CLOTALDO.\u2014 [\u2026] Segismundo; que aun en sue\xF1os"
+      - no se pierde el hacer bien.
+      - (Vase.)
+      - "SEGISMUNDO.\u2014 Es verdad; pues reprimamos"
+      - "esta fiera condici\xF3n,"
+      - "esta furia, esta ambici\xF3n"
+      - "por si alguna vez so\xF1amos."
+      - 
+      - "SEGISMUNDO.\u2014 [\u2026]"
+      - "\xBFQu\xE9 es la vida? Un frenes\xED."
+      - "\xBFQu\xE9 es la vida? Una ilusi\xF3n,"
+      - "una sombra, una ficci\xF3n,"
+      - "y el mayor bien es peque\xF1o;"
+      - "que toda la vida es sue\xF1o,"
+      - "y los sue\xF1os, sue\xF1os son."
+    - id: calderon_estas
+      autor: "Pedro Calder\xF3n de la Barca"
+      titulo: "Estas que fueron pompa y alegr\xEDa\u2026"
+      pagina: 100
+      rima: ABBA ABBA CDC DCD
+      glosario: "pompa = esplendor; albor = primera luz del d\xEDa; grana = rojo;
+        escarmiento = castigo, lecci\xF3n; bot\xF3n = brote de la flor."
+      versos:
+      - "Estas que fueron pompa y alegr\xEDa"
+      - "despertando al albor de la ma\xF1ana,"
+      - "a la tarde ser\xE1n l\xE1stima vana"
+      - "durmiendo en brazos de la noche fr\xEDa."
+      - 
+      - "Este matiz que al cielo desaf\xEDa,"
+      - Iris listado de oro, nieve y grana,
+      - "ser\xE1 escarmiento de la vida humana:"
+      - "\xA1tanto se emprende en t\xE9rmino de un d\xEDa!"
+      - 
+      - A florecer las rosas madrugaron,
+      - 'y para envejecerse florecieron:'
+      - "cuna y sepulcro en un bot\xF3n hallaron."
+      - 
+      - 'Tales los hombres sus fortunas vieron:'
+      - "en un d\xEDa nacieron y espiraron;"
+      - que pasados los siglos, horas fueron.
+    - id: calderon_magico
+      autor: "Pedro Calder\xF3n de la Barca"
+      titulo: "El m\xE1gico prodigioso, Jornada III (escena del esqueleto)"
+      pagina: 101
+      rima: 
+      glosario: "Cipriano, que vendi\xF3 su alma para conquistar a Justina, la descubre
+        y encuentra un esqueleto."
+      versos:
+      - "ESQUELETO.\u2014 As\xED, Cipriano, son"
+      - todas las glorias del mundo.
+  topicos:
+    topicos:
+    - id: tempus
+      nombre: Tempus irreparabile fugit
+      idea: El tiempo se escapa sin remedio; la muerte es irremediable.
+      ejemplo: Jorge Manrique, Coplas
+    - id: carpe
+      nombre: Carpe diem
+      idea: Aprovecha el momento, sobre todo la juventud.
+      ejemplo: Garcilaso, Soneto XXIII
+    - id: contemptus
+      nombre: Contemptus mundi
+      idea: Desprecio de lo que ofrece el mundo.
+      ejemplo: "Santa Teresa, \xABVivo sin vivir en m\xED\xBB"
+    - id: vanitas
+      nombre: Vanitas vanitatum
+      idea: "Las cosas son enga\xF1osas; hay que dejarlas por otras m\xE1s elevadas."
+      ejemplo: "Sor Juana, \xABEste, que ves\u2026\xBB"
+    - id: somnium
+      nombre: Vita somnium
+      idea: "La vida como experiencia irreal, ficci\xF3n pasajera."
+      ejemplo: "Calder\xF3n, La vida es sue\xF1o"
+    - id: ubisunt
+      nombre: Ubi sunt?
+      idea: Pregunta por personas o realidades desaparecidas.
+      ejemplo: "Garcilaso, \xC9gloga I"
+    - id: jauja
+      nombre: Tierra de Jauja
+      idea: Lugar ideal de abundancia donde todo es posible sin esfuerzo.
+      ejemplo: Lope de Rueda, La tierra de Jauja
+  puzzles:
+    puzzles:
+    - id: P1
+      zona: patio
+      titulo: El candado de las rosas
+      fichas:
+      - denotacion
+      - simbolos
+      conceptTags:
+      - connotacion
+      - simbolos
+      - topicos
+      pistas:
+      - "\xBFQu\xE9 estaci\xF3n del a\xF1o es la juventud?"
+      - Las canas son blancas como la nieve.
+      - "Rosa \u2192 \xABAyer naciste y morir\xE1s ma\xF1ana\xBB. Robusta mano \u2192
+        \xABCuando te corte la robusta mano\xBB. Primavera \u2192 \xABcoged de vuestra
+        alegre primavera\xBB. Nieve \u2192 \xABcubra de nieve la hermosa cumbre\xBB."
+      pasos:
+      - id: candado
+        tipo: asignar
+        titulo: Candado de cuatro diales
+        enunciado: "La placa muestra \xABA una rosa\xBB (G\xF3ngora) y el primer
+          terceto del Soneto XXIII (Garcilaso). Gira cada dial hasta el <b>sentido
+          connotativo</b> de la imagen."
+        plantilla: 
+        voz: 
+        usaInventario: 0
+        estante: 0
+        opciones:
+        - texto: 'La existencia humana: bella y breve'
+          tag: 
+        - texto: La muerte
+          tag: 
+        - texto: La juventud
+          tag: 
+        - texto: La vejez (las canas)
+          tag: 
+        - texto: Un jardinero
+          tag: 
+        - texto: El invierno
+          tag: 
+        - texto: El amor
+          tag: 
+        - texto: La riqueza
+          tag: 
+        slots:
+        - etiqueta: Rosa
+          correcta: 'La existencia humana: bella y breve'
+          opciones: []
+          grupo: 0
+        - etiqueta: Robusta mano / tirano
+          correcta: La muerte
+          opciones: []
+          grupo: 0
+        - etiqueta: Primavera
+          correcta: La juventud
+          opciones: []
+          grupo: 0
+        - etiqueta: Nieve en la cumbre
+          correcta: La vejez (las canas)
+          opciones: []
+          grupo: 0
+        correcta: 
+        distractores: []
+        pistas: []
+    - id: H
+      zona: radios
+      titulo: Las tres radios
+      fichas:
+      - actitudes
+      conceptTags:
+      - actitud
+      pistas:
+      - "Preg\xFAntate a qui\xE9n se habla en cada fragmento."
+      - "Si el fragmento le habla a un \xABvosotros\xBB, es apostr\xF3fica. Si describe
+        algo que ocurre, es enunciativa."
+      - "Bosc\xE1n habla de su propio sue\xF1o y de lo que siente: mira hacia adentro."
+      pasos:
+      - id: radios
+        tipo: asignar
+        titulo: Etiquetas de las radios
+        enunciado: Pega en cada radio la etiqueta con la <b>actitud del hablante</b>.
+        plantilla: 
+        voz: 
+        usaInventario: 0
+        estante: 0
+        opciones:
+        - texto: "Carm\xEDnica"
+          tag: 
+        - texto: "Apostr\xF3fica"
+          tag: 
+        - texto: Enunciativa
+          tag: 
+        slots:
+        - etiqueta: "Radio 1 \u2014 \xABDurmiendo, en fin, fui bienaventurado, /
+            y es justo en la mentira ser dichoso / quien siempre en la verdad fue
+            desdichado.\xBB (Bosc\xE1n)"
+          correcta: "Carm\xEDnica"
+          opciones: []
+          grupo: 0
+        - etiqueta: "Radio 2 \u2014 \xABcoged de vuestra alegre primavera / el dulce
+            fruto\xBB (Garcilaso)"
+          correcta: "Apostr\xF3fica"
+          opciones: []
+          grupo: 0
+        - etiqueta: "Radio 3 \u2014 \xABEstas que fueron pompa y alegr\xEDa / despertando
+            al albor de la ma\xF1ana, / a la tarde ser\xE1n l\xE1stima vana\xBB (Calder\xF3n)"
+          correcta: Enunciativa
+          opciones: []
+          grupo: 0
+        correcta: 
+        distractores: []
+        pistas: []
+    - id: P3
+      zona: galeria
+      titulo: "El bodeg\xF3n del caballero"
+      fichas:
+      - vanitas
+      - simbolos
+      conceptTags:
+      - simbolos
+      - vanitas
+      pistas:
+      - "Abre la ficha \xABS\xEDmbolos barrocos\xBB en tu Cuaderno."
+      - Recuerda la rosa del patio.
+      - "Calavera: laboratorio. Reloj: sala de profesores. Corona: bodega de utiler\xEDa
+        del teatro. Rosa: el invernadero del patio."
+      pasos:
+      - id: mesa
+        tipo: asignar
+        titulo: La mesa del caballero
+        enunciado: "Cinta del \xE1ngel: <i>Aeterna pungit, cito volat et occidit</i>.\nNota:
+          \xABPon lo que dice que todo termina, que el tiempo huye, que la belleza
+          se marchita y que el poder no dura\xBB."
+        plantilla: 
+        voz: 
+        usaInventario: 1
+        estante: 0
+        opciones:
+        - texto: Calavera
+          tag: calavera
+        - texto: Reloj
+          tag: reloj
+        - texto: Rosa
+          tag: rosa
+        - texto: Corona
+          tag: corona
+        - texto: Paloma
+          tag: paloma
+        - texto: Ancla
+          tag: ancla
+        - texto: Llave
+          tag: llave
+        - texto: Pelota
+          tag: pelota
+        slots:
+        - etiqueta: Que todo termina
+          correcta: Calavera
+          opciones: []
+          grupo: 0
+        - etiqueta: Que el tiempo huye
+          correcta: Reloj
+          opciones: []
+          grupo: 0
+        - etiqueta: Que la belleza se marchita
+          correcta: Rosa
+          opciones: []
+          grupo: 0
+        - etiqueta: Que el poder no dura
+          correcta: Corona
+          opciones: []
+          grupo: 0
+        correcta: 
+        distractores: []
+        pistas: []
+    - id: P4
+      zona: galeria
+      titulo: El retrato que miente
+      fichas:
+      - sorjuana
+      conceptTags:
+      - simbolos
+      - topicos
+      - lenguaje_figurado
+      pistas:
+      - Cada palabra es menos que la anterior.
+      - "El \xFAltimo verso dice: \xABes cad\xE1ver, es polvo, es sombra, es nada\xBB."
+      - "El primer gancho va con el rostro p\xE1lido y sin vida (\xABcad\xE1ver\xBB)."
+      pasos:
+      - id: marcos
+        tipo: asignar
+        titulo: Los cuatro retratos
+        enunciado: "Cuelga los retratos de Ale en el orden del \xFAltimo verso del
+          soneto de Sor Juana."
+        plantilla: 
+        voz: 
+        usaInventario: 0
+        estante: 0
+        opciones:
+        - texto: "El rostro p\xE1lido y sin vida"
+          tag: 
+        - texto: La figura deshecha en polvo
+          tag: 
+        - texto: Solo una silueta oscura
+          tag: 
+        - texto: "El marco vac\xEDo"
+          tag: 
+        slots:
+        - etiqueta: Gancho 1
+          correcta: "El rostro p\xE1lido y sin vida"
+          opciones: []
+          grupo: 0
+        - etiqueta: Gancho 2
+          correcta: La figura deshecha en polvo
+          opciones: []
+          grupo: 0
+        - etiqueta: Gancho 3
+          correcta: Solo una silueta oscura
+          opciones: []
+          grupo: 0
+        - etiqueta: Gancho 4
+          correcta: "El marco vac\xEDo"
+          opciones: []
+          grupo: 0
+        correcta: 
+        distractores: []
+        pistas: []
+      - id: cuartetos
+        tipo: pregunta
+        titulo: Lo que hace el retrato
+        enunciado: "Seg\xFAn los cuartetos, \xBFqu\xE9 hace el retrato?"
+        plantilla: 
+        voz: 
+        usaInventario: 0
+        estante: 0
+        opciones: []
+        slots: []
+        correcta: Aparenta vencer al tiempo y al olvido
+        distractores:
+        - Muestra la verdad del rostro
+        - Celebra la vejez
+        pistas:
+        - Relee el segundo cuarteto.
+        - "\xABy venciendo del tiempo los rigores / triunfar de la vejez y del olvido\xBB."
+        - 'El retrato pretende algo que no puede lograr: solo lo aparenta.'
+    - id: P5
+      zona: biblioteca
+      titulo: El estante del soneto
+      fichas:
+      - soneto
+      - topicos
+      conceptTags:
+      - soneto
+      - topicos
+      pistas:
+      - "\xABDulce\xBB abre los versos 1, 3, 5 y 7."
+      - 'Los cuartetos riman ABBA: -arme, -aba, -aba, -arme. Los tercetos, CDC DCD:
+        -oso, -ado, -oso / -ado, -oso, -ado.'
+      - "El primer verso es \xABDulce so\xF1ar y dulce congojarme,\xBB y el \xFAltimo
+        \xABquien siempre en la verdad fue desdichado.\xBB"
+      pasos:
+      - id: estante
+        tipo: asignar
+        titulo: Estante de cuatro repisas (4 / 4 / 3 / 3)
+        enunciado: "Ordena los 14 libros: cada lomo tiene un verso de Bosc\xE1n.
+          Se revisa repisa por repisa."
+        plantilla: 
+        voz: 
+        usaInventario: 0
+        estante: 1
+        opciones:
+        - texto: "Dulce so\xF1ar y dulce congojarme,"
+          tag: A
+        - texto: "cuando estaba so\xF1ando que so\xF1aba;"
+          tag: B
+        - texto: "dulce gozar con lo que me enga\xF1aba,"
+          tag: B
+        - texto: "si un poco m\xE1s durara el enga\xF1arme;"
+          tag: A
+        - texto: "dulce no estar en m\xED, que figurarme"
+          tag: A
+        - texto: "pod\xEDa cuanto bien yo deseaba,"
+          tag: B
+        - texto: dulce placer, aunque me importunaba
+          tag: B
+        - texto: que alguna vez llegaba a despertarme.
+          tag: A
+        - texto: "\xA1Oh sue\xF1o, cu\xE1nto m\xE1s leve y sabroso"
+          tag: C
+        - texto: me fueras si vinieras tan pesado
+          tag: D
+        - texto: "que asentaras en m\xED con m\xE1s reposo!"
+          tag: C
+        - texto: Durmiendo, en fin, fui bienaventurado,
+          tag: D
+        - texto: y es justo en la mentira ser dichoso
+          tag: C
+        - texto: quien siempre en la verdad fue desdichado.
+          tag: D
+        slots:
+        - etiqueta: "Repisa 1 \xB7 verso 1"
+          correcta: "Dulce so\xF1ar y dulce congojarme,"
+          opciones: []
+          grupo: 1
+        - etiqueta: "Repisa 1 \xB7 verso 2"
+          correcta: "cuando estaba so\xF1ando que so\xF1aba;"
+          opciones: []
+          grupo: 1
+        - etiqueta: "Repisa 1 \xB7 verso 3"
+          correcta: "dulce gozar con lo que me enga\xF1aba,"
+          opciones: []
+          grupo: 1
+        - etiqueta: "Repisa 1 \xB7 verso 4"
+          correcta: "si un poco m\xE1s durara el enga\xF1arme;"
+          opciones: []
+          grupo: 1
+        - etiqueta: "Repisa 2 \xB7 verso 5"
+          correcta: "dulce no estar en m\xED, que figurarme"
+          opciones: []
+          grupo: 2
+        - etiqueta: "Repisa 2 \xB7 verso 6"
+          correcta: "pod\xEDa cuanto bien yo deseaba,"
+          opciones: []
+          grupo: 2
+        - etiqueta: "Repisa 2 \xB7 verso 7"
+          correcta: dulce placer, aunque me importunaba
+          opciones: []
+          grupo: 2
+        - etiqueta: "Repisa 2 \xB7 verso 8"
+          correcta: que alguna vez llegaba a despertarme.
+          opciones: []
+          grupo: 2
+        - etiqueta: "Repisa 3 \xB7 verso 9"
+          correcta: "\xA1Oh sue\xF1o, cu\xE1nto m\xE1s leve y sabroso"
+          opciones: []
+          grupo: 3
+        - etiqueta: "Repisa 3 \xB7 verso 10"
+          correcta: me fueras si vinieras tan pesado
+          opciones: []
+          grupo: 3
+        - etiqueta: "Repisa 3 \xB7 verso 11"
+          correcta: "que asentaras en m\xED con m\xE1s reposo!"
+          opciones: []
+          grupo: 3
+        - etiqueta: "Repisa 4 \xB7 verso 12"
+          correcta: Durmiendo, en fin, fui bienaventurado,
+          opciones: []
+          grupo: 4
+        - etiqueta: "Repisa 4 \xB7 verso 13"
+          correcta: y es justo en la mentira ser dichoso
+          opciones: []
+          grupo: 4
+        - etiqueta: "Repisa 4 \xB7 verso 14"
+          correcta: quien siempre en la verdad fue desdichado.
+          opciones: []
+          grupo: 4
+        correcta: 
+        distractores: []
+        pistas: []
+      - id: funciones
+        tipo: asignar
+        titulo: "Funci\xF3n de cada estrofa"
+        enunciado: "Rotula cada repisa con la funci\xF3n de su estrofa."
+        plantilla: 
+        voz: 
+        usaInventario: 0
+        estante: 0
+        opciones:
+        - texto: Presenta el tema
+          tag: 
+        - texto: "Ampl\xEDa el tema"
+          tag: 
+        - texto: "Reflexi\xF3n"
+          tag: 
+        - texto: "Conclusi\xF3n"
+          tag: 
+        slots:
+        - etiqueta: "1\xB0 cuarteto"
+          correcta: Presenta el tema
+          opciones: []
+          grupo: 0
+        - etiqueta: "2\xB0 cuarteto"
+          correcta: "Ampl\xEDa el tema"
+          opciones: []
+          grupo: 0
+        - etiqueta: "1\xB0 terceto"
+          correcta: "Reflexi\xF3n"
+          opciones: []
+          grupo: 0
+        - etiqueta: "2\xB0 terceto"
+          correcta: "Conclusi\xF3n"
+          opciones: []
+          grupo: 0
+        correcta: 
+        distractores: []
+        pistas:
+        - "Tema \u2192 lo ampl\xEDa \u2192 reflexiona \u2192 concluye."
+        - "El 1\xB0 terceto empieza con \xAB\xA1Oh sue\xF1o\u2026!\xBB: es una reflexi\xF3n
+          emocionada."
+        - "\xABDurmiendo, en fin\u2026\xBB: \xABen fin\xBB anuncia la conclusi\xF3n."
+      - id: dulce
+        tipo: pregunta
+        titulo: "La repetici\xF3n"
+        enunciado: "\xBFPor qu\xE9 se repite \xABdulce\xBB en el soneto?"
+        plantilla: 
+        voz: 
+        usaInventario: 0
+        estante: 0
+        opciones: []
+        slots: []
+        correcta: "Para enfatizar el placer del sue\xF1o"
+        distractores:
+        - Por error del poeta
+        - Solo para rimar
+        pistas:
+        - "\xABDulce\xBB nunca est\xE1 al final del verso: no sirve para la rima."
+        - "La repetici\xF3n insiste en una idea."
+        - "\xBFQu\xE9 siente el hablante mientras sue\xF1a?"
+      - id: topico
+        tipo: pregunta
+        titulo: "El t\xF3pico"
+        enunciado: "\xBFQu\xE9 t\xF3pico expresa el soneto de Bosc\xE1n?"
+        plantilla: 
+        voz: 
+        usaInventario: 0
+        estante: 0
+        opciones: []
+        slots: []
+        correcta: Vita somnium
+        distractores:
+        - Carpe diem
+        - Contemptus mundi
+        - Ubi sunt?
+        pistas:
+        - "Revisa la ficha \xABT\xF3picos literarios\xBB."
+        - "El hablante es feliz so\xF1ando, aunque sea un enga\xF1o."
+        - "Es el mismo t\xF3pico de La vida es sue\xF1o."
+    - id: P7
+      zona: teatro
+      titulo: El libreto de Segismundo
+      fichas:
+      - vidaessueno
+      - conflicto
+      - discurso
+      - personajes
+      conceptTags:
+      - teatro
+      pistas:
+      - "Lo que va entre par\xE9ntesis orienta la puesta en escena."
+      - "En el aparte el personaje habla sin que los dem\xE1s lo oigan; en el mon\xF3logo
+        nadie le responde; en el di\xE1logo hay dos que conversan."
+      - "(Despierta.) es acotaci\xF3n. \xAB\xBFQu\xE9 es la vida? Un frenes\xED\u2026\xBB
+        es el mon\xF3logo de Segismundo."
+      pasos:
+      - id: libreto
+        tipo: asignar
+        titulo: Las cuatro hojas del libreto
+        enunciado: Pega la etiqueta correcta en cada hoja.
+        plantilla: 
+        voz: 
+        usaInventario: 0
+        estante: 0
+        opciones:
+        - texto: "Acotaci\xF3n"
+          tag: 
+        - texto: Aparte
+          tag: 
+        - texto: "Di\xE1logo"
+          tag: 
+        - texto: "Mon\xF3logo"
+          tag: 
+        slots:
+        - etiqueta: "Hoja 1 \u2014 \xAB(Despierta.)\xBB"
+          correcta: "Acotaci\xF3n"
+          opciones: []
+          grupo: 0
+        - etiqueta: "Hoja 2 \u2014 \xABCLOTALDO (Aparte.).\u2014 A m\xED me toca
+            llegar / a hacer la deshecha ahora.\xBB"
+          correcta: Aparte
+          opciones: []
+          grupo: 0
+        - etiqueta: "Hoja 3 \u2014 \xABCLOTALDO.\u2014 \xBFEs ya de despertar hora?
+            / SEGISMUNDO.\u2014 S\xED, hora es ya de despertar.\xBB"
+          correcta: "Di\xE1logo"
+          opciones: []
+          grupo: 0
+        - etiqueta: "Hoja 4 \u2014 \xABSEGISMUNDO.\u2014 \xBFQu\xE9 es la vida? Un
+            frenes\xED. / \xBFQu\xE9 es la vida? Una ilusi\xF3n, / una sombra, una
+            ficci\xF3n\u2026\xBB"
+          correcta: "Mon\xF3logo"
+          opciones: []
+          grupo: 0
+        correcta: 
+        distractores: []
+        pistas: []
+      - id: mascaras
+        tipo: asignar
+        titulo: "Los maniqu\xEDes"
+        enunciado: "Ponle a cada maniqu\xED la m\xE1scara de su personaje tipo."
+        plantilla: 
+        voz: 
+        usaInventario: 0
+        estante: 0
+        opciones:
+        - texto: "Gal\xE1n"
+          tag: 
+        - texto: Dama
+          tag: 
+        - texto: Gracioso
+          tag: 
+        - texto: Rey
+          tag: 
+        - texto: Villano
+          tag: 
+        slots:
+        - etiqueta: Segismundo
+          correcta: "Gal\xE1n"
+          opciones: []
+          grupo: 0
+        - etiqueta: Rosaura
+          correcta: Dama
+          opciones: []
+          grupo: 0
+        - etiqueta: "Clar\xEDn"
+          correcta: Gracioso
+          opciones: []
+          grupo: 0
+        - etiqueta: Basilio
+          correcta: Rey
+          opciones: []
+          grupo: 0
+        correcta: 
+        distractores: []
+        pistas:
+        - "Revisa la ficha \xABPersonajes tipo\xBB."
+        - "Basilio es el rey de Polonia; Clar\xEDn es el que hace re\xEDr."
+        - "Segismundo es el gal\xE1n y Rosaura la dama."
+      - id: conflicto
+        tipo: pregunta
+        titulo: El conflicto
+        enunciado: "\xBFCu\xE1l es el conflicto central de La vida es sue\xF1o?"
+        plantilla: 
+        voz: 
+        usaInventario: 0
+        estante: 0
+        opciones: []
+        slots: []
+        correcta: "Libre albedr\xEDo (Segismundo) vs. destino (Basilio)"
+        distractores:
+        - "El amor de Rosaura vs. la amistad de Clar\xEDn"
+        - La pobreza vs. la riqueza del reino
+        - Polonia vs. un reino enemigo
+        pistas:
+        - "Revisa la ficha \xABConflicto dram\xE1tico\xBB."
+        - "El or\xE1culo anuncia un destino; Segismundo decide c\xF3mo actuar."
+        - Al final, la voluntad vence al destino.
+    - id: JUICIO
+      zona: teatro
+      titulo: El Juicio del Espejo
+      fichas:
+      - conectores
+      conceptTags:
+      - argumentacion
+      - conectores
+      pistas:
+      - Si la idea que sigue se opone a la anterior, va un conector adversativo.
+      - "Si lo que sigue es un resultado, va un consecutivo. Para abrir una enumeraci\xF3n,
+        uno de ordenaci\xF3n."
+      - Elige el verso que responde directamente a la tesis de El Retrato.
+      pasos:
+      - id: r1
+        tipo: juicio
+        titulo: Ronda 1
+        enunciado: 
+        plantilla: Es cierto que la juventud es bella; {0}, Garcilaso advierte que
+          {1}; {2}, hay que vivirla, no congelarla.
+        voz: "La juventud es lo \xFAnico que vale: cong\xE9lala en una foto."
+        usaInventario: 0
+        estante: 0
+        opciones:
+        - texto: sin embargo
+          tag: adversativo
+        - texto: por lo tanto
+          tag: consecutivo
+        - texto: en primer lugar
+          tag: ordenacion
+        - texto: para empezar
+          tag: ordenacion
+        - texto: en cambio
+          tag: adversativo
+        - texto: "as\xED pues"
+          tag: consecutivo
+        - texto: "\xABtodo lo mudar\xE1 la edad ligera\xBB"
+          tag: evidencia
+        - texto: "\xABhace a Dios ser mi cautivo\xBB"
+          tag: irrelevante
+        - texto: "\xABdulce gozar con lo que me enga\xF1aba\xBB"
+          tag: irrelevante
+        slots:
+        - etiqueta: Conector 1
+          correcta: sin embargo
+          opciones:
+          - sin embargo
+          - por lo tanto
+          - en primer lugar
+          grupo: 0
+        - etiqueta: Evidencia (verso del Cuaderno)
+          correcta: "\xABtodo lo mudar\xE1 la edad ligera\xBB"
+          opciones:
+          - "\xABtodo lo mudar\xE1 la edad ligera\xBB"
+          - "\xABhace a Dios ser mi cautivo\xBB"
+          - "\xABdulce gozar con lo que me enga\xF1aba\xBB"
+          grupo: 0
+        - etiqueta: Conector 2
+          correcta: por lo tanto
+          opciones:
+          - en cambio
+          - por lo tanto
+          - para empezar
+          grupo: 0
+        correcta: 
+        distractores: []
+        pistas: []
+      - id: r2
+        tipo: juicio
+        titulo: Ronda 2
+        enunciado: 
+        plantilla: '{0}, Sor Juana dice que el retrato es {1}; {2}, la imagen solo
+          aparenta vencer al tiempo.'
+        voz: Un retrato perfecto vence al tiempo y al olvido.
+        usaInventario: 0
+        estante: 0
+        opciones:
+        - texto: en primer lugar
+          tag: ordenacion
+        - texto: sin embargo
+          tag: adversativo
+        - texto: por ende
+          tag: consecutivo
+        - texto: en consecuencia
+          tag: consecutivo
+        - texto: no obstante
+          tag: adversativo
+        - texto: finalmente
+          tag: ordenacion
+        - texto: "\xABun resguardo in\xFAtil para el hado\xBB"
+          tag: evidencia
+        - texto: "\xABcon clara luz la tempestad serena\xBB"
+          tag: irrelevante
+        - texto: "\xABMas \xA1ay de m\xED!, \xBFd\xF3nde estoy?\xBB"
+          tag: irrelevante
+        slots:
+        - etiqueta: Conector 1
+          correcta: en primer lugar
+          opciones:
+          - en primer lugar
+          - sin embargo
+          - por ende
+          grupo: 0
+        - etiqueta: Evidencia (verso del Cuaderno)
+          correcta: "\xABun resguardo in\xFAtil para el hado\xBB"
+          opciones:
+          - "\xABcon clara luz la tempestad serena\xBB"
+          - "\xABun resguardo in\xFAtil para el hado\xBB"
+          - "\xABMas \xA1ay de m\xED!, \xBFd\xF3nde estoy?\xBB"
+          grupo: 0
+        - etiqueta: Conector 2
+          correcta: en consecuencia
+          opciones:
+          - no obstante
+          - finalmente
+          - en consecuencia
+          grupo: 0
+        correcta: 
+        distractores: []
+        pistas: []
+      - id: r3
+        tipo: juicio
+        titulo: Ronda 3
+        enunciado: 
+        plantilla: "Puede que la vida sea sue\xF1o; {0}, como dice Clotaldo, {1};
+          {2}, lo que hacemos importa aunque todo sea apariencia."
+        voz: Es justo en la mentira ser dichoso.
+        usaInventario: 0
+        estante: 0
+        opciones:
+        - texto: no obstante
+          tag: adversativo
+        - texto: en consecuencia
+          tag: consecutivo
+        - texto: "a continuaci\xF3n"
+          tag: ordenacion
+        - texto: por ende
+          tag: consecutivo
+        - texto: por el contrario
+          tag: adversativo
+        - texto: en primer lugar
+          tag: ordenacion
+        - texto: "\xABaun en sue\xF1os / no se pierde el hacer bien\xBB"
+          tag: evidencia
+        - texto: "\xABel viento mueve, esparce y desordena\xBB"
+          tag: irrelevante
+        - texto: "\xABes justo en la mentira ser dichoso\xBB"
+          tag: irrelevante
+        slots:
+        - etiqueta: Conector 1
+          correcta: no obstante
+          opciones:
+          - en consecuencia
+          - no obstante
+          - "a continuaci\xF3n"
+          grupo: 0
+        - etiqueta: Evidencia (verso del Cuaderno)
+          correcta: "\xABaun en sue\xF1os / no se pierde el hacer bien\xBB"
+          opciones:
+          - "\xABel viento mueve, esparce y desordena\xBB"
+          - "\xABes justo en la mentira ser dichoso\xBB"
+          - "\xABaun en sue\xF1os / no se pierde el hacer bien\xBB"
+          grupo: 0
+        - etiqueta: Conector 2
+          correcta: por ende
+          opciones:
+          - por ende
+          - por el contrario
+          - en primer lugar
+          grupo: 0
+        correcta: 
+        distractores: []
+        pistas: []
+    - id: TUVERSO
+      zona: teatro
+      titulo: Tu verso
+      fichas:
+      - soneto
+      conceptTags:
+      - rima
+      - escritura
+      pistas:
+      - En una rima abba, el verso 1 rima con el 4 y el verso 2 con el 3.
+      - "Los versos terminados en -ado riman entre s\xED; los terminados en -ida,
+        tambi\xE9n."
+      - 'Prueba: versos 1 y 4 en -ado; versos 2 y 3 en -ida.'
+      pasos:
+      - id: cuarteto
+        tipo: abba
+        titulo: Tu verso
+        enunciado: "Arma una estrofa de cuatro versos sobre c\xF3mo percibes la vida,
+          con rima <b>abba</b>."
+        plantilla: 
+        voz: 
+        usaInventario: 0
+        estante: 0
+        opciones:
+        - texto: No quiero un rostro pintado
+          tag: ado
+        - texto: el reloj sigue a mi lado
+          tag: ado
+        - texto: y el ayer ya se ha marchado
+          tag: ado
+        - texto: prefiero vivir mi vida
+          tag: ida
+        - texto: con la luz que no se olvida
+          tag: ida
+        - texto: aunque el filtro me lo pida
+          tag: ida
+        - texto: "quiero quedarme en el sue\xF1o"
+          tag: 
+        - texto: todo lo cambia el tiempo
+          tag: 
+        slots:
+        - etiqueta: Verso 1 (a)
+          correcta: 
+          opciones: []
+          grupo: 0
+        - etiqueta: Verso 2 (b)
+          correcta: 
+          opciones: []
+          grupo: 0
+        - etiqueta: Verso 3 (b)
+          correcta: 
+          opciones: []
+          grupo: 0
+        - etiqueta: Verso 4 (a)
+          correcta: 
+          opciones: []
+          grupo: 0
+        correcta: 
+        distractores: []
+        pistas: []
+  dialogos:
+    dialogos:
+    - id: diag_intro
+      lineas:
+      - quien: Repasa+
+        texto: "Ma\xF1ana es la prueba de Siglo de Oro. Cinco preguntas r\xE1pidas
+          para ver c\xF3mo vas. No lleva nota."
+    - id: diag_fin
+      lineas:
+      - quien: Ale
+        texto: "Ya, suficiente repaso. Un ratito m\xE1s de ensayo frente al espejo
+          y me voy\u2026 Voy a probar el filtro \xABDorado\xBB."
+      - quien: 
+        texto: "Ale apoya la cabeza en el tocador del camar\xEDn y se queda raja."
+    - id: camarin_despertar
+      lineas:
+      - quien: Ale
+        texto: "Pucha\u2026 me qued\xE9 raja ensayando el mon\xF3logo."
+      - quien: Ale
+        texto: "\xBF23:59? El reloj no se mueve. Y afuera\u2026 \xBFeso es camanchaca?
+          \xBFAdentro del liceo?"
+      - quien: El Retrato
+        texto: "Por fin despiertas. \xBFO no? M\xEDrame bien: soy tu mejor versi\xF3n.
+          Con filtro Dorado."
+      - quien: Ale
+        texto: "Mi reflejo no me est\xE1 imitando. Esto no puede estar pasando."
+      - quien: El Retrato
+        texto: "Qu\xE9date conmigo. Aqu\xED nadie envejece, nadie se esfuerza, todo
+          brilla. Una tierra de Jauja\u2026 con likes."
+      - quien: El Retrato
+        texto: "Aunque, claro, la profe In\xE9s dej\xF3 sus notitas pegadas en el
+          espejo. Qu\xE9 fome."
+    - id: camarin_listo
+      lineas:
+      - quien: Ale
+        texto: "Si todo esto es un enga\xF1o, me toca desenga\xF1arme. Leer el liceo
+          como un poema barroco."
+      - quien: Ale
+        texto: "Y la que habla en mi cabeza\u2026 \xBFsoy yo, o es una voz que invent\xE9?
+          Ya, al patio."
+    - id: patio_intro
+      lineas:
+      - quien: Don Ruperto
+        texto: "\xA1Ale! \xBFQu\xE9 hace a esta hora en el liceo? Bueno, yo tampoco
+          s\xE9 qu\xE9 hago aqu\xED\u2026 la niebla entr\xF3 como Pedro por su casa."
+      - quien: Don Ruperto
+        texto: "Mire, el invernadero tiene un candado de rosas. La profe In\xE9s
+          dej\xF3 una nota al lado. Dicen que esas rosas florecen justo cuando suena
+          la campana."
+    - id: patio_candado_ok
+      lineas:
+      - quien: Don Ruperto
+        texto: "\xA1Se abri\xF3! Ahora, ojo con la campana: cuando cambia el mundo,
+          las rosas florecen un ratito no m\xE1s."
+      - quien: Don Ruperto
+        texto: 'Hay que cortar una en el momento justo. Si se le pasa, no importa:
+          la campana vuelve a sonar.'
+    - id: patio_rosa_ok
+      lineas:
+      - quien: Ale
+        texto: "La cort\xE9 justo a tiempo. Coged de vuestra alegre primavera\u2026
+          Carpe diem, supongo."
+      - quien: Don Ruperto
+        texto: "Gu\xE1rdela bien. Y vaya a ver las radios del kiosco: hace rato que
+          suenan solas."
+    - id: radios_ok
+      lineas:
+      - quien: Don Ruperto
+        texto: "\xBFEscuch\xF3 eso? Se abri\xF3 la puerta de la galer\xEDa. Yo me
+          quedo cuidando el patio."
+    - id: galeria_intro
+      lineas:
+      - quien: Ale
+        texto: "La galer\xEDa del liceo. Hay una mesa armada como un cuadro antiguo\u2026
+          y algo tapado con un velo al fondo."
+      - quien: Ale
+        texto: "Y cuatro retratos m\xEDos, cada uno peor que el anterior. Qu\xE9
+          manera de arruinar una selfie."
+    - id: galeria_velo
+      lineas:
+      - quien: 
+        texto: 'Ale levanta el velo. Debajo no hay nadie: solo un esqueleto con su
+          misma ropa.'
+      - quien: Esqueleto
+        texto: "As\xED, Cipriano, son / todas las glorias del mundo."
+      - quien: Ale
+        texto: "Eso es lo que queda cuando se apaga el filtro. Lo mismo que le pas\xF3
+          a Cipriano en El m\xE1gico prodigioso."
+    - id: biblioteca_intro
+      lineas:
+      - quien: Ale
+        texto: "La biblioteca. Los libros est\xE1n en el suelo y hay un estante de
+          cuatro repisas: cuatro, cuatro, tres y tres. Como un soneto."
+    - id: teatro_intro
+      lineas:
+      - quien: Ale
+        texto: "El teatro. Aqu\xED empez\xF3 todo. El libreto de Segismundo est\xE1
+          desarmado y los maniqu\xEDes no tienen cara."
+    - id: juicio_intro
+      lineas:
+      - quien: El Retrato
+        texto: "Le\xEDste harto esta noche, Ale. Ahora conv\xE9nceme: \xBFpara qu\xE9
+          despertar?"
+      - quien: El Retrato
+        texto: "Tres tesis. Resp\xF3ndeme con un conector, un verso de tu Cuaderno
+          y otro conector. Si no puedes, te quedas aqu\xED, brillando conmigo."
+    - id: juicio_fin
+      lineas:
+      - quien: El Retrato
+        texto: "\u2026Tus palabras pesan m\xE1s que mi brillo."
+      - quien: El Retrato
+        texto: "Antes de elegir, escribe algo tuyo. Un verso que no pase por ning\xFAn
+          filtro."
+    - id: final_eleccion
+      lineas:
+      - quien: El Retrato
+        texto: "\xDAltima pregunta, y esta no tiene respuesta correcta: \xBFdespiertas
+          o te quedas?"
+    - id: final_despertar
+      lineas:
+      - quien: 
+        texto: "07:59. Una llave gira en la puerta del teatro. La niebla se retira
+          como un tel\xF3n."
+      - quien: Don Ruperto
+        texto: "\xBFAle? \xBFPas\xF3 la noche aqu\xED? Venga, que hoy es la prueba.
+          \xBFMe dice el mon\xF3logo, ya que est\xE1 en el escenario?"
+      - quien: Ale
+        texto: "\xBFQu\xE9 es la vida? Un frenes\xED. / \xBFQu\xE9 es la vida? Una
+          ilusi\xF3n, / una sombra, una ficci\xF3n, / y el mayor bien es peque\xF1o;"
+      - quien: Ale
+        texto: "que toda la vida es sue\xF1o, / y los sue\xF1os, sue\xF1os son."
+    - id: final_foto
+      lineas:
+      - quien: 
+        texto: "En el celular queda una foto de esta ma\xF1ana, sin filtro. El dedo
+          de Ale se detiene sobre \xABPublicar\xBB."
+    - id: final_sonar
+      lineas:
+      - quien: 
+        texto: El Mundo Dorado se cierra como un retablo. Todo brilla, nada pesa.
+      - quien: 
+        texto: "En la galer\xEDa cuelga un retrato nuevo: Ale, sonriendo para siempre."
+      - quien: "Juan Bosc\xE1n"
+        texto: Durmiendo, en fin, fui bienaventurado, / y es justo en la mentira
+          ser dichoso / quien siempre en la verdad fue desdichado.
+    - id: ruperto_pistas
+      lineas:
+      - quien: Don Ruperto
+        texto: "Ale, le dej\xE9 una pista en el celular, en \xABPensar\xBB. A veces
+          una ayudita no le hace mal a nadie."
+    - id: ruperto_guiado
+      lineas:
+      - quien: Don Ruperto
+        texto: "Ale, se nos est\xE1 haciendo tarde. \xBFQuiere que le muestre el
+          camino?"
+    - id: ruperto_teatro
+      lineas:
+      - quien: Don Ruperto
+        texto: "\xA1Ale! Ya casi amanece. Vamos directo al teatro, que all\xE1 se
+          resuelve todo."
+    - id: salida_intro
+      lineas:
+      - quien: Repasa+
+        texto: "Buenos d\xEDas. Ocho preguntas finales. Las \xFAltimas tres son sobre
+          un poema que no has le\xEDdo: l\xE9elo con calma."
+    - id: notif_patio
+      lineas:
+      - quien: El Retrato
+        texto: "Vive hoy, ma\xF1ana hay nieve. #CarpeDiem #SinFiltroNo"
+    - id: notif_galeria
+      lineas:
+      - quien: El Retrato
+        texto: "Este retrato no envejece nunca. \xBFPara qu\xE9 quieres arrugas?
+          #Dorado"
+    - id: notif_biblioteca
+      lineas:
+      - quien: El Retrato
+        texto: "Dulce so\xF1ar\u2026 \xBFy si no despiertas? #VitaSomnium"
+    - id: notif_teatro
+      lineas:
+      - quien: El Retrato
+        texto: Te espero en el escenario. Trae tus mejores versos. #ElJuicio
+  evaluacion:
+    diagnostico:
+    - id: D1
+      enunciado: "\xBFQui\xE9n habla en un poema?"
+      correcta: "El hablante l\xEDrico, una voz ficticia"
+      distractores:
+      - Siempre el autor
+      - El narrador
+      - El lector
+      concepto: hablante
+      contexto: 
+    - id: D2
+      enunciado: "En \xABla rosa es la vida: bella y breve\xBB, la palabra \xABrosa\xBB
+        se usa en sentido\u2026"
+      correcta: Connotativo
+      distractores:
+      - Denotativo
+      - Literal
+      - "Cient\xEDfico"
+      concepto: connotacion
+      contexto: 
+    - id: D3
+      enunciado: "Un soneto tiene\u2026"
+      correcta: '14 versos: dos cuartetos y dos tercetos'
+      distractores:
+      - 10 versos
+      - Cuatro estrofas de cuatro versos
+      - Versos libres sin rima
+      concepto: soneto
+      contexto: 
+    - id: D4
+      enunciado: "\xABCarpe diem\xBB significa\u2026"
+      correcta: Aprovecha el momento
+      distractores:
+      - Desprecio del mundo
+      - "La vida es sue\xF1o"
+      - "\xBFD\xF3nde est\xE1n?"
+      concepto: topicos
+      contexto: 
+    - id: D5
+      enunciado: "En el arte del Siglo de Oro, una calavera junto a un reloj simboliza\u2026"
+      correcta: La muerte y lo pasajero de la vida
+      distractores:
+      - La riqueza
+      - La ciencia
+      - El amor
+      concepto: simbolos
+      contexto: 
+    salida:
+    - id: S1
+      enunciado: "En \xABVivo sin vivir en m\xED\xBB, quien dice \xABque muero porque
+        no muero\xBB es\u2026"
+      correcta: "El hablante l\xEDrico"
+      distractores:
+      - Santa Teresa contando un hecho real
+      - Un personaje de teatro
+      - El narrador
+      concepto: hablante
+      contexto: 
+    - id: S2
+      enunciado: "En \xABA una rosa\xBB, \xABla robusta mano\xBB connota\u2026"
+      correcta: La muerte
+      distractores:
+      - Un jardinero
+      - "La fuerza f\xEDsica"
+      - El trabajo
+      concepto: connotacion
+      contexto: 
+    - id: S3
+      enunciado: "Los cuartetos de un soneto cl\xE1sico riman\u2026"
+      correcta: ABBA ABBA
+      distractores:
+      - ABAB CDCD
+      - AABB
+      - No riman
+      concepto: soneto
+      contexto: 
+    - id: S4
+      enunciado: "\xAB\xBFQu\xE9 es la vida? Una ilusi\xF3n, / una sombra, una ficci\xF3n\xBB
+        expresa el t\xF3pico\u2026"
+      correcta: Vita somnium
+      distractores:
+      - Carpe diem
+      - Ubi sunt?
+      - Contemptus mundi
+      concepto: topicos
+      contexto: 
+    - id: S5
+      enunciado: "En un cuadro vanitas, el reloj representa\u2026"
+      correcta: La fugacidad del tiempo y de la vida
+      distractores:
+      - La paciencia
+      - La riqueza
+      - El orden
+      concepto: simbolos
+      contexto: 
+    - id: S6
+      enunciado: "Lee los cuartetos. Los dos primeros versos se asocian al t\xF3pico\u2026"
+      correcta: Tempus irreparabile fugit
+      distractores:
+      - Carpe diem
+      - Tierra de Jauja
+      - Ubi sunt?
+      concepto: transferencia
+      contexto: quevedo_fue
+    - id: S7
+      enunciado: "Lee el poema completo. La actitud del hablante es\u2026"
+      correcta: "Carm\xEDnica: expresa su mundo interior"
+      distractores:
+      - Enunciativa
+      - "Apostr\xF3fica"
+      concepto: transferencia
+      contexto: quevedo_fue
+    - id: S8
+      enunciado: "\xBFQu\xE9 visi\xF3n del Barroco comparte el poema?"
+      correcta: "La vida es breve y el tiempo lleva a la muerte (desenga\xF1o)"
+      distractores:
+      - La vida es una fiesta sin fin
+      - El amor lo vence todo
+      - "La naturaleza es arm\xF3nica y eterna"
+      concepto: transferencia
+      contexto: quevedo_fue
+    poemaSalida:
+      id: quevedo_fue
+      autor: Francisco de Quevedo
+      titulo: "Fue sue\xF1o ayer, ma\xF1ana ser\xE1 tierra\u2026"
+      pagina: 112
+      rima: ABBA ABBA CDC DCD
+      glosario: "presumir = suponer; sumo = m\xE1ximo; despe\xF1ado = arrojado al
+        abismo; azada = herramienta para cavar; jornal = paga."
+      versos:
+      - "\xA1Fue sue\xF1o ayer, ma\xF1ana ser\xE1 tierra!:"
+      - "poco antes nada, y poco despu\xE9s humo,"
+      - "\xA1y destino ambiciones! \xA1y presumo,"
+      - apenas junto al cerco que me cierra!
+      - 
+      - Breve combate de importuna guerra,
+      - en mi defensa, soy peligro sumo;
+      - y mientras con mis armas me consumo,
+      - menos me hospeda el cuerpo, que me entierra.
+      - 
+      - "Ya no es ayer; ma\xF1ana no ha llegado;"
+      - hoy pasa, y es, y fue, con movimiento
+      - "que a la muerte me lleva despe\xF1ado."
+      - 
+      - Azadas son la hora y el momento
+      - que, a jornal de mi pena y mi cuidado,
+      - cavan en mi vivir mi monumento.
   sesion:
     pinDocente: 1234
     toleranciaAtrasoMin: 2
     umbralPistas: 1
     umbralGuiado: 1.3
-    zonas: []
-    modos: []
+    zonas:
+    - id: diagnostico
+      nombre: "Diagn\xF3stico"
+      escena: Arranque
+      opcional: 0
+    - id: camarin
+      nombre: "Camar\xEDn"
+      escena: Camarin
+      opcional: 0
+    - id: patio
+      nombre: Patio de las rosas
+      escena: Patio
+      opcional: 0
+    - id: radios
+      nombre: Las tres radios
+      escena: Patio
+      opcional: 0
+    - id: capilla
+      nombre: Capilla
+      escena: Capilla
+      opcional: 1
+    - id: galeria
+      nombre: "Galer\xEDa"
+      escena: Galeria
+      opcional: 0
+    - id: biblioteca
+      nombre: Biblioteca
+      escena: Biblioteca
+      opcional: 0
+    - id: torre
+      nombre: Torre del reloj
+      escena: Torre
+      opcional: 1
+    - id: teatro
+      nombre: Teatro
+      escena: Teatro
+      opcional: 0
+    - id: salida
+      nombre: Prueba de salida
+      escena: Teatro
+      opcional: 0
+    modos:
+    - minutos: 45
+      envioTeatroMin: 29
+      salidaMin: 37
+      disponible: 1
+      zonas:
+      - zona: diagnostico
+        minutos: 2
+      - zona: camarin
+        minutos: 2
+      - zona: patio
+        minutos: 7
+      - zona: radios
+        minutos: 3
+      - zona: galeria
+        minutos: 8
+      - zona: biblioteca
+        minutos: 7
+      - zona: teatro
+        minutos: 8
+      - zona: salida
+        minutos: 3
+    - minutos: 90
+      envioTeatroMin: 47
+      salidaMin: 56
+      disponible: 0
+      zonas:
+      - zona: diagnostico
+        minutos: 3
+      - zona: camarin
+        minutos: 3
+      - zona: patio
+        minutos: 8
+      - zona: radios
+        minutos: 3
+      - zona: capilla
+        minutos: 7
+      - zona: galeria
+        minutos: 9
+      - zona: biblioteca
+        minutos: 8
+      - zona: torre
+        minutos: 6
+      - zona: teatro
+        minutos: 9
+      - zona: salida
+        minutos: 4

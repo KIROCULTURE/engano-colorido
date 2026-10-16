@@ -1,0 +1,94 @@
+{
+  "dialogos": [
+    { "id": "diag_intro", "lineas": [
+      { "quien": "Repasa+", "texto": "Mañana es la prueba de Siglo de Oro. Cinco preguntas rápidas para ver cómo vas. No lleva nota." }
+    ]},
+    { "id": "diag_fin", "lineas": [
+      { "quien": "Ale", "texto": "Ya, suficiente repaso. Un ratito más de ensayo frente al espejo y me voy… Voy a probar el filtro «Dorado»." },
+      { "quien": "", "texto": "Ale apoya la cabeza en el tocador del camarín y se queda raja." }
+    ]},
+    { "id": "camarin_despertar", "lineas": [
+      { "quien": "Ale", "texto": "Pucha… me quedé raja ensayando el monólogo." },
+      { "quien": "Ale", "texto": "¿23:59? El reloj no se mueve. Y afuera… ¿eso es camanchaca? ¿Adentro del liceo?" },
+      { "quien": "El Retrato", "texto": "Por fin despiertas. ¿O no? Mírame bien: soy tu mejor versión. Con filtro Dorado." },
+      { "quien": "Ale", "texto": "Mi reflejo no me está imitando. Esto no puede estar pasando." },
+      { "quien": "El Retrato", "texto": "Quédate conmigo. Aquí nadie envejece, nadie se esfuerza, todo brilla. Una tierra de Jauja… con likes." },
+      { "quien": "El Retrato", "texto": "Aunque, claro, la profe Inés dejó sus notitas pegadas en el espejo. Qué fome." }
+    ]},
+    { "id": "camarin_listo", "lineas": [
+      { "quien": "Ale", "texto": "Si todo esto es un engaño, me toca desengañarme. Leer el liceo como un poema barroco." },
+      { "quien": "Ale", "texto": "Y la que habla en mi cabeza… ¿soy yo, o es una voz que inventé? Ya, al patio." }
+    ]},
+    { "id": "patio_intro", "lineas": [
+      { "quien": "Don Ruperto", "texto": "¡Ale! ¿Qué hace a esta hora en el liceo? Bueno, yo tampoco sé qué hago aquí… la niebla entró como Pedro por su casa." },
+      { "quien": "Don Ruperto", "texto": "Mire, el invernadero tiene un candado de rosas. La profe Inés dejó una nota al lado. Dicen que esas rosas florecen justo cuando suena la campana." }
+    ]},
+    { "id": "patio_candado_ok", "lineas": [
+      { "quien": "Don Ruperto", "texto": "¡Se abrió! Ahora, ojo con la campana: cuando cambia el mundo, las rosas florecen un ratito no más." },
+      { "quien": "Don Ruperto", "texto": "Hay que cortar una en el momento justo. Si se le pasa, no importa: la campana vuelve a sonar." }
+    ]},
+    { "id": "patio_rosa_ok", "lineas": [
+      { "quien": "Ale", "texto": "La corté justo a tiempo. Coged de vuestra alegre primavera… Carpe diem, supongo." },
+      { "quien": "Don Ruperto", "texto": "Guárdela bien. Y vaya a ver las radios del kiosco: hace rato que suenan solas." }
+    ]},
+    { "id": "radios_ok", "lineas": [
+      { "quien": "Don Ruperto", "texto": "¿Escuchó eso? Se abrió la puerta de la galería. Yo me quedo cuidando el patio." }
+    ]},
+    { "id": "galeria_intro", "lineas": [
+      { "quien": "Ale", "texto": "La galería del liceo. Hay una mesa armada como un cuadro antiguo… y algo tapado con un velo al fondo." },
+      { "quien": "Ale", "texto": "Y cuatro retratos míos, cada uno peor que el anterior. Qué manera de arruinar una selfie." }
+    ]},
+    { "id": "galeria_velo", "lineas": [
+      { "quien": "", "texto": "Ale levanta el velo. Debajo no hay nadie: solo un esqueleto con su misma ropa." },
+      { "quien": "Esqueleto", "texto": "Así, Cipriano, son / todas las glorias del mundo." },
+      { "quien": "Ale", "texto": "Eso es lo que queda cuando se apaga el filtro. Lo mismo que le pasó a Cipriano en El mágico prodigioso." }
+    ]},
+    { "id": "biblioteca_intro", "lineas": [
+      { "quien": "Ale", "texto": "La biblioteca. Los libros están en el suelo y hay un estante de cuatro repisas: cuatro, cuatro, tres y tres. Como un soneto." }
+    ]},
+    { "id": "teatro_intro", "lineas": [
+      { "quien": "Ale", "texto": "El teatro. Aquí empezó todo. El libreto de Segismundo está desarmado y los maniquíes no tienen cara." }
+    ]},
+    { "id": "juicio_intro", "lineas": [
+      { "quien": "El Retrato", "texto": "Leíste harto esta noche, Ale. Ahora convénceme: ¿para qué despertar?" },
+      { "quien": "El Retrato", "texto": "Tres tesis. Respóndeme con un conector, un verso de tu Cuaderno y otro conector. Si no puedes, te quedas aquí, brillando conmigo." }
+    ]},
+    { "id": "juicio_fin", "lineas": [
+      { "quien": "El Retrato", "texto": "…Tus palabras pesan más que mi brillo." },
+      { "quien": "El Retrato", "texto": "Antes de elegir, escribe algo tuyo. Un verso que no pase por ningún filtro." }
+    ]},
+    { "id": "final_eleccion", "lineas": [
+      { "quien": "El Retrato", "texto": "Última pregunta, y esta no tiene respuesta correcta: ¿despiertas o te quedas?" }
+    ]},
+    { "id": "final_despertar", "lineas": [
+      { "quien": "", "texto": "07:59. Una llave gira en la puerta del teatro. La niebla se retira como un telón." },
+      { "quien": "Don Ruperto", "texto": "¿Ale? ¿Pasó la noche aquí? Venga, que hoy es la prueba. ¿Me dice el monólogo, ya que está en el escenario?" },
+      { "quien": "Ale", "texto": "¿Qué es la vida? Un frenesí. / ¿Qué es la vida? Una ilusión, / una sombra, una ficción, / y el mayor bien es pequeño;" },
+      { "quien": "Ale", "texto": "que toda la vida es sueño, / y los sueños, sueños son." }
+    ]},
+    { "id": "final_foto", "lineas": [
+      { "quien": "", "texto": "En el celular queda una foto de esta mañana, sin filtro. El dedo de Ale se detiene sobre «Publicar»." }
+    ]},
+    { "id": "final_sonar", "lineas": [
+      { "quien": "", "texto": "El Mundo Dorado se cierra como un retablo. Todo brilla, nada pesa." },
+      { "quien": "", "texto": "En la galería cuelga un retrato nuevo: Ale, sonriendo para siempre." },
+      { "quien": "Juan Boscán", "texto": "Durmiendo, en fin, fui bienaventurado, / y es justo en la mentira ser dichoso / quien siempre en la verdad fue desdichado." }
+    ]},
+    { "id": "ruperto_pistas", "lineas": [
+      { "quien": "Don Ruperto", "texto": "Ale, le dejé una pista en el celular, en «Pensar». A veces una ayudita no le hace mal a nadie." }
+    ]},
+    { "id": "ruperto_guiado", "lineas": [
+      { "quien": "Don Ruperto", "texto": "Ale, se nos está haciendo tarde. ¿Quiere que le muestre el camino?" }
+    ]},
+    { "id": "ruperto_teatro", "lineas": [
+      { "quien": "Don Ruperto", "texto": "¡Ale! Ya casi amanece. Vamos directo al teatro, que allá se resuelve todo." }
+    ]},
+    { "id": "salida_intro", "lineas": [
+      { "quien": "Repasa+", "texto": "Buenos días. Ocho preguntas finales. Las últimas tres son sobre un poema que no has leído: léelo con calma." }
+    ]},
+    { "id": "notif_patio", "lineas": [ { "quien": "El Retrato", "texto": "Vive hoy, mañana hay nieve. #CarpeDiem #SinFiltroNo" } ] },
+    { "id": "notif_galeria", "lineas": [ { "quien": "El Retrato", "texto": "Este retrato no envejece nunca. ¿Para qué quieres arrugas? #Dorado" } ] },
+    { "id": "notif_biblioteca", "lineas": [ { "quien": "El Retrato", "texto": "Dulce soñar… ¿y si no despiertas? #VitaSomnium" } ] },
+    { "id": "notif_teatro", "lineas": [ { "quien": "El Retrato", "texto": "Te espero en el escenario. Trae tus mejores versos. #ElJuicio" } ] }
+  ]
+}

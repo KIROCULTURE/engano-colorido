@@ -1,0 +1,11 @@
+{
+  "topicos": [
+    { "id": "tempus", "nombre": "Tempus irreparabile fugit", "idea": "El tiempo se escapa sin remedio; la muerte es irremediable.", "ejemplo": "Jorge Manrique, Coplas" },
+    { "id": "carpe", "nombre": "Carpe diem", "idea": "Aprovecha el momento, sobre todo la juventud.", "ejemplo": "Garcilaso, Soneto XXIII" },
+    { "id": "contemptus", "nombre": "Contemptus mundi", "idea": "Desprecio de lo que ofrece el mundo.", "ejemplo": "Santa Teresa, «Vivo sin vivir en mí»" },
+    { "id": "vanitas", "nombre": "Vanitas vanitatum", "idea": "Las cosas son engañosas; hay que dejarlas por otras más elevadas.", "ejemplo": "Sor Juana, «Este, que ves…»" },
+    { "id": "somnium", "nombre": "Vita somnium", "idea": "La vida como experiencia irreal, ficción pasajera.", "ejemplo": "Calderón, La vida es sueño" },
+    { "id": "ubisunt", "nombre": "Ubi sunt?", "idea": "Pregunta por personas o realidades desaparecidas.", "ejemplo": "Garcilaso, Égloga I" },
+    { "id": "jauja", "nombre": "Tierra de Jauja", "idea": "Lugar ideal de abundancia donde todo es posible sin esfuerzo.", "ejemplo": "Lope de Rueda, La tierra de Jauja" }
+  ]
+}
