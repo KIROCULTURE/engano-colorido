@@ -157,7 +157,7 @@ namespace EnganoColorido.EditorTools
             Lamp(t, new Vector3(-4f, 0, -12f)); Lamp(t, new Vector3(5f, 0, -6f)); Lamp(t, new Vector3(-8f, 0, 10f)); Lamp(t, new Vector3(10f, 0, 12f));
             Box("Banca", t, new Vector3(-2f, 0.25f, -8f), new Vector3(2f, 0.5f, 0.5f), Madera);
             Box("Banca", t, new Vector3(4f, 0.25f, 8f), new Vector3(2f, 0.5f, 0.5f), Madera);
-            DoradoDecor(t, new Vector3(-6f, 0, -1.5f), 180, "CARPE DIEM");
+            DoradoDecor(t, new Vector3(-6f, 0, -1.5f), 0, "CARPE DIEM");
 
             var zone = AddZone("Patio de las rosas", "patio_intro", "notif_patio", "patio", "radios");
             zone.tasks = new ZoneTask[] { p1, h };
@@ -248,6 +248,7 @@ namespace EnganoColorido.EditorTools
 
             // P4-C · La figura velada (El mágico prodigioso)
             var figura = Group("FiguraVelada", t, new Vector3(13.6f, 0, 0));
+            figura.transform.localEulerAngles = new Vector3(0, -90, 0);
             var ft = figura.transform;
             var velo = Group("Velo", ft);
             Prim(PrimitiveType.Cylinder, "Manto", velo.transform, new Vector3(0, 0.95f, 0), new Vector3(0.6f, 0.95f, 0.6f), Papel, false);
@@ -310,7 +311,7 @@ namespace EnganoColorido.EditorTools
             for (int r = 0; r < 4; r++)
             {
                 Box("Repisa", et, new Vector3(0, 0.55f + r * 0.7f, 0), new Vector3(3.2f, 0.06f, 0.4f), Madera);
-                Text3D("Repisa " + (r + 1), et, new Vector3(-1.15f, 0.47f + r * 0.7f, -0.22f), Vector3.zero, 1.3f, new Color(0.95f, 0.85f, 0.6f), 1.2f);
+                Text3D("Repisa " + (r + 1), et, new Vector3(-1.05f, 0.72f + r * 0.7f, -0.22f), Vector3.zero, 1.3f, new Color(0.95f, 0.85f, 0.6f), 0.9f);
             }
             var col = estante.AddComponent<BoxCollider>(); col.size = new Vector3(3.4f, 3.2f, 0.6f); col.center = new Vector3(0, 1.6f, 0);
             var ordenados = Group("LibrosOrdenados", et);
@@ -319,7 +320,7 @@ namespace EnganoColorido.EditorTools
             int n = 0;
             for (int r = 0; r < 4; r++)
                 for (int b = 0; b < porRepisa[r]; b++, n++)
-                    Box("Libro" + (n + 1), ordenados.transform, new Vector3(-0.6f + b * 0.4f, 0.85f + r * 0.7f, 0), new Vector3(0.3f, 0.55f, 0.3f), lomos[rimas[n] - 'A'], false);
+                    Box("Libro" + (n + 1), ordenados.transform, new Vector3(-0.25f + b * 0.4f, 0.85f + r * 0.7f, 0), new Vector3(0.3f, 0.55f, 0.3f), lomos[rimas[n] - 'A'], false);
             ordenados.SetActive(false);
             var mesa = Box("MesaLectura", t, new Vector3(0, 0.4f, 1f), new Vector3(2.6f, 0.8f, 1.4f), Madera);
             var pila = Group("LibrosTirados", t, new Vector3(0, 0.8f, 1f));

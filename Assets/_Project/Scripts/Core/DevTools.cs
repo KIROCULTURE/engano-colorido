@@ -50,9 +50,27 @@ namespace EnganoColorido.Core
             }
             if (Arg("-devyaw") is string yaw && Player.PlayerController.I != null)
                 Player.PlayerController.I.transform.rotation = Quaternion.Euler(0, float.Parse(yaw, System.Globalization.CultureInfo.InvariantCulture), 0);
+            if (Arg("-devpos") is string pos && Player.PlayerController.I != null)
+            {
+                var v = pos.Split(',');
+                var inv = System.Globalization.CultureInfo.InvariantCulture;
+                Player.PlayerController.I.Teleport(new Vector3(float.Parse(v[0], inv), float.Parse(v[1], inv), float.Parse(v[2], inv)), Player.PlayerController.I.transform.eulerAngles.y);
+            }
+            if (Arg("-devpitch") is string pitch && Player.PlayerController.I != null)
+                Player.PlayerController.I.cam.transform.localEulerAngles = new Vector3(float.Parse(pitch, System.Globalization.CultureInfo.InvariantCulture), 0, 0);
             if (Has("-devclose")) { yield return new WaitForSeconds(1f); UI.UIManager.I.CloseAllModals(); yield return null; }
+            if (Has("-devdone") && World.ZoneController.I != null)
+            {
+                foreach (var t in World.ZoneController.I.tasks)
+                    if (t != null && !(t is Puzzles.FinalTask)) t.ForceComplete();
+                yield return new WaitForSeconds(1f);
+                UI.UIManager.I.CloseAllModals();
+            }
+            if (Has("-devdorado") && World.WorldManager.I != null) { World.WorldManager.I.SetWorld(true, 0.5f); yield return new WaitForSeconds(1f); }
+            if (Has("-devhud")) UI.UIManager.I.SetHudVisible(false);
             switch (Arg("-devui"))
             {
+                case "ficha": Game.ShowFicha(Game.DB.Ficha(Arg("-devficha") ?? "actitudes")); break;
                 case "alias": UI.NewSessionPanel.Show(); break;
                 case "docente": UI.TeacherMenu.Show(); break;
                 case "celular": UI.PhoneUI.Open(Arg("-devtab") ?? "Mapa"); break;
