@@ -49,7 +49,7 @@ La duración real con estudiantes no está medida (ver pendientes). El ritmo sí
 
 - **Modo 90:** Capilla (P2, órgano del estribillo, Santa Teresa) y Torre del reloj (P6, las tres horas). Sus puertas en el Patio están cerradas con "solo en el modo 90" y el modo 90 aparece bloqueado en el menú docente. `SessionPacer` ya soporta el modo 90, incluido el salto de Capilla y Torre si la sesión va atrasada (está testeado). La ficha "Poesía mística" ya está escrita.
 - **Las Horas:** patrulla con NavMesh, robo de Tiempo, perder el rastro al agacharse, y el modo Calma/Suave ("Presencias"). AI Navigation está instalado pero el generador todavía no hornea NavMesh. `StaticSource` ya está listo para que las Horas hagan sonar la estática del celular.
-- **Tiempo (reloj de arena):** hoy solo lo consumen los errores del Juicio. Al llegar a cero, Ale despierta y sigue, sin game over. Las velas rojas son decorativas: el guardado es automático por zona y también manual desde la pausa.
+- **Tiempo (reloj de arena):** hoy solo lo consumen los errores del Juicio. Al llegar a cero, Fran despierta y sigue, sin game over. Las velas rojas son decorativas: el guardado es automático por zona y también manual desde la pausa.
 - **Audio:** ambiente (zumbido, viento) y TTS de los poemas. Hoy solo hay campana, estática y un tono grave, todos procedurales. Los fragmentos de las radios van subtitulados, sin voz.
 - **Accesibilidad completa:** ya están los subtítulos siempre activos, el tamaño de texto, la sensibilidad, el FOV y el juego no tiene destellos. Faltan TTS, opción explícita "sin sustos" (hoy no hay sustos bruscos) y el modo Calma.
 - **Pulido visual** de los dos mundos y de las recreaciones de Pereda y Murillo (hoy son primitivas).

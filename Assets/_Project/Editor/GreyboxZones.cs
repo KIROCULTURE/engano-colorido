@@ -157,7 +157,7 @@ namespace EnganoColorido.EditorTools
 
             var afiche = Box("Afiche", t, new Vector3(-3.83f, 1.6f, 0.5f), new Vector3(0.02f, 1.1f, 0.8f), Papel);
             Text3D("ENSAYO GENERAL\nLa vida es sueño\nCalderón de la Barca", t, new Vector3(-3.81f, 1.6f, 0.5f), new Vector3(0, -90, 0), 1.2f, new Color(0.2f, 0.1f, 0.05f), 0.75f);
-            Inspect(afiche, "Leer el afiche del ensayo", "Afiche del ensayo", "Ensayo general: La vida es sueño (Jornada II). Ale ensaya el monólogo de Segismundo. Abajo, alguien pegó el libreto con cinta:", "calderon_vida");
+            Inspect(afiche, "Leer el afiche del ensayo", "Afiche del ensayo", "Ensayo general: La vida es sueño (Jornada II). Fran ensaya el monólogo de Segismundo. Abajo, alguien pegó el libreto con cinta:", "calderon_vida");
 
             AddDoor(t, new Vector3(0, 0, -4f), 0, "Patio", "Antes de salir… las notas del espejo.");
 

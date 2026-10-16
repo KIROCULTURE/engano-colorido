@@ -119,7 +119,7 @@
           "id": "marcos",
           "tipo": "asignar",
           "titulo": "Los cuatro retratos",
-          "enunciado": "Cuelga los retratos de Ale en el orden del último verso del soneto de Sor Juana.",
+          "enunciado": "Cuelga los retratos de Fran en el orden del último verso del soneto de Sor Juana.",
           "opciones": [
             { "texto": "El rostro pálido y sin vida", "tag": "" },
             { "texto": "La figura deshecha en polvo", "tag": "" },

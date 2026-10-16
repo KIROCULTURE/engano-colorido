@@ -33,7 +33,7 @@ namespace EnganoColorido.Assessment
             {
                 into.Add(Answer(q, elegida));
                 Step(titulo, qs, into, done, rng, i + 1);
-            });
+            }, null, null, Tema.App, (float)i / qs.Count);
         }
 
         public static List<string> Options(Pregunta q)

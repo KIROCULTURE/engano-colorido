@@ -67,7 +67,7 @@ namespace EnganoColorido.Core
                 case "pregunta":
                     var q = Game.DB.evaluacion.salida[5];
                     UI.UIManager.I.ShowQuestion("Repasa+ · Prueba de salida · pregunta 6 de 8", q.enunciado, Assessment.AssessmentRunner.Options(q),
-                        Data.ContentDatabase.PoemaTexto(Game.DB.Poema(q.contexto)), null);
+                        Data.ContentDatabase.PoemaTexto(Game.DB.Poema(q.contexto)), null, null, null, UI.Tema.App, 5f / 8f);
                     break;
             }
             var shot = Arg("-devshot");

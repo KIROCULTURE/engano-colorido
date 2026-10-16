@@ -20,6 +20,9 @@ namespace EnganoColorido.Puzzles
         TextMeshProUGUI preview, feedback;
         readonly List<UnityEngine.UI.Button> slotButtons = new();
 
+        Tema tema = Tema.Liceo;
+        TextMeshProUGUI progreso;
+
         static readonly Dictionary<string, Color> RimaColor = new()
         {
             { "A", new Color(0.55f, 0.22f, 0.22f) }, { "B", new Color(0.20f, 0.30f, 0.55f) },
@@ -28,8 +31,10 @@ namespace EnganoColorido.Puzzles
 
         public static void Show(PuzzleController ctrl, Paso paso, int stepIndex)
         {
-            var c = UIKit.Window(UIManager.I.Panels, 1640, 980, out var root, "Asignar");
+            var tema = paso.tipo == "juicio" ? Tema.Retrato : Tema.Liceo;
+            var c = UIKit.Window(UIManager.I.Panels, 1640, 990, out var root, "Asignar", tema);
             var p = root.gameObject.AddComponent<AssignmentPanel>();
+            p.tema = tema;
             p.ctrl = ctrl; p.paso = paso; p.stepIndex = stepIndex;
             p.answers = new string[paso.slots.Length];
             p.Build(c, root.gameObject);
@@ -41,10 +46,13 @@ namespace EnganoColorido.Puzzles
 
         void Build(RectTransform c, GameObject root)
         {
-            UIKit.Text(c, $"{ctrl.HintTitle} · {paso.titulo}", 32, TextAlignmentOptions.Left, UIKit.Oro);
+            bool juicio = paso.tipo == "juicio";
+            UIKit.Header(c, tema, juicio ? ctrl.HintTitle : "Acertijo · " + ctrl.HintTitle, paso.titulo);
             if (!string.IsNullOrEmpty(paso.voz))
-                UIKit.Text(c, $"<color=#EBC261>El Retrato:</color> «{paso.voz}»", 30);
-            if (!string.IsNullOrEmpty(paso.enunciado)) UIKit.Text(c, paso.enunciado, 24);
+                UIKit.Text(c, $"<color=#{ColorUtility.ToHtmlStringRGB(tema.acento)}><b>El Retrato:</b></color> «{paso.voz}»", 30, TextAlignmentOptions.Left, tema.texto);
+            if (!string.IsNullOrEmpty(paso.enunciado)) UIKit.Text(c, paso.enunciado, 24, TextAlignmentOptions.Left, tema.texto);
+            string a = ColorUtility.ToHtmlStringRGB(tema.acento);
+            UIKit.Text(c, $"<color=#{a}><b>1</b></color> Elige un hueco (izquierda)    <color=#{a}><b>2</b></color> Haz clic en una opción (derecha)    <color=#{a}><b>3</b></color> Cuando estén todos, «Comprobar»", 20, TextAlignmentOptions.Left, tema.tenue);
             if (!string.IsNullOrEmpty(paso.plantilla))
             {
                 preview = UIKit.Text(c, "", 26, TextAlignmentOptions.Left, UIKit.Texto);
@@ -56,28 +64,30 @@ namespace EnganoColorido.Puzzles
             var left = UIKit.Make("Huecos", row);
             UIKit.VList(left, 6);
             UIKit.Size(left.gameObject, -1, -1, 760, 1);
-            UIKit.Text(left, "Huecos (elige uno)", 20, TextAlignmentOptions.Left, UIKit.Tenue);
+            progreso = UIKit.Text(left, "", 19, TextAlignmentOptions.Left, tema.tenue);
             slotsList = UIKit.Scroll(left, 6);
             UIKit.Size(slotsList.parent.parent.gameObject, -1, 1);
             var right = UIKit.Make("Opciones", row);
             UIKit.VList(right, 6);
             UIKit.Size(right.gameObject, -1, -1, 760, 1);
-            UIKit.Text(right, "Opciones", 20, TextAlignmentOptions.Left, UIKit.Tenue);
+            UIKit.Text(right, "OPCIONES · haz clic para poner una en el hueco marcado", 19, TextAlignmentOptions.Left, tema.tenue);
             optionsList = UIKit.Scroll(right, 6);
             UIKit.Size(optionsList.parent.parent.gameObject, -1, 1);
 
             feedback = UIKit.Text(c, "", 22, TextAlignmentOptions.Left, UIKit.Mal);
             var buttons = UIKit.HRow(c, 58, 12);
-            UIKit.Button(buttons, "Cerrar", () => UIManager.I.CloseModal(root), 0, 24);
-            UIKit.Button(buttons, "Pedir pista", ShowHint, 0, 24);
-            UIKit.Button(buttons, "Comprobar", Submit, 0, 24, UIKit.BotonSel);
+            UIKit.Secondary(buttons, "Cerrar", () => UIManager.I.CloseModal(root), tema, 0);
+            UIKit.Secondary(buttons, "Pedir pista", ShowHint, tema, 0);
+            UIKit.Primary(buttons, "Comprobar", Submit, tema, 0);
 
             for (int i = 0; i < paso.slots.Length; i++)
             {
                 int idx = i;
-                var b = UIKit.Button(slotsList, "", () => Select(idx), -1, 22);
-                UIKit.Size(b.gameObject, paso.slots.Length > 8 ? 50 : 76);
-                UIKit.Label(b).alignment = TextAlignmentOptions.Left;
+                var b = UIKit.Button(slotsList, "", () => Select(idx), -1, 22, tema.superficie);
+                UIKit.Size(b.gameObject, paso.slots.Length > 8 ? 52 : 78);
+                UIKit.Label(b).alignment = TextAlignmentOptions.MidlineLeft;
+                UIKit.Label(b).color = tema.texto;
+                UIKit.Chip(b, (i + 1).ToString(), tema);
                 slotButtons.Add(b);
             }
             Select(0);
@@ -88,8 +98,8 @@ namespace EnganoColorido.Puzzles
             var s = paso.slots[i];
             string label = s.etiqueta;
             if (paso.estante && (Facil || Normal))
-                label += $"  <color=#EBC261>({ContentDatabase.Tag(paso, s.correcta)})</color>";
-            string val = answers[i] ?? "<color=#A09A90>— vacío —</color>";
+                label += $"  <color=#{ColorUtility.ToHtmlStringRGB(tema.acento)}>({ContentDatabase.Tag(paso, s.correcta)})</color>";
+            string val = answers[i] ?? $"<color=#{ColorUtility.ToHtmlStringRGB(tema.tenue)}>— vacío —</color>";
             return $"<b>{label}</b>\n<size=90%>{val}</size>";
         }
 
@@ -98,10 +108,13 @@ namespace EnganoColorido.Puzzles
             for (int i = 0; i < slotButtons.Count; i++)
             {
                 UIKit.Label(slotButtons[i]).text = SlotLabel(i);
-                var col = i == selected ? UIKit.BotonSel : UIKit.Boton;
+                var col = i == selected ? tema.superficieSel : tema.superficie;
                 if (i != selected && paso.estante && Facil && answers[i] != null && RimaColor.TryGetValue(ContentDatabase.Tag(paso, answers[i]) ?? "", out var rc)) col = rc;
                 slotButtons[i].image.color = col;
             }
+            int llenos = 0;
+            foreach (var a in answers) if (a != null) llenos++;
+            if (progreso != null) progreso.text = $"HUECOS · {llenos} de {answers.Length} completos";
             if (preview != null)
             {
                 var fill = new object[paso.slots.Length];
@@ -127,11 +140,12 @@ namespace EnganoColorido.Puzzles
                     if (Game.State != null && !Game.State.inventario.Contains(tag)) continue;
                 }
                 string opt = o;
-                var color = UIKit.Boton;
+                var color = tema.superficie;
                 if (paso.estante && Facil && RimaColor.TryGetValue(ContentDatabase.Tag(paso, o) ?? "", out var rc)) color = rc;
                 var b = UIKit.Button(optionsList, opt, () => Assign(opt), -1, 22, color);
                 UIKit.Size(b.gameObject, all.Count > 8 ? 50 : 64);
-                UIKit.Label(b).alignment = TextAlignmentOptions.Left;
+                UIKit.Label(b).alignment = TextAlignmentOptions.MidlineLeft;
+                UIKit.Label(b).color = tema.texto;
                 shown++;
             }
             if (paso.usaInventario)
@@ -169,7 +183,7 @@ namespace EnganoColorido.Puzzles
         void ShowHint()
         {
             var h = ctrl.RequestHint();
-            feedback.color = UIKit.Oro;
+            feedback.color = tema.acento;
             feedback.text = h != null ? $"Pista {ctrl.HintsShown}: {h}" : "Ya viste las tres pistas. Si no sale, Don Ruperto puede mostrar el camino.";
         }
     }

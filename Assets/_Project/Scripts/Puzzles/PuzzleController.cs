@@ -113,7 +113,7 @@ namespace EnganoColorido.Puzzles
                     S.AddUnique(S.poemas, id);
                     sb.Append("\n\n").Append(ContentDatabase.PoemaTexto(p));
                 }
-            UIManager.I.ShowText(Def.titulo, sb.ToString().Trim(), "Resolver", ShowStep);
+            UIManager.I.ShowText(Def.titulo, sb.ToString().Trim(), "Resolver", ShowStep, 1100, 800, Tema.Liceo, "Acertijo");
         }
 
         void ShowStep()
@@ -127,7 +127,7 @@ namespace EnganoColorido.Puzzles
                 opts.AddRange(paso.distractores);
                 opts = Assessment.AssessmentRunner.Shuffle(opts, new System.Random(puzzleId.GetHashCode() + i + Log.intentos));
                 string ctx = string.IsNullOrEmpty(poemaContexto) ? null : ContentDatabase.PoemaTexto(Game.DB.Poema(poemaContexto));
-                UIManager.I.ShowQuestion($"{Def.titulo} · {paso.titulo}", paso.enunciado, opts, ctx, a =>
+                UIManager.I.ShowQuestion($"Acertijo · {Def.titulo} · {paso.titulo}", paso.enunciado, opts, ctx, a =>
                 {
                     if (Check(i, new List<string> { a }, out var fb)) Next(i);
                     else { UIManager.I.Toast("No es esa. " + (fb ?? "Puedes pedir una pista en Pensar (celular)."), 4f); ShowStep(); }
@@ -152,7 +152,7 @@ namespace EnganoColorido.Puzzles
         int juicioErrors;
 
         /// Juicio: un error cuesta Tiempo y El Retrato contraataca; cada 2 errores llega una pista.
-        /// En cero, Ale despierta junto a la última vela (sin game over, nunca bloquea).
+        /// En cero, Fran despierta junto a la última vela (sin game over, nunca bloquea).
         string JuicioPenalty(string feedback)
         {
             juicioErrors++;
@@ -168,7 +168,7 @@ namespace EnganoColorido.Puzzles
             if (S.tiempo <= 0)
             {
                 S.tiempo = 100;
-                UIManager.I.Toast("La arena del reloj se acabó… Ale despierta junto a la última vela roja, en el mismo escenario. Sigue.", 6f);
+                UIManager.I.Toast("La arena del reloj se acabó… Fran despierta junto a la última vela roja, en el mismo escenario. Sigue.", 6f);
             }
             return feedback;
         }

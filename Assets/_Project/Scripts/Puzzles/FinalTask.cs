@@ -4,7 +4,7 @@ using EnganoColorido.World;
 
 namespace EnganoColorido.Puzzles
 {
-    /// Los dos finales (GDD 3.4). Ninguno mata a Ale; ambos llevan a la prueba de salida. La elección se registra.
+    /// Los dos finales (GDD 3.4). Ninguno mata a Fran; ambos llevan a la prueba de salida. La elección se registra.
     public class FinalTask : ZoneTask
     {
         public PuzzleController requiere; // Tu verso
@@ -19,7 +19,7 @@ namespace EnganoColorido.Puzzles
             UIManager.I.PlayDialogue("final_eleccion", () =>
                 UIManager.I.ShowChoice("¿Despertar o quedarse?",
                     "Despertar es desengañarse: volver al mundo real, con su tiempo y sus arrugas.\nQuedarse es seguir en el Mundo Dorado, donde todo brilla y nada pesa.",
-                    new[] { "Despertar", "Quedarme: dulce soñar" }, Choose));
+                    new[] { "Despertar", "Quedarme: dulce soñar" }, Choose, 1000, Tema.Retrato, "El Retrato"));
         }
 
         void Choose(int i)

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace EnganoColorido.World
 {
-    /// Algo que hace sonar estática en el celular de Ale cuando está cerca (radios, el velo, el espejo;
+    /// Algo que hace sonar estática en el celular de Fran cuando está cerca (radios, el velo, el espejo;
     /// en la Entrega 2, Las Horas).
     public class StaticSource : MonoBehaviour
     {

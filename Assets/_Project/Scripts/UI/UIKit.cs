@@ -8,13 +8,13 @@ namespace EnganoColorido.UI
     /// Helpers para armar uGUI por código (sin prefabs). Una sola fuente: la de TMP por defecto.
     public static class UIKit
     {
-        public static readonly Color Fondo = new Color(0.04f, 0.04f, 0.06f, 0.94f);
-        public static readonly Color Panel = new Color(0.11f, 0.11f, 0.13f, 0.97f);
-        public static readonly Color Boton = new Color(0.20f, 0.19f, 0.22f, 1f);
-        public static readonly Color BotonSel = new Color(0.55f, 0.42f, 0.16f, 1f);
-        public static readonly Color Oro = new Color(0.92f, 0.76f, 0.38f, 1f);
-        public static readonly Color Texto = new Color(0.93f, 0.91f, 0.86f, 1f);
-        public static readonly Color Tenue = new Color(0.62f, 0.60f, 0.58f, 1f);
+        // Paleta por defecto = familia Liceo (ver Tema.cs). Las pantallas clave eligen su tema.
+        public static readonly Color Panel = Tema.Liceo.panel;
+        public static readonly Color Boton = Tema.Liceo.superficie;
+        public static readonly Color BotonSel = Tema.Liceo.superficieSel;
+        public static readonly Color Oro = Tema.Liceo.acento;
+        public static readonly Color Texto = Tema.Liceo.texto;
+        public static readonly Color Tenue = Tema.Liceo.tenue;
         public static readonly Color Bien = new Color(0.45f, 0.78f, 0.50f, 1f);
         public static readonly Color Mal = new Color(0.90f, 0.45f, 0.40f, 1f);
 
@@ -63,17 +63,67 @@ namespace EnganoColorido.UI
         }
 
         /// Panel centrado con fondo y lista vertical interna. Devuelve el contenedor de la lista.
-        public static RectTransform Window(Transform parent, float width, float height, out RectTransform root, string name = "Window")
+        public static RectTransform Window(Transform parent, float width, float height, out RectTransform root, string name = "Window", Tema tema = null)
         {
-            var dim = Image(parent, new Color(0, 0, 0, 0.55f), name);
+            tema ??= Tema.Liceo;
+            var dim = Image(parent, new Color(0, 0, 0, 0.6f), name);
             root = Stretch((RectTransform)dim.transform);
-            var box = Image(dim.transform, Panel, "Box");
+            var box = Image(dim.transform, tema.panel, "Box");
+            Tema.Redondear(box, 18);
             Center((RectTransform)box.transform, width, height);
-            var frame = Image(box.transform, Oro, "Marco", false);
-            Stretch((RectTransform)frame.transform, 0, 0, 0, height - 4);
-            var content = Stretch(Make("Contenido", box.transform), 28, 24, 28, 24);
+            var outline = box.gameObject.AddComponent<UnityEngine.UI.Outline>();
+            outline.effectColor = new Color(tema.acento.r, tema.acento.g, tema.acento.b, 0.45f);
+            outline.effectDistance = new Vector2(1.5f, -1.5f);
+            var content = Stretch(Make("Contenido", box.transform), 34, 28, 34, 28);
             VList(content, 12);
             return content;
+        }
+
+        /// Encabezado común: rótulo en mayúsculas (quién habla o qué es), título, bajada y una línea.
+        public static void Header(Transform parent, Tema tema, string rotulo, string titulo, string bajada = null)
+        {
+            if (!string.IsNullOrEmpty(rotulo))
+            {
+                var k = Text(parent, rotulo.ToUpperInvariant(), 18, TextAlignmentOptions.Left, tema.acento, "Rotulo");
+                k.characterSpacing = 6;
+                k.fontStyle = FontStyles.Bold;
+            }
+            if (!string.IsNullOrEmpty(titulo)) Text(parent, titulo, 34, TextAlignmentOptions.Left, tema.texto, "Titulo");
+            if (!string.IsNullOrEmpty(bajada)) Text(parent, bajada, 22, TextAlignmentOptions.Left, tema.tenue, "Bajada");
+            var line = Image(parent, new Color(tema.acento.r, tema.acento.g, tema.acento.b, 0.3f), "Linea", false);
+            Size(line.gameObject, 2);
+        }
+
+        public static UnityEngine.UI.Button Primary(Transform parent, string label, Action onClick, Tema tema = null, float height = 56, float fontSize = 24)
+        {
+            tema ??= Tema.Liceo;
+            var b = Button(parent, label, onClick, height, fontSize, tema.acento);
+            var t = Label(b);
+            t.color = tema.textoSobreAcento;
+            t.fontStyle = FontStyles.Bold;
+            return b;
+        }
+
+        public static UnityEngine.UI.Button Secondary(Transform parent, string label, Action onClick, Tema tema = null, float height = 56, float fontSize = 24)
+        {
+            tema ??= Tema.Liceo;
+            var b = Button(parent, label, onClick, height, fontSize, tema.superficie);
+            Label(b).color = tema.texto;
+            return b;
+        }
+
+        /// Ficha redonda con una letra o número a la izquierda de un botón (alternativas, huecos).
+        public static void Chip(UnityEngine.UI.Button b, string text, Tema tema, bool lleno = false)
+        {
+            var chip = Image(b.transform, lleno ? tema.acento : new Color(tema.acento.r, tema.acento.g, tema.acento.b, 0.18f), "Chip", false);
+            Tema.Redondear(chip, 14);
+            var rt = (RectTransform)chip.transform;
+            rt.anchorMin = new Vector2(0, 0.5f); rt.anchorMax = new Vector2(0, 0.5f); rt.pivot = new Vector2(0, 0.5f);
+            rt.sizeDelta = new Vector2(34, 34); rt.anchoredPosition = new Vector2(12, 0);
+            var t = Text(chip.transform, text, 18, TextAlignmentOptions.Center, lleno ? tema.textoSobreAcento : tema.acento, "Letra");
+            t.fontStyle = FontStyles.Bold;
+            Stretch(t.rectTransform);
+            Label(b).rectTransform.offsetMin = new Vector2(58, 4);
         }
 
         public static UnityEngine.UI.VerticalLayoutGroup VList(RectTransform rt, float spacing = 8, int pad = 0)
@@ -128,9 +178,11 @@ namespace EnganoColorido.UI
         public static UnityEngine.UI.Button Button(Transform parent, string label, Action onClick, float height = 54, float fontSize = 24, Color? color = null)
         {
             var img = Image(parent, color ?? Boton, "Boton");
+            Tema.Redondear(img, 10);
             var btn = img.gameObject.AddComponent<UnityEngine.UI.Button>();
             var cb = btn.colors;
-            cb.highlightedColor = new Color(1.25f, 1.2f, 1.1f, 1f);
+            cb.highlightedColor = new Color(1.22f, 1.18f, 1.12f, 1f);
+            cb.selectedColor = Color.white;
             cb.pressedColor = new Color(0.8f, 0.8f, 0.8f, 1f);
             cb.disabledColor = new Color(0.55f, 0.55f, 0.55f, 0.6f);
             btn.colors = cb;
@@ -148,7 +200,7 @@ namespace EnganoColorido.UI
         {
             var root = Make(name, parent);
             var bg = root.gameObject.AddComponent<UnityEngine.UI.Image>();
-            bg.color = new Color(0, 0, 0, 0.15f);
+            bg.color = new Color(0, 0, 0, 0f);
             var sr = root.gameObject.AddComponent<UnityEngine.UI.ScrollRect>();
             sr.horizontal = false;
             sr.scrollSensitivity = 30;
@@ -177,6 +229,7 @@ namespace EnganoColorido.UI
             bar.direction = UnityEngine.UI.Scrollbar.Direction.BottomToTop;
             var area = Stretch(Make("Area", barRt));
             var handle = Image(area, Oro, "Handle");
+            Tema.Redondear(handle, 5);
             Stretch((RectTransform)handle.transform);
             bar.handleRect = (RectTransform)handle.transform;
             bar.targetGraphic = handle;
@@ -195,7 +248,8 @@ namespace EnganoColorido.UI
 
         public static TMP_InputField Input(Transform parent, string placeholder, float height = 54, bool multiline = false, int charLimit = 0)
         {
-            var bg = Image(parent, new Color(0.05f, 0.05f, 0.06f, 1f), "Entrada");
+            var bg = Image(parent, new Color(0, 0, 0, 0.35f), "Entrada");
+            Tema.Redondear(bg, 10);
             Size(bg.gameObject, height);
             var area = Stretch(Make("Area", bg.transform), 12, 6, 12, 6);
             area.gameObject.AddComponent<UnityEngine.UI.RectMask2D>();
@@ -222,12 +276,15 @@ namespace EnganoColorido.UI
             var root = Make("Slider", parent);
             Size(root.gameObject, height);
             var bg = Image(root, new Color(1, 1, 1, 0.12f), "Fondo");
+            Tema.Redondear(bg, 6);
             var bgRt = Stretch((RectTransform)bg.transform, 0, height * 0.35f, 0, height * 0.35f);
             var fillArea = Stretch(Make("FillArea", root), 0, height * 0.35f, 0, height * 0.35f);
-            var fill = Image(fillArea, BotonSel, "Fill", false);
+            var fill = Image(fillArea, Oro, "Fill", false);
+            Tema.Redondear(fill, 6);
             Stretch((RectTransform)fill.transform);
             var handleArea = Stretch(Make("HandleArea", root), 10, 0, 10, 0);
-            var handle = Image(handleArea, Oro, "Handle");
+            var handle = Image(handleArea, Texto, "Handle");
+            Tema.Redondear(handle, 9);
             var hrt = (RectTransform)handle.transform;
             hrt.sizeDelta = new Vector2(20, 0);
             hrt.anchorMin = new Vector2(0, 0); hrt.anchorMax = new Vector2(0, 1);

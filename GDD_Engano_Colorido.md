@@ -322,14 +322,14 @@ cavan en mi vivir mi monumento.
 ## 3. Narrativa
 
 ### 3.1 Premisa
-La noche antes de la prueba de Siglo de Oro, Ale se queda en el teatro del liceo ensayando el monólogo de Segismundo. Repasa con una app de preguntas (**diagnóstico**), abre un filtro "Dorado" frente al espejo del camarín y se duerme. Despierta a las **23:59**: la camanchaca entró al liceo, los relojes están detenidos y su reflejo ya no le imita. Su versión filtrada, **El Retrato**, le ofrece quedarse en un mundo perfecto, dorado y sin esfuerzo (una **tierra de Jauja** de likes). Para despertar, Ale tiene que **desengañarse**: leer el liceo como un poema barroco.
+La noche antes de la prueba de Siglo de Oro, Fran se queda en el teatro del liceo ensayando el monólogo de Segismundo. Repasa con una app de preguntas (**diagnóstico**), abre un filtro "Dorado" frente al espejo del camarín y se duerme. Despierta a las **23:59**: la camanchaca entró al liceo, los relojes están detenidos y su reflejo ya no le imita. Su versión filtrada, **El Retrato**, le ofrece quedarse en un mundo perfecto, dorado y sin esfuerzo (una **tierra de Jauja** de likes). Para despertar, Fran tiene que **desengañarse**: leer el liceo como un poema barroco.
 
 **Pregunta central (la misma del ensayo del libro, p. 106):** *¿necesitamos hoy un "desengaño del mundo"?*
 
 ### 3.2 Personajes
-- **Ale** (jugable): 2° medio, **género neutro** (nunca adjetivos con género para Ale; se le ve solo en reflejos). Ironía adolescente, chilenismos suaves en su voz interna. Su conflicto: vive pendiente de la imagen que muestra.
+- **Fran** (jugable): 2° medio, **género neutro** (nunca adjetivos con género para Fran; se le ve solo en reflejos). Ironía adolescente, chilenismos suaves en su voz interna. Su conflicto: vive pendiente de la imagen que muestra.
 - **El Retrato** (antagonista): su versión con filtro. Seduce, no ataca. Su tesis es la de Boscán: *"es justo en la mentira ser dichoso"*. Se comunica por **stories y notificaciones** que reescriben tópicos en lenguaje de redes ("Vive hoy, mañana hay nieve 🌹❄️ #CarpeDiem").
-- **Don Ruperto** (guía): auxiliar del liceo, cálido y con humor de campo; el único otro humano en la niebla. Funciona como el **gracioso** sabio y como sistema de ayuda cuando Ale se atrasa.
+- **Don Ruperto** (guía): auxiliar del liceo, cálido y con humor de campo; el único otro humano en la niebla. Funciona como el **gracioso** sabio y como sistema de ayuda cuando Fran se atrasa.
 - **La profe Inés** (homenaje a Sor Juana): nunca aparece; deja **fichas** (el sistema de enseñanza, sección 4.2).
 - **Las Horas:** siluetas con un reloj sin manecillas por cara. No hieren: **roban tiempo** y aumentan la tensión. En modo Calma no existen.
 
@@ -342,9 +342,9 @@ La noche antes de la prueba de Siglo de Oro, Ale se queda en el teatro del liceo
 > Nada de óxido, sangre ni carne: el "otro mundo" es **barroco**, no industrial.
 
 ### 3.4 Finales
-Tras el Juicio, Ale elige:
-- **Despertar (desengaño):** 07:59, Don Ruperto abre el teatro; Ale dice el monólogo. Última decisión sin moraleja forzada: publicar o no la foto sin filtro.
-- **Dulce soñar:** Ale se queda; plano final de un retrato nuevo en la galería, sonriendo para siempre, con el verso de Boscán. Melancólico, **sin muerte**.
+Tras el Juicio, Fran elige:
+- **Despertar (desengaño):** 07:59, Don Ruperto abre el teatro; Fran dice el monólogo. Última decisión sin moraleja forzada: publicar o no la foto sin filtro.
+- **Dulce soñar:** Fran se queda; plano final de un retrato nuevo en la galería, sonriendo para siempre, con el verso de Boscán. Melancólico, **sin muerte**.
 
 Ambos finales llevan a **la prueba** (prueba de salida). La elección se registra (sirve para el diálogo del cierre).
 
@@ -355,7 +355,7 @@ Ambos finales llevan a **la prueba** (prueba de salida). La elección se registr
 ### 4.1 Estructura de la sesión
 | # | Momento | Modo 90 | Modo 45 | Contenido (p. del libro) |
 |---|---|---|---|---|
-| D | **Diagnóstico** (app de repaso de Ale) | 3' | 2' | 5 preguntas (4.4) |
+| D | **Diagnóstico** (app de repaso de Fran) | 3' | 2' | 5 preguntas (4.4) |
 | 0 | Prólogo: camarín | 3' | 2' | Hablante lírico; desengaño (pp. 76–78, 86) |
 | 1 | Patio de las rosas | 8' | 7' | Denotación/connotación, símbolo rosa, *carpe diem* (pp. 67, 74, 79, 86) |
 | H | Las tres radios (hub) | 3' | 3' | Actitudes del hablante (p. 86) |
@@ -373,7 +373,7 @@ Antes de cada puzzle hay una ficha (máx. 80 palabras, lenguaje de 2° medio, co
 ### 4.3 Control de ritmo (para que calce en el bloque)
 - Cada zona tiene un **presupuesto de tiempo** (tabla 4.1). Al pasar el 100 % las pistas se adelantan; al 130 %, Don Ruperto ofrece mostrar el camino y el puzzle queda en modo guiado (se registra como "resuelto con ayuda").
 - Si la sesión va atrasada, el juego **salta automáticamente** las zonas opcionales del modo (Capilla, luego Torre) y lo informa con una nota en el Cuaderno.
-- A los **minutos 47 (modo 90) / 29 (modo 45)**, pase lo que pase, el juego lleva a Ale al Teatro para el Juicio, y luego a la prueba de salida.
+- A los **minutos 47 (modo 90) / 29 (modo 45)**, pase lo que pase, el juego lleva a Fran al Teatro para el Juicio, y luego a la prueba de salida.
 - Pistas en **3 niveles** en todo puzzle. Dificultad de acertijos *Fácil/Normal/Difícil* (Fácil por defecto).
 
 ### 4.4 Evaluación
@@ -405,7 +405,7 @@ Antes de cada puzzle hay una ficha (máx. 80 palabras, lenguaje de 2° medio, co
 |---|---|
 | Niebla densa | Camanchaca dentro del liceo (también abarata el render) |
 | Mundo alternativo tras una sirena | Mundo Dorado barroco al sonar la **campana** |
-| Radio con estática cerca de enemigos | El **celular** de Ale hace estática procedural cerca de Las Horas |
+| Radio con estática cerca de enemigos | El **celular** de Fran hace estática procedural cerca de Las Horas |
 | Linterna como luz principal | Linterna del celular |
 | Acertijos basados en poemas crípticos (piano, libros, relojes) | Órgano del estribillo (P2), estante del soneto (P5), reloj de las tres horas (P6) |
 | Dificultad de acertijos separada de la de acción | *Acertijos* (Fácil/Normal/Difícil) y *Presencias* (Calma/Suave) |
@@ -413,7 +413,7 @@ Antes de cada puzzle hay una ficha (máx. 80 palabras, lenguaje de 2° medio, co
 | Mapa que el personaje anota | Mapa que se marca solo: X cerrado, ? pendiente, ✓ resuelto |
 | Puntos de guardado distintivos | Velas rojas |
 | Maniquíes inquietantes | Maniquíes del teatro con máscaras de personajes tipo (P7) |
-| Mundo que refleja el conflicto interno | El liceo dorado es la vanidad de Ale hecha arquitectura |
+| Mundo que refleja el conflicto interno | El liceo dorado es la vanidad de Fran hecha arquitectura |
 | Finales múltiples | Despertar / Dulce soñar |
 
 **Prohibido:** nombres, personajes, criaturas, frases, música, efectos, logos o assets de Silent Hill/Konami.
@@ -432,7 +432,7 @@ Reglas generales: ficha previa siempre; 3 niveles de pista; nunca bloquear más 
   - **Primavera → La juventud**
   - **Nieve en la cumbre → La vejez (canas)**
   - Distractores en cada dial: Un jardinero · El invierno · El amor · La riqueza.
-- **B. El momento justo (*carpe diem* jugable):** las rosas del invernadero son botones en la Niebla y están marchitas en el Dorado; **solo florecen ~4 s durante el cambio de mundo**. Ale debe cortar una en ese instante. Sin castigo: la campana vuelve a sonar cada 20 s. La rosa se usa en P3.
+- **B. El momento justo (*carpe diem* jugable):** las rosas del invernadero son botones en la Niebla y están marchitas en el Dorado; **solo florecen ~4 s durante el cambio de mundo**. Fran debe cortar una en ese instante. Sin castigo: la campana vuelve a sonar cada 20 s. La rosa se usa en P3.
 - **Pistas:** (1) "¿Qué estación del año es la juventud?" (2) "Las canas son blancas como la nieve." (3) Marca el verso de cada imagen.
 
 ### H — Las tres radios (hub) · actitudes del hablante
@@ -458,9 +458,9 @@ Reglas generales: ficha previa siempre; 3 niveles de pista; nunca bloquear más 
 
 ### P4 — El retrato que miente (Galería) · Sor Juana, anáfora y gradación, *vanitas*
 - **Ficha previa:** "Este, que ves, engaño colorido…" (p. 82).
-- **A.** Cuatro marcos con el retrato de Ale cada vez más deteriorado: colgarlos según el último verso: **cadáver → polvo → sombra → nada** (el último marco queda vacío).
+- **A.** Cuatro marcos con el retrato de Fran cada vez más deteriorado: colgarlos según el último verso: **cadáver → polvo → sombra → nada** (el último marco queda vacío).
 - **B.** Pregunta: "¿Qué hace el retrato según los cuartetos?" → **Aparenta vencer al tiempo y al olvido** (distractores: Muestra la verdad del rostro · Celebra la vejez).
-- **C. Escena de *El mágico prodigioso*:** una figura velada con la ropa de Ale espera al final de la galería. Al quitarle el velo aparece un esqueleto (sin sangre) que dice: *"Así, Cipriano, son todas las glorias del mundo"*. Ficha de *El mágico prodigioso* (p. 101). En Calma: sin sonido brusco, transición lenta.
+- **C. Escena de *El mágico prodigioso*:** una figura velada con la ropa de Fran espera al final de la galería. Al quitarle el velo aparece un esqueleto (sin sangre) que dice: *"Así, Cipriano, son todas las glorias del mundo"*. Ficha de *El mágico prodigioso* (p. 101). En Calma: sin sonido brusco, transición lenta.
 - **Pistas:** (1) "Cada palabra es menos que la anterior." (2) Muestra el verso. (3) Cuelga el primero.
 
 ### P5 — El estante del soneto (Biblioteca) · estructura del soneto, *vita somnium*
@@ -494,9 +494,9 @@ Reglas generales: ficha previa siempre; 3 niveles de pista; nunca bloquear más 
 
 ### FINAL — El Juicio del Espejo (Teatro) · argumentación con evidencia y conectores
 - **Ficha previa:** conectores (p. 108).
-- 3 rondas. El Retrato dice una tesis; Ale arma su respuesta llenando **3 huecos**: una concesión ya escrita + **conector** + **evidencia** (verso del Cuaderno) + **conector** + conclusión ya escrita. Error = pierde Tiempo y El Retrato contraataca; 2 errores = pista.
+- 3 rondas. El Retrato dice una tesis; Fran arma su respuesta llenando **3 huecos**: una concesión ya escrita + **conector** + **evidencia** (verso del Cuaderno) + **conector** + conclusión ya escrita. Error = pierde Tiempo y El Retrato contraataca; 2 errores = pista.
 
-| Ronda | Tesis de El Retrato | Respuesta correcta de Ale |
+| Ronda | Tesis de El Retrato | Respuesta correcta de Fran |
 |---|---|---|
 | 1 | "La juventud es lo único que vale: congélala en una foto." | "Es cierto que la juventud es bella; **sin embargo**, Garcilaso advierte que *'todo lo mudará la edad ligera'*; **por lo tanto**, hay que vivirla, no congelarla." |
 | 2 | "Un retrato perfecto vence al tiempo y al olvido." | "**En primer lugar**, Sor Juana dice que el retrato es *'un resguardo inútil para el hado'*; **en consecuencia**, la imagen solo aparenta vencer al tiempo." |
@@ -505,7 +505,7 @@ Reglas generales: ficha previa siempre; 3 niveles de pista; nunca bloquear más 
 - Distractores: conectores de la categoría equivocada (p. ej., "por lo tanto" donde va una oposición) y versos reales pero irrelevantes. Feedback breve que nombra la categoría ("Ese conector introduce una consecuencia, no una oposición").
 
 ### CIERRE — Tu verso (libro p. 85, actividad 7)
-- Ale escribe **una estrofa de cuatro versos sobre cómo percibe la vida**. Dos caminos:
+- Fran escribe **una estrofa de cuatro versos sobre cómo percibe la vida**. Dos caminos:
   - **Armar** un cuarteto con rima **abba** desde un banco (todos de 8 sílabas, verificados): rima *-ado*: "No quiero un rostro pintado" · "el reloj sigue a mi lado" · "y el ayer ya se ha marchado"; rima *-ida*: "prefiero vivir mi vida" · "con la luz que no se olvida" · "aunque el filtro me lo pida". Distractores sin rima: "quiero quedarme en el sueño" · "todo lo cambia el tiempo". Se valida solo el esquema abba.
   - **Escribir** cuatro versos propios (sin validación; se guardan para la profesora).
 - La estrofa aparece en los créditos.
@@ -515,9 +515,9 @@ Reglas generales: ficha previa siempre; 3 niveles de pista; nunca bloquear más 
 ## 7. Sistemas
 - **Controlador en primera persona:** caminar, agacharse, linterna, interactuar (raycast), inspeccionar objetos.
 - **Celular (UI diegética):** Cuaderno (fichas y versos), Mapa, Inventario, Stories, Pensar (pistas), Ajustes.
-- **Tiempo (vida):** reloj de arena; lo consumen Las Horas y los errores del Juicio. En cero, Ale despierta en la última vela (sin muerte ni game over). Nunca bloquea el avance.
+- **Tiempo (vida):** reloj de arena; lo consumen Las Horas y los errores del Juicio. En cero, Fran despierta en la última vela (sin muerte ni game over). Nunca bloquea el avance.
 - **Cambio de mundo:** variantes Niebla/Dorado por sala; transición suave (sin destellos).
-- **Las Horas:** patrulla simple con NavMesh; persiguen al oír correr; se pierden si Ale se agacha o se esconde. No hay persecuciones largas ni zonas bloqueadas por ellas.
+- **Las Horas:** patrulla simple con NavMesh; persiguen al oír correr; se pierden si Fran se agacha o se esconde. No hay persecuciones largas ni zonas bloqueadas por ellas.
 - **Guardado:** velas rojas + autoguardado al terminar cada zona (si se corta la clase, se retoma).
 - **Ritmo:** sección 4.3.
 - **Accesibilidad:** subtítulos siempre activos, tamaño de texto, sensibilidad, FOV, sin destellos, modo Calma, opción sin sustos repentinos, lectura en voz alta de poemas (TTS).

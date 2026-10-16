@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace EnganoColorido.Puzzles
 {
-    /// P4-C · Escena de El mágico prodigioso: una figura velada con la ropa de Ale; bajo el velo, un esqueleto.
+    /// P4-C · Escena de El mágico prodigioso: una figura velada con la ropa de Fran; bajo el velo, un esqueleto.
     /// Se cuenta con texto, un cambio de luz y un sonido (sin sangre, sin susto brusco).
     public class VeiledFigure : ZoneTask
     {

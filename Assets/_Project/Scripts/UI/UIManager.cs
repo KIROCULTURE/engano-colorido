@@ -106,83 +106,104 @@ namespace EnganoColorido.UI
             ModalsChanged?.Invoke();
         }
 
-        public GameObject ShowText(string title, string body, string button = "Entendido", Action onClose = null, float width = 1100, float height = 760)
+        public GameObject ShowText(string title, string body, string button = "Entendido", Action onClose = null, float width = 1100, float height = 760, Tema tema = null, string rotulo = null)
         {
-            var c = UIKit.Window(Panels, width, height, out var root, "Texto");
-            UIKit.Text(c, title, 36, TextAlignmentOptions.Left, UIKit.Oro);
+            tema ??= Tema.Liceo;
+            var c = UIKit.Window(Panels, width, height, out var root, "Texto", tema);
+            UIKit.Header(c, tema, rotulo, title);
             var scroll = UIKit.Scroll(c);
             UIKit.Size(scroll.parent.parent.gameObject, -1, 1);
-            UIKit.Text(scroll, body, 27);
-            UIKit.Button(c, button, () => { CloseModal(root.gameObject); onClose?.Invoke(); });
+            UIKit.Text(scroll, body, 26, TextAlignmentOptions.TopLeft, tema.texto);
+            UIKit.Primary(c, button, () => { CloseModal(root.gameObject); onClose?.Invoke(); }, tema);
             PushModal(root.gameObject);
             return root.gameObject;
         }
 
-        public GameObject ShowChoice(string title, string body, string[] options, Action<int> onPick, float width = 1000)
+        public GameObject ShowChoice(string title, string body, string[] options, Action<int> onPick, float width = 1000, Tema tema = null, string rotulo = null)
         {
-            float h = 300 + options.Length * 66 + (string.IsNullOrEmpty(body) ? 0 : 160);
-            var c = UIKit.Window(Panels, width, Mathf.Min(h, 980), out var root, "Eleccion");
-            UIKit.Text(c, title, 34, TextAlignmentOptions.Left, UIKit.Oro);
+            tema ??= Tema.Liceo;
+            float h = 320 + options.Length * 70 + (string.IsNullOrEmpty(body) ? 0 : 170);
+            var c = UIKit.Window(Panels, width, Mathf.Min(h, 980), out var root, "Eleccion", tema);
+            UIKit.Header(c, tema, rotulo, title);
             if (!string.IsNullOrEmpty(body))
             {
                 var scroll = UIKit.Scroll(c);
                 UIKit.Size(scroll.parent.parent.gameObject, -1, 1);
-                UIKit.Text(scroll, body, 26);
+                UIKit.Text(scroll, body, 25, TextAlignmentOptions.TopLeft, tema.texto);
             }
             for (int i = 0; i < options.Length; i++)
             {
                 int idx = i;
-                UIKit.Button(c, options[i], () => { CloseModal(root.gameObject); onPick?.Invoke(idx); }, 58);
+                var b = UIKit.Secondary(c, options[i], () => { CloseModal(root.gameObject); onPick?.Invoke(idx); }, tema, 60);
+                UIKit.Label(b).alignment = TextAlignmentOptions.MidlineLeft;
+                UIKit.Chip(b, (i + 1).ToString(), tema);
             }
             PushModal(root.gameObject);
             return root.gameObject;
         }
 
         /// Pregunta de alternativas. Devuelve el texto elegido.
-        /// onHint (opcional, puzzles): muestra un botón "Pedir pista"; también agrega "Cerrar".
-        public GameObject ShowQuestion(string header, string enunciado, List<string> opciones, string contexto, Action<string> onAnswer, string footer = null, Func<string> onHint = null)
+        /// rotulo: quién pregunta (Repasa+, un acertijo). progreso 0..1 dibuja una barra (evaluaciones).
+        /// onHint (opcional, puzzles): agrega "Pedir pista" y "Cerrar".
+        public GameObject ShowQuestion(string rotulo, string enunciado, List<string> opciones, string contexto, Action<string> onAnswer,
+            string footer = null, Func<string> onHint = null, Tema tema = null, float progreso = -1)
         {
+            tema ??= Tema.Liceo;
             bool ctx = !string.IsNullOrEmpty(contexto);
-            var c = UIKit.Window(Panels, ctx ? 1500 : 1100, ctx ? 960 : 640 + opciones.Count * 20, out var root, "Pregunta");
-            UIKit.Text(c, header, 24, TextAlignmentOptions.Left, UIKit.Tenue);
+            var c = UIKit.Window(Panels, ctx ? 1560 : 1100, ctx ? 960 : 660 + opciones.Count * 24 + (onHint != null ? 80 : 0), out var root, "Pregunta", tema);
+            UIKit.Header(c, tema, rotulo, null);
+            if (progreso >= 0)
+            {
+                var track = UIKit.Image(c, new Color(1, 1, 1, 0.08f), "Progreso", false);
+                Tema.Redondear(track, 4);
+                UIKit.Size(track.gameObject, 8);
+                var fill = UIKit.Image(track.transform, tema.acento, "Relleno", false);
+                Tema.Redondear(fill, 4);
+                var frt = (RectTransform)fill.transform;
+                frt.anchorMin = Vector2.zero; frt.anchorMax = new Vector2(Mathf.Clamp01(progreso), 1);
+                frt.offsetMin = frt.offsetMax = Vector2.zero;
+            }
             if (ctx)
             {
                 var row = UIKit.HRow(c, 0, 24);
                 UIKit.Size(row.gameObject, -1, 1);
-                var left = UIKit.Scroll(row);
-                UIKit.Size(left.parent.parent.gameObject, -1, -1, 620, 0);
-                UIKit.Text(left, contexto, 23);
+                var card = UIKit.Image(row, new Color(0, 0, 0, 0.28f), "Poema", false);
+                Tema.Redondear(card, 14);
+                UIKit.Size(card.gameObject, -1, -1, 640, 0);
+                var left = UIKit.Scroll(card.transform);
+                UIKit.Stretch((RectTransform)left.parent.parent, 22, 18, 12, 18);
+                UIKit.Text(left, contexto, 23, TextAlignmentOptions.TopLeft, tema.texto);
                 var rightRt = UIKit.Make("Derecha", row);
                 UIKit.VList(rightRt, 10);
                 UIKit.Size(rightRt.gameObject, -1, -1, 760, 1);
-                FillQuestion(rightRt, enunciado, opciones, root.gameObject, onAnswer);
+                FillQuestion(rightRt, enunciado, opciones, root.gameObject, onAnswer, tema);
             }
-            else FillQuestion(c, enunciado, opciones, root.gameObject, onAnswer);
-            if (!string.IsNullOrEmpty(footer)) UIKit.Text(c, footer, 20, TextAlignmentOptions.Left, UIKit.Tenue);
+            else FillQuestion(c, enunciado, opciones, root.gameObject, onAnswer, tema);
+            if (!string.IsNullOrEmpty(footer)) UIKit.Text(c, footer, 20, TextAlignmentOptions.Left, tema.tenue);
             if (onHint != null)
             {
-                var hint = UIKit.Text(c, "", 22, TextAlignmentOptions.Left, UIKit.Oro);
+                var hint = UIKit.Text(c, "", 22, TextAlignmentOptions.Left, tema.acento);
                 var row = UIKit.HRow(c, 54, 12);
-                UIKit.Button(row, "Cerrar", () => CloseModal(root.gameObject), 0, 22);
-                UIKit.Button(row, "Pedir pista", () =>
+                UIKit.Secondary(row, "Cerrar", () => CloseModal(root.gameObject), tema, 0, 22);
+                UIKit.Secondary(row, "Pedir pista", () =>
                 {
                     var h = onHint();
                     hint.text = h ?? "Ya viste las tres pistas. Si no sale, Don Ruperto puede mostrar el camino.";
-                }, 0, 22);
+                }, tema, 0, 22);
             }
             PushModal(root.gameObject);
             return root.gameObject;
         }
 
-        void FillQuestion(Transform c, string enunciado, List<string> opciones, GameObject root, Action<string> onAnswer)
+        void FillQuestion(Transform c, string enunciado, List<string> opciones, GameObject root, Action<string> onAnswer, Tema tema)
         {
-            UIKit.Text(c, enunciado, 30);
-            foreach (var o in opciones)
+            UIKit.Text(c, enunciado, 30, TextAlignmentOptions.TopLeft, tema.texto);
+            for (int i = 0; i < opciones.Count; i++)
             {
-                string op = o;
-                var b = UIKit.Button(c, op, () => { CloseModal(root); onAnswer?.Invoke(op); }, -1, 25);
-                UIKit.Size(b.gameObject, 64);
-                UIKit.Label(b).alignment = TextAlignmentOptions.Left;
+                string op = opciones[i];
+                var b = UIKit.Secondary(c, op, () => { CloseModal(root); onAnswer?.Invoke(op); }, tema, 66, 24);
+                UIKit.Label(b).alignment = TextAlignmentOptions.MidlineLeft;
+                UIKit.Chip(b, ((char)('A' + i)).ToString(), tema);
             }
         }
 
@@ -194,35 +215,69 @@ namespace EnganoColorido.UI
             PlayLines(d.lineas, onDone);
         }
 
+        /// Tema de cada voz: El Retrato habla en oro, Fran y su app en celeste, el liceo en ocre.
+        public static Tema TemaDe(string quien)
+        {
+            if (quien == "El Retrato" || quien == "Esqueleto") return Tema.Retrato;
+            if (quien == "Fran" || quien == "Repasa+") return Tema.App;
+            return Tema.Liceo;
+        }
+
         public void PlayLines(Linea[] lineas, Action onDone = null)
         {
             if (Core.DevTools.AutoPlay) { onDone?.Invoke(); return; }
             var root = UIKit.Stretch(UIKit.Make("Dialogo", Panels));
             var catcher = root.gameObject.AddComponent<UnityEngine.UI.Image>();
-            catcher.color = new Color(0, 0, 0, 0.2f);
-            var bar = UIKit.Image(root, new Color(0, 0, 0, 0.82f), "Barra");
+            catcher.color = new Color(0, 0, 0, 0.25f);
+            var bar = UIKit.Image(root, new Color(0.05f, 0.045f, 0.04f, 0.95f), "Barra");
+            Tema.Redondear(bar, 18);
             var brt = (RectTransform)bar.transform;
-            brt.anchorMin = new Vector2(0.12f, 0); brt.anchorMax = new Vector2(0.88f, 0); brt.pivot = new Vector2(0.5f, 0);
-            brt.sizeDelta = new Vector2(0, 230); brt.anchoredPosition = new Vector2(0, 40);
-            var who = UIKit.Text(bar.transform, "", 28, TextAlignmentOptions.TopLeft, UIKit.Oro, "Quien");
-            UIKit.Stretch(who.rectTransform, 30, 18, 30, 170);
-            var txt = UIKit.Text(bar.transform, "", 30, TextAlignmentOptions.TopLeft, UIKit.Texto, "Linea");
-            UIKit.Stretch(txt.rectTransform, 30, 62, 30, 40);
-            var hint = UIKit.Text(bar.transform, "Clic / Espacio para continuar", 18, TextAlignmentOptions.BottomRight, UIKit.Tenue, "Ayuda");
-            UIKit.Stretch(hint.rectTransform, 30, 190, 30, 10);
+            brt.anchorMin = new Vector2(0.14f, 0); brt.anchorMax = new Vector2(0.86f, 0); brt.pivot = new Vector2(0.5f, 0);
+            brt.sizeDelta = new Vector2(0, 210); brt.anchoredPosition = new Vector2(0, 46);
+            // Placa con el nombre de quien habla
+            var plate = UIKit.Image(bar.transform, Tema.Liceo.acento, "Placa", false);
+            Tema.Redondear(plate, 12);
+            var prt = (RectTransform)plate.transform;
+            prt.anchorMin = prt.anchorMax = new Vector2(0, 1); prt.pivot = new Vector2(0, 0.5f);
+            prt.sizeDelta = new Vector2(260, 44); prt.anchoredPosition = new Vector2(30, 0);
+            var who = UIKit.Text(plate.transform, "", 22, TextAlignmentOptions.Center, Tema.Liceo.textoSobreAcento, "Quien");
+            who.fontStyle = FontStyles.Bold;
+            UIKit.Stretch(who.rectTransform, 12, 0, 12, 0);
+            var txt = UIKit.Text(bar.transform, "", 29, TextAlignmentOptions.TopLeft, UIKit.Texto, "Linea");
+            UIKit.Stretch(txt.rectTransform, 34, 40, 34, 36);
+            var hint = UIKit.Text(bar.transform, "Clic · Espacio · E  para continuar", 17, TextAlignmentOptions.BottomRight, UIKit.Tenue, "Ayuda");
+            UIKit.Stretch(hint.rectTransform, 30, 170, 26, 12);
             var runner = root.gameObject.AddComponent<DialogueRunner>();
             runner.Init(lineas, who, txt, () => { CloseModal(root.gameObject); onDone?.Invoke(); });
+            runner.OnLine = quien =>
+            {
+                var t = TemaDe(quien);
+                bool narrador = string.IsNullOrEmpty(quien);
+                plate.gameObject.SetActive(!narrador);
+                plate.color = t.acento;
+                who.color = t.textoSobreAcento;
+                txt.fontStyle = narrador ? FontStyles.Italic : FontStyles.Normal;
+                txt.color = narrador ? UIKit.Tenue : t.texto;
+            };
+            runner.ShowFirst();
             PushModal(root.gameObject);
         }
 
         // ---------- Avisos ----------
         public void Toast(string text, float seconds = 5f, bool retrato = false)
         {
-            var img = UIKit.Image(toasts, retrato ? new Color(0.35f, 0.25f, 0.08f, 0.92f) : new Color(0, 0, 0, 0.8f), "Aviso", false);
-            var v = UIKit.VList((RectTransform)img.transform, 4, 14);
+            var t = retrato ? Tema.Retrato : Tema.App;
+            var img = UIKit.Image(toasts, new Color(t.panel.r, t.panel.g, t.panel.b, 0.94f), "Aviso", false);
+            Tema.Redondear(img, 14);
+            var o = img.gameObject.AddComponent<UnityEngine.UI.Outline>();
+            o.effectColor = new Color(t.acento.r, t.acento.g, t.acento.b, 0.5f);
+            o.effectDistance = new Vector2(1.5f, -1.5f);
+            var v = UIKit.VList((RectTransform)img.transform, 4, 16);
             v.childAlignment = TextAnchor.UpperLeft;
             img.gameObject.AddComponent<UnityEngine.UI.ContentSizeFitter>().verticalFit = UnityEngine.UI.ContentSizeFitter.FitMode.PreferredSize;
-            UIKit.Text(img.transform, text, 23);
+            var k = UIKit.Text(img.transform, retrato ? "STORY · EL RETRATO" : "CELULAR DE FRAN", 15, TextAlignmentOptions.Left, t.acento);
+            k.characterSpacing = 5; k.fontStyle = FontStyles.Bold;
+            UIKit.Text(img.transform, text, 22, TextAlignmentOptions.Left, t.texto);
             img.transform.SetAsFirstSibling();
             Destroy(img.gameObject, seconds);
         }

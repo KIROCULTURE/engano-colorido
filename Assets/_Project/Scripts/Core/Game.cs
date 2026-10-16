@@ -15,9 +15,9 @@ namespace EnganoColorido.Core
         public static void ShowFicha(Ficha f, Action onClose = null)
         {
             State?.AddUnique(State.fichas, f.id);
-            UIManager.I.ShowText("Ficha de la profe Inés · " + f.titulo,
-                f.texto + $"\n\n<size=80%><color=#A09A90>Texto escolar, p. {f.pagina}. Queda guardada en tu Cuaderno.</color></size>",
-                "Entendido", onClose, 1000, 700);
+            UIManager.I.ShowText(f.titulo,
+                f.texto + "\n\n<size=80%><color=#A09A90>Queda guardada en tu Cuaderno (celular → Cuaderno).</color></size>",
+                "Entendido", onClose, 1000, 720, Tema.Liceo, $"Ficha de la profe Inés · texto escolar p. {f.pagina}");
         }
 
         /// Muestra fichas en cadena (por defecto solo las que aún no se han leído).

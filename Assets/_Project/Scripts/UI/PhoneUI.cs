@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace EnganoColorido.UI
 {
-    /// Celular de Ale (UI diegética): Cuaderno, Mapa, Inventario, Stories, Pensar, Ajustes.
+    /// Celular de Fran (UI diegética): Cuaderno, Mapa, Inventario, Stories, Pensar, Ajustes.
     public class PhoneUI : MonoBehaviour
     {
         static PhoneUI current;

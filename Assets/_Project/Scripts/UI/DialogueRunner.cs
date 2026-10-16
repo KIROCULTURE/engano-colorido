@@ -6,9 +6,11 @@ using UnityEngine.InputSystem;
 
 namespace EnganoColorido.UI
 {
+    /// Avanza una lista lineal de líneas (clic, Espacio, E o Enter).
     public class DialogueRunner : MonoBehaviour
     {
         Linea[] lines; int i = -1; TextMeshProUGUI who, txt; Action done; float shownAt;
+        public Action<string> OnLine; // para teñir la barra según quién habla
 
         public void Init(Linea[] l, TextMeshProUGUI w, TextMeshProUGUI t, Action d)
         {
@@ -16,8 +18,9 @@ namespace EnganoColorido.UI
             var btn = gameObject.AddComponent<UnityEngine.UI.Button>();
             btn.transition = UnityEngine.UI.Selectable.Transition.None;
             btn.onClick.AddListener(Next);
-            Next();
         }
+
+        public void ShowFirst() => Next();
 
         void Next()
         {
@@ -26,6 +29,7 @@ namespace EnganoColorido.UI
             if (i >= lines.Length) { done?.Invoke(); done = null; return; }
             who.text = lines[i].quien;
             txt.text = lines[i].texto;
+            OnLine?.Invoke(lines[i].quien);
             shownAt = Time.unscaledTime;
         }
 

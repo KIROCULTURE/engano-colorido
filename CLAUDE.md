@@ -20,12 +20,12 @@ Esto **no es un juego comercial**. Es un serious game de estudiantes que tiene q
 - Si algo del GDD sale caro, haz la versión mínima y anótalo en `AVANCE.md`.
 
 ## Reglas de contenido (no negociables)
-- Todo el texto del juego en español de Chile. Ale tiene género neutro: nunca adjetivos con género para Ale.
+- Todo el texto del juego en español de Chile. Fran tiene género neutro: nunca adjetivos con género para Fran.
 - El contenido académico sale del libro (GDD sección 2). Definiciones parafraseadas, nunca copiadas del libro.
 - Solo se citan textualmente los textos de dominio público de GDD 2.6. Lo de 2.8 no se reproduce.
 - El poema de Quevedo (2.6) es exclusivo de la prueba de salida: no puede aparecer antes en el juego.
 - Silent Hill = patrones de diseño (GDD 5). Cero nombres, personajes, criaturas, música, sonidos, logos o assets de la saga.
-- Público menor de edad: sin sangre, gore, armas ni combate; la muerte es tema literario, nunca algo deseable; ningún final mata a Ale.
+- Público menor de edad: sin sangre, gore, armas ni combate; la muerte es tema literario, nunca algo deseable; ningún final mata a Fran.
 - Datos de estudiantes: solo alias, solo en local, sin red (GDD 8).
 
 ## Stack

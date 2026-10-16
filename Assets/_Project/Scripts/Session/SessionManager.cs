@@ -63,7 +63,7 @@ namespace EnganoColorido.Session
             string line = d != null && d.lineas.Length > 0 ? d.lineas[0].texto : "¿Le muestro el camino?";
             UIManager.I.ShowChoice("Don Ruperto", line + "\n\n<size=80%><color=#A09A90>" + task.Objective + "</color></size>",
                 new[] { "Sí, muéstrame", "Sigo intentando" },
-                i => { if (i == 0) task.ForceComplete(); });
+                i => { if (i == 0) task.ForceComplete(); }, 1000, Tema.Liceo, "Don Ruperto");
         }
     }
 }

@@ -576,7 +576,7 @@ MonoBehaviour:
       - id: marcos
         tipo: asignar
         titulo: Los cuatro retratos
-        enunciado: "Cuelga los retratos de Ale en el orden del \xFAltimo verso del
+        enunciado: "Cuelga los retratos de Fran en el orden del \xFAltimo verso del
           soneto de Sor Juana."
         plantilla: 
         voz: 
@@ -1182,22 +1182,22 @@ MonoBehaviour:
           para ver c\xF3mo vas. No lleva nota."
     - id: diag_fin
       lineas:
-      - quien: Ale
+      - quien: Fran
         texto: "Ya, suficiente repaso. Un ratito m\xE1s de ensayo frente al espejo
           y me voy\u2026 Voy a probar el filtro \xABDorado\xBB."
       - quien: 
-        texto: "Ale apoya la cabeza en el tocador del camar\xEDn y se queda raja."
+        texto: "Fran apoya la cabeza en el tocador del camar\xEDn y se queda raja."
     - id: camarin_despertar
       lineas:
-      - quien: Ale
+      - quien: Fran
         texto: "Pucha\u2026 me qued\xE9 raja ensayando el mon\xF3logo."
-      - quien: Ale
+      - quien: Fran
         texto: "\xBF23:59? El reloj no se mueve. Y afuera\u2026 \xBFeso es camanchaca?
           \xBFAdentro del liceo?"
       - quien: El Retrato
         texto: "Por fin despiertas. \xBFO no? M\xEDrame bien: soy tu mejor versi\xF3n.
           Con filtro Dorado."
-      - quien: Ale
+      - quien: Fran
         texto: "Mi reflejo no me est\xE1 imitando. Esto no puede estar pasando."
       - quien: El Retrato
         texto: "Qu\xE9date conmigo. Aqu\xED nadie envejece, nadie se esfuerza, todo
@@ -1207,16 +1207,16 @@ MonoBehaviour:
           espejo. Qu\xE9 fome."
     - id: camarin_listo
       lineas:
-      - quien: Ale
+      - quien: Fran
         texto: "Si todo esto es un enga\xF1o, me toca desenga\xF1arme. Leer el liceo
           como un poema barroco."
-      - quien: Ale
+      - quien: Fran
         texto: "Y la que habla en mi cabeza\u2026 \xBFsoy yo, o es una voz que invent\xE9?
           Ya, al patio."
     - id: patio_intro
       lineas:
       - quien: Don Ruperto
-        texto: "\xA1Ale! \xBFQu\xE9 hace a esta hora en el liceo? Bueno, yo tampoco
+        texto: "\xA1Fran! \xBFQu\xE9 hace a esta hora en el liceo? Bueno, yo tampoco
           s\xE9 qu\xE9 hago aqu\xED\u2026 la niebla entr\xF3 como Pedro por su casa."
       - quien: Don Ruperto
         texto: "Mire, el invernadero tiene un candado de rosas. La profe In\xE9s
@@ -1232,7 +1232,7 @@ MonoBehaviour:
           la campana vuelve a sonar.'
     - id: patio_rosa_ok
       lineas:
-      - quien: Ale
+      - quien: Fran
         texto: "La cort\xE9 justo a tiempo. Coged de vuestra alegre primavera\u2026
           Carpe diem, supongo."
       - quien: Don Ruperto
@@ -1245,36 +1245,36 @@ MonoBehaviour:
           quedo cuidando el patio."
     - id: galeria_intro
       lineas:
-      - quien: Ale
+      - quien: Fran
         texto: "La galer\xEDa del liceo. Hay una mesa armada como un cuadro antiguo\u2026
           y algo tapado con un velo al fondo."
-      - quien: Ale
+      - quien: Fran
         texto: "Y cuatro retratos m\xEDos, cada uno peor que el anterior. Qu\xE9
           manera de arruinar una selfie."
     - id: galeria_velo
       lineas:
       - quien: 
-        texto: 'Ale levanta el velo. Debajo no hay nadie: solo un esqueleto con su
-          misma ropa.'
+        texto: 'Fran levanta el velo. Debajo no hay nadie: solo un esqueleto con
+          su misma ropa.'
       - quien: Esqueleto
         texto: "As\xED, Cipriano, son / todas las glorias del mundo."
-      - quien: Ale
+      - quien: Fran
         texto: "Eso es lo que queda cuando se apaga el filtro. Lo mismo que le pas\xF3
           a Cipriano en El m\xE1gico prodigioso."
     - id: biblioteca_intro
       lineas:
-      - quien: Ale
+      - quien: Fran
         texto: "La biblioteca. Los libros est\xE1n en el suelo y hay un estante de
           cuatro repisas: cuatro, cuatro, tres y tres. Como un soneto."
     - id: teatro_intro
       lineas:
-      - quien: Ale
+      - quien: Fran
         texto: "El teatro. Aqu\xED empez\xF3 todo. El libreto de Segismundo est\xE1
           desarmado y los maniqu\xEDes no tienen cara."
     - id: juicio_intro
       lineas:
       - quien: El Retrato
-        texto: "Le\xEDste harto esta noche, Ale. Ahora conv\xE9nceme: \xBFpara qu\xE9
+        texto: "Le\xEDste harto esta noche, Fran. Ahora conv\xE9nceme: \xBFpara qu\xE9
           despertar?"
       - quien: El Retrato
         texto: "Tres tesis. Resp\xF3ndeme con un conector, un verso de tu Cuaderno
@@ -1286,7 +1286,7 @@ MonoBehaviour:
       - quien: El Retrato
         texto: Esas palabras no conectan. Como tus fotos sin filtro.
       - quien: El Retrato
-        texto: "El tiempo se te escapa, Ale. Aqu\xED no pasar\xEDa eso."
+        texto: "El tiempo se te escapa, Fran. Aqu\xED no pasar\xEDa eso."
     - id: juicio_fin
       lineas:
       - quien: El Retrato
@@ -1305,41 +1305,41 @@ MonoBehaviour:
         texto: "07:59. Una llave gira en la puerta del teatro. La niebla se retira
           como un tel\xF3n."
       - quien: Don Ruperto
-        texto: "\xBFAle? \xBFPas\xF3 la noche aqu\xED? Venga, que hoy es la prueba.
+        texto: "\xBFFran? \xBFPas\xF3 la noche aqu\xED? Venga, que hoy es la prueba.
           \xBFMe dice el mon\xF3logo, ya que est\xE1 en el escenario?"
-      - quien: Ale
+      - quien: Fran
         texto: "\xBFQu\xE9 es la vida? Un frenes\xED. / \xBFQu\xE9 es la vida? Una
           ilusi\xF3n, / una sombra, una ficci\xF3n, / y el mayor bien es peque\xF1o;"
-      - quien: Ale
+      - quien: Fran
         texto: "que toda la vida es sue\xF1o, / y los sue\xF1os, sue\xF1os son."
     - id: final_foto
       lineas:
       - quien: 
         texto: "En el celular queda una foto de esta ma\xF1ana, sin filtro. El dedo
-          de Ale se detiene sobre \xABPublicar\xBB."
+          de Fran se detiene sobre \xABPublicar\xBB."
     - id: final_sonar
       lineas:
       - quien: 
         texto: El Mundo Dorado se cierra como un retablo. Todo brilla, nada pesa.
       - quien: 
-        texto: "En la galer\xEDa cuelga un retrato nuevo: Ale, sonriendo para siempre."
+        texto: "En la galer\xEDa cuelga un retrato nuevo: Fran, sonriendo para siempre."
       - quien: "Juan Bosc\xE1n"
         texto: Durmiendo, en fin, fui bienaventurado, / y es justo en la mentira
           ser dichoso / quien siempre en la verdad fue desdichado.
     - id: ruperto_pistas
       lineas:
       - quien: Don Ruperto
-        texto: "Ale, le dej\xE9 una pista en el celular, en \xABPensar\xBB. A veces
+        texto: "Fran, le dej\xE9 una pista en el celular, en \xABPensar\xBB. A veces
           una ayudita no le hace mal a nadie."
     - id: ruperto_guiado
       lineas:
       - quien: Don Ruperto
-        texto: "Ale, se nos est\xE1 haciendo tarde. \xBFQuiere que le muestre el
+        texto: "Fran, se nos est\xE1 haciendo tarde. \xBFQuiere que le muestre el
           camino?"
     - id: ruperto_teatro
       lineas:
       - quien: Don Ruperto
-        texto: "\xA1Ale! Ya casi amanece. Vamos directo al teatro, que all\xE1 se
+        texto: "\xA1Fran! Ya casi amanece. Vamos directo al teatro, que all\xE1 se
           resuelve todo."
     - id: salida_intro
       lineas:

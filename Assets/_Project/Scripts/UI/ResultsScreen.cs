@@ -30,7 +30,7 @@ namespace EnganoColorido.UI
             sb.Append("<size=80%><color=#A09A90>Engaño Colorido · serious game de Lengua y Literatura, 2° medio.\n" +
                       "Poemas de dominio público (siglos XVI–XVII). Contenidos parafraseados del Texto del Estudiante (Mineduc).\n" +
                       "Para la tarea: ¿necesitamos hoy un «desengaño del mundo»? (ensayo, p. 106).</color></size>");
-            UIManager.I.ShowText("Fin de la sesión", sb.ToString(), "Volver al menú", () => GameFlow.I.ReturnToMenu(), 1100, 900);
+            UIManager.I.ShowText("Fin de la sesión", sb.ToString(), "Volver al menú", () => GameFlow.I.ReturnToMenu(), 1100, 900, Tema.App, "Repasa+ · resultados");
         }
     }
 }

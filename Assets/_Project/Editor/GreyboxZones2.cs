@@ -227,7 +227,7 @@ namespace EnganoColorido.EditorTools
             // P4 · El retrato que miente
             var atril = Box("Atril", t, new Vector3(7f, 0.55f, 2.4f), new Vector3(0.6f, 1.1f, 0.4f), Madera);
             var p4 = MakePuzzle(atril, "P4", "galeria", "Lee el soneto del atril y cuelga los cuatro retratos en orden.");
-            p4.placa = "En el atril, el soneto que Sor Juana Inés de la Cruz escribió sobre su propio retrato. Junto a la pared hay cuatro retratos de Ale, cada uno más deteriorado.";
+            p4.placa = "En el atril, el soneto que Sor Juana Inés de la Cruz escribió sobre su propio retrato. Junto a la pared hay cuatro retratos de Fran, cada uno más deteriorado.";
             p4.poemasPlaca = new[] { "sorjuana_este" };
             p4.poemaContexto = "sorjuana_este";
             Trigger(atril, p4, "Leer el soneto del atril");
@@ -259,7 +259,7 @@ namespace EnganoColorido.EditorTools
             Box("Cadera", esq.transform, new Vector3(0, 0.8f, 0), new Vector3(0.36f, 0.12f, 0.16f), Hueso, false);
             Prim(PrimitiveType.Cylinder, "PiernaI", esq.transform, new Vector3(-0.12f, 0.38f, 0), new Vector3(0.06f, 0.38f, 0.06f), Hueso, false);
             Prim(PrimitiveType.Cylinder, "PiernaD", esq.transform, new Vector3(0.12f, 0.38f, 0), new Vector3(0.06f, 0.38f, 0.06f), Hueso, false);
-            Box("RopaDeAle", esq.transform, new Vector3(0, 1.3f, 0.02f), new Vector3(0.46f, 0.5f, 0.2f), Mat("RopaAle", new Color(0.2f, 0.28f, 0.45f)), false);
+            Box("RopaDeFran", esq.transform, new Vector3(0, 1.3f, 0.02f), new Vector3(0.46f, 0.5f, 0.2f), Mat("RopaFran", new Color(0.2f, 0.28f, 0.45f)), false);
             var luzVelo = PointLight(ft, new Vector3(-0.8f, 2.6f, 0), new Color(1f, 0.6f, 0.4f), 0.9f, 5f);
             var fc = figura.AddComponent<BoxCollider>(); fc.size = new Vector3(1.2f, 2.3f, 1.2f); fc.center = new Vector3(0, 1.15f, 0);
             var vf = figura.AddComponent<VeiledFigure>();
