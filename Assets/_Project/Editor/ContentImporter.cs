@@ -20,6 +20,7 @@ namespace EnganoColorido.EditorTools
             if (nuevo) AssetDatabase.CreateAsset(db, AssetPath);
             EditorUtility.SetDirty(db);
             AssetDatabase.SaveAssets();
+            foreach (var problema in ContentValidator.Check(db)) Debug.LogWarning("[Import Content] " + problema);
             Debug.Log($"[Import Content] {db.fichas.fichas.Count} fichas · {db.poemas.poemas.Count} poemas · {db.puzzles.puzzles.Count} puzzles · " +
                       $"{db.evaluacion.diagnostico.Count}+{db.evaluacion.salida.Count} preguntas · {db.dialogos.dialogos.Count} diálogos");
         }

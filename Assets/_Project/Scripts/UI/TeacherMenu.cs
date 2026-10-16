@@ -58,6 +58,7 @@ namespace EnganoColorido.UI
 
             UIKit.Button(c, "Ver resumen del curso (junta los CSV de la carpeta)", () =>
                 UIManager.I.ShowText("Resumen del curso", CourseSummary.Build(carpeta.text), "Cerrar"), 54, 22);
+            UIKit.Button(c, "Revisar contenidos (fichas, poemas, preguntas)", ShowContent, 54, 22);
             UIKit.Text(c, "Privacidad: solo alias, todo queda en este computador. Sin internet ni cuentas.", 20, TextAlignmentOptions.Left, UIKit.Tenue);
             UIKit.Button(c, "Guardar y cerrar", () =>
             {
@@ -68,6 +69,21 @@ namespace EnganoColorido.UI
                 GameFlow.I.ShowMenu();
             }, 58, 24, UIKit.BotonSel);
             UIManager.I.PushModal(root.gameObject);
+        }
+
+        /// Vista de revisión: todo el texto curricular que verá el curso (se corrige en Assets/_Project/Data/*.json).
+        static void ShowContent()
+        {
+            var db = ContentDatabase.Instance;
+            var sb = new System.Text.StringBuilder("<size=85%><color=#A09A90>Para corregir un texto: editar Assets/_Project/Data/*.json y usar Tools/Engaño Colorido/Import Content.</color></size>\n\n");
+            sb.Append("<b><color=#EBC261>FICHAS</color></b>\n\n");
+            foreach (var f in db.fichas.fichas) sb.Append($"<b>{f.titulo}</b> (p. {f.pagina})\n{f.texto}\n\n");
+            sb.Append("<b><color=#EBC261>POEMAS</color></b>\n\n");
+            foreach (var p in db.poemas.poemas) sb.Append(ContentDatabase.PoemaTexto(p)).Append("\n\n");
+            sb.Append("<b><color=#EBC261>DIAGNÓSTICO Y PRUEBA DE SALIDA</color></b>\n\n");
+            foreach (var q in db.evaluacion.diagnostico) sb.Append($"{q.id}. {q.enunciado} → <b>{q.correcta}</b>\n");
+            foreach (var q in db.evaluacion.salida) sb.Append($"{q.id}. {q.enunciado} → <b>{q.correcta}</b>\n");
+            UIManager.I.ShowText("Contenidos del juego", sb.ToString(), "Cerrar", null, 1300, 950);
         }
 
         /// Quita caracteres que romperían el CSV.

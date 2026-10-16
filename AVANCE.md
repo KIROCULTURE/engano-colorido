@@ -22,3 +22,10 @@
 - Export CSV (UTF-8 con BOM, `;`, apto para Excel en Chile, sin fórmulas) + JSON con todo el registro.
 - Tests EditMode (12): ritmo, puntaje y ganancia, CSV/JSON, guardado/carga, barajado.
 - Verificación automática: `EnganoColorido.exe -autoplay -exportdir <carpeta>` juega la sesión y exporta.
+
+## M3 Datos ✅ — `Builds/M3_Datos/`
+- `Assets/_Project/Data/`: `fichas.json` (16 fichas ≤ 80 palabras, con página del libro), `poems.json` (corpus 2.6 textual, sin Quevedo), `topicos.json`, `puzzles.json` (P1, H, P3, P4, P5, P7, Juicio, Tu verso: solución, distractores, 3 pistas, conceptTags), `assessment.json` (D1–D5, S1–S8 y el soneto de Quevedo solo aquí), `dialogue.json` (líneas lineales), `session.json` (PIN, zonas, presupuestos por modo).
+- `Tools/Engaño Colorido/Import Content` → `Resources/ContentDatabase.asset` + `ContentValidator` (avisa si una corrección rompe un puzzle).
+- `PuzzleValidation` (puro): asignación, estante por repisa, preguntas, abba de Tu verso, Juicio con feedback por categoría de conector.
+- Tests EditMode (28): + contenido (Quevedo exclusivo de la salida, fichas ≤ 80 palabras, 3 pistas, Clotaldo), soluciones válidas y cada distractor rechazado en cada puzzle, abba, Juicio.
+- Menú docente: "Revisar contenidos".

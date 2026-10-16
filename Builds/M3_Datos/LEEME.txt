@@ -1,0 +1,9 @@
+ENGAÑO COLORIDO — Build M3 Datos
+Incluye todo lo de M2 y el contenido completo en JSON (Assets/_Project/Data): 16 fichas de la
+profe Inés, 8 poemas de dominio público, puzzles del modo 45 con solución, distractores y 3 pistas,
+banco de evaluación D1–D5 / S1–S8, diálogos y presupuestos de tiempo. Importador: Tools/Engaño
+Colorido/Import Content (avisa si una corrección rompe algo). Nuevo en el menú docente (PIN 1234):
+"Revisar contenidos" muestra todos los textos que verá el curso.
+Cómo se juega: igual que M2 (Nueva sesión > diagnóstico > Camarín > prueba de salida > CSV).
+Falta: zonas del Patio en adelante, puzzles jugables, Juicio y finales.
+Duración: 6–8 minutos. Copia la carpeta a una ruta corta antes de abrir EnganoColorido.exe.

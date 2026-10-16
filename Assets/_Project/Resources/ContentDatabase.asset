@@ -105,10 +105,10 @@ MonoBehaviour:
     - id: topicos
       titulo: "T\xF3picos literarios"
       pagina: 98
-      texto: "Un <b>t\xF3pico</b> es un tema que se repite desde la Antig\xFCedad
-        y tiene nombre en lat\xEDn.\n\n\u2022 <i>Carpe diem</i>: aprovecha el momento,
-        sobre todo la juventud.\n\u2022 <i>Tempus irreparabile fugit</i>: el tiempo
-        huye sin remedio.\n\u2022 <i>Contemptus mundi</i>: desprecio de lo que ofrece
+      texto: "Un <b>t\xF3pico</b> es un tema repetido desde la Antig\xFCedad, con
+        nombre en lat\xEDn.\n\n\u2022 <i>Carpe diem</i>: aprovecha el momento, sobre
+        todo la juventud.\n\u2022 <i>Tempus irreparabile fugit</i>: el tiempo huye
+        sin remedio.\n\u2022 <i>Contemptus mundi</i>: desprecio de lo que ofrece
         el mundo.\n\u2022 <i>Vanitas vanitatum</i>: las cosas son enga\xF1osas y
         vanas.\n\u2022 <i>Vita somnium</i>: la vida como un sue\xF1o, una ficci\xF3n
         pasajera.\n\u2022 <i>Ubi sunt?</i>: \xBFd\xF3nde est\xE1n los que ya no est\xE1n?"
