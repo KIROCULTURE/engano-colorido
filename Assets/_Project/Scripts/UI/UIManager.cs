@@ -139,7 +139,8 @@ namespace EnganoColorido.UI
         }
 
         /// Pregunta de alternativas. Devuelve el texto elegido.
-        public GameObject ShowQuestion(string header, string enunciado, List<string> opciones, string contexto, Action<string> onAnswer, string footer = null)
+        /// onHint (opcional, puzzles): muestra un botón "Pedir pista"; también agrega "Cerrar".
+        public GameObject ShowQuestion(string header, string enunciado, List<string> opciones, string contexto, Action<string> onAnswer, string footer = null, Func<string> onHint = null)
         {
             bool ctx = !string.IsNullOrEmpty(contexto);
             var c = UIKit.Window(Panels, ctx ? 1500 : 1100, ctx ? 960 : 640 + opciones.Count * 20, out var root, "Pregunta");
@@ -158,6 +159,17 @@ namespace EnganoColorido.UI
             }
             else FillQuestion(c, enunciado, opciones, root.gameObject, onAnswer);
             if (!string.IsNullOrEmpty(footer)) UIKit.Text(c, footer, 20, TextAlignmentOptions.Left, UIKit.Tenue);
+            if (onHint != null)
+            {
+                var hint = UIKit.Text(c, "", 22, TextAlignmentOptions.Left, UIKit.Oro);
+                var row = UIKit.HRow(c, 54, 12);
+                UIKit.Button(row, "Cerrar", () => CloseModal(root.gameObject), 0, 22);
+                UIKit.Button(row, "Pedir pista", () =>
+                {
+                    var h = onHint();
+                    hint.text = h ?? "Ya viste las tres pistas. Si no sale, Don Ruperto puede mostrar el camino.";
+                }, 0, 22);
+            }
             PushModal(root.gameObject);
             return root.gameObject;
         }

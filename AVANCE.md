@@ -53,6 +53,7 @@ La duración real con estudiantes no está medida (ver pendientes). El ritmo sí
 - **Audio:** ambiente (zumbido, viento) y TTS de los poemas. Hoy solo hay campana, estática y un tono grave, todos procedurales. Los fragmentos de las radios van subtitulados, sin voz.
 - **Accesibilidad completa:** ya están los subtítulos siempre activos, el tamaño de texto, la sensibilidad, el FOV y el juego no tiene destellos. Faltan TTS, opción explícita "sin sustos" (hoy no hay sustos bruscos) y el modo Calma.
 - **Pulido visual** de los dos mundos y de las recreaciones de Pereda y Murillo (hoy son primitivas).
+- **Jugar con mouse y teclado reales (sin verificar):** todas las pruebas de punta a punta usaron autoplay o modo guiado y capturas automáticas. Hay que jugar M6 a mano al menos una vez: escribir el alias, hacer clic en los paneles, cortar la rosa dentro de los 4 s, mover el dial de las radios y elegir el final.
 - **Prueba cronometrada con estudiantes** en cada modo. La duración de ~40 min es una estimación: el ritmo está verificado, pero no se midió jugando de verdad.
 - **Confirmar con la docente:**
   - la actitud *enunciativa* de la radio 3 (Calderón);

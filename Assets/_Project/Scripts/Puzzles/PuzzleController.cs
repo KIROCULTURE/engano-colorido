@@ -131,7 +131,7 @@ namespace EnganoColorido.Puzzles
                 {
                     if (Check(i, new List<string> { a }, out var fb)) Next(i);
                     else { UIManager.I.Toast("No es esa. " + (fb ?? "Puedes pedir una pista en Pensar (celular)."), 4f); ShowStep(); }
-                }, "Pistas: celular → Pensar.");
+                }, null, () => { var h = RequestHint(); return h == null ? null : $"Pista {HintsShown}: {h}"; });
             }
             else AssignmentPanel.Show(this, paso, i);
         }

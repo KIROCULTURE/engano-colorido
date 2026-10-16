@@ -90,9 +90,10 @@ namespace EnganoColorido.World
         }
 
         /// Amanecer del final Despertar: la niebla se retira.
-        public void Dawn(float seconds = 4f) => StartCoroutine(DawnCo(seconds));
+        public void Dawn(float seconds = 4f) { StopAllCoroutines(); StartCoroutine(DawnCo(seconds)); }
         IEnumerator DawnCo(float seconds)
         {
+            if (Dorado || Transitioning) yield return Transition(false, seconds / 2); // primero se apaga el oro
             Color f0 = RenderSettings.fogColor, a0 = RenderSettings.ambientLight;
             float d0 = RenderSettings.fogDensity;
             for (float e = 0; e < seconds; e += Time.deltaTime)

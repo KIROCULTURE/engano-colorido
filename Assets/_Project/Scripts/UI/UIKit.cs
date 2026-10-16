@@ -213,6 +213,7 @@ namespace EnganoColorido.UI
             input.characterLimit = charLimit;
             input.caretColor = Oro;
             input.customCaretColor = true;
+            input.enabled = false; input.enabled = true; // OnEnable otra vez, ya con texto y viewport asignados
             return input;
         }
 
