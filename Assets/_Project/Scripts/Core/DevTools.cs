@@ -14,6 +14,8 @@ namespace EnganoColorido.Core
     public class DevTools : MonoBehaviour
     {
         public static bool AutoPlay { get; private set; }
+        public static bool Idle { get; private set; }        // -devidle: autoplay sin resolver (prueba el ritmo)
+        public static float ClockScale { get; private set; } = 1f; // -devclock 60: reloj de sesión acelerado
 
         public static string Arg(string name)
         {
@@ -27,6 +29,8 @@ namespace EnganoColorido.Core
         public static void Init()
         {
             AutoPlay = Has("-autoplay");
+            Idle = Has("-devidle");
+            if (Arg("-devclock") is string k) ClockScale = float.Parse(k, System.Globalization.CultureInfo.InvariantCulture);
             if (Arg("-exportdir") is string dir) Settings.ExportOverride = dir;
             if (Arg("-devscene") == null && Arg("-devshot") == null && !AutoPlay) return;
             var go = new GameObject("DevTools");
@@ -89,7 +93,8 @@ namespace EnganoColorido.Core
             yield return new WaitForSeconds(1.5f);
             var z = World.ZoneController.I;
             if (z == null) yield break;
-            Debug.Log("[AUTOPLAY] zona " + string.Join(",", z.zonas));
+            Debug.Log("[AUTOPLAY] zona " + string.Join(",", z.zonas) + " · min " + (GameFlow.I.Pacer != null ? GameFlow.I.Pacer.Elapsed / 60f : 0).ToString("0.0"));
+            if (Idle) yield break;
             int guard = 0;
             while (!z.AllDone && guard++ < 40)
             {

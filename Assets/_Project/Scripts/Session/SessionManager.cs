@@ -24,7 +24,7 @@ namespace EnganoColorido.Session
         void Update()
         {
             if (Pacer == null) return;
-            Pacer.Tick(Time.unscaledDeltaTime);
+            Pacer.Tick(Time.unscaledDeltaTime * Core.DevTools.ClockScale);
             var flow = GameFlow.I;
             if (flow == null) return;
 
@@ -42,6 +42,7 @@ namespace EnganoColorido.Session
             {
                 hintedZone = Pacer.Zone;
                 if (h.HintsShown < 3) h.RequestHint();
+                Debug.Log("[Ritmo] pistas adelantadas en " + Pacer.Zone);
                 UIManager.I.PlayDialogue("ruperto_pistas");
                 return;
             }
@@ -57,6 +58,7 @@ namespace EnganoColorido.Session
 
         public static void OfferGuided(ZoneTask task)
         {
+            Debug.Log("[Ritmo] Don Ruperto ofrece modo guiado: " + task.name);
             var d = Game.DB.Dialogo("ruperto_guiado");
             string line = d != null && d.lineas.Length > 0 ? d.lineas[0].texto : "¿Le muestro el camino?";
             UIManager.I.ShowChoice("Don Ruperto", line + "\n\n<size=80%><color=#A09A90>" + task.Objective + "</color></size>",

@@ -217,6 +217,7 @@ namespace EnganoColorido.Core
         public void ForceTheater()
         {
             if (FreeRoam) return;
+            Debug.Log("[Ritmo] envío forzado al Teatro, min " + (Pacer.Elapsed / 60f).ToString("0.0"));
             UIManager.I.CloseAllModals();
             Game.State.notas.Add("Don Ruperto llevó a Ale al Teatro para el Juicio (minuto " + Mathf.RoundToInt(Pacer.Elapsed / 60f) + ").");
             InGameplay = false;
@@ -236,6 +237,7 @@ namespace EnganoColorido.Core
             if (FreeRoam || exitStarted) return;
             UIManager.I.CloseAllModals();
             Game.State.notas.Add("La prueba de salida empezó por tiempo.");
+            Debug.Log("[Ritmo] prueba de salida forzada, min " + (Pacer.Elapsed / 60f).ToString("0.0"));
             StartExitTest();
         }
 

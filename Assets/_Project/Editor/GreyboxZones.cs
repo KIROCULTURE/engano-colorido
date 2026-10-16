@@ -18,6 +18,7 @@ namespace EnganoColorido.EditorTools
             built.Add(BuildPatio());
             built.Add(BuildGaleria());
             built.Add(BuildBiblioteca());
+            built.Add(BuildTeatro());
         }
 
         // ------------------------------------------------------------ comunes

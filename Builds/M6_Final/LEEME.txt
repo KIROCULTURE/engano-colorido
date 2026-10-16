@@ -1,0 +1,10 @@
+ENGAÑO COLORIDO — Build M6 Final (Entrega 1: modo 45 completo)
+Incluye la sesión completa del modo 45: menú docente (PIN 1234), alias, diagnóstico, Camarín,
+Patio (P1), Radios (H), Galería (P3, P4, esqueleto), Biblioteca (P5), Teatro (P7 libreto y máscaras,
+Juicio del Espejo con conectores y evidencia, Tu verso armado o escrito, finales Despertar / Dulce
+soñar), prueba de salida con el soneto de Quevedo y export CSV + JSON (carpeta en el menú docente).
+Cómo se juega: Nueva sesión > alias. WASD, mouse, E interactuar, F linterna, Tab celular (pistas en
+Pensar), Esc pausa. El juego controla el ritmo: pistas al 100 % del tiempo de la zona, Don Ruperto
+ofrece el camino al 130 %, Teatro en el minuto 29 y prueba de salida en el 37.
+Falta (Entrega 2): Capilla, Torre, modo 90, Las Horas, audio ambiente/TTS. Duración: ~35–40 min.
+Copia la carpeta a una ruta corta (p. ej. el Escritorio) antes de abrir EnganoColorido.exe.

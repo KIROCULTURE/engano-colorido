@@ -417,7 +417,7 @@
         {
           "id": "cuarteto",
           "tipo": "abba",
-          "titulo": "Tu verso",
+          "titulo": "Arma tu cuarteto",
           "enunciado": "Arma una estrofa de cuatro versos sobre cómo percibes la vida, con rima <b>abba</b>.",
           "opciones": [
             { "texto": "No quiero un rostro pintado", "tag": "ado" },

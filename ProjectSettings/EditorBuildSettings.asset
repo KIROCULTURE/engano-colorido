@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Biblioteca.unity
     guid: d9c88e759d0e34a4ebbdbc52e4c7e2fb
+  - enabled: 1
+    path: Assets/_Project/Scenes/Teatro.unity
+    guid: 70fecd70bc7394f4e98afca019c3eb55
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

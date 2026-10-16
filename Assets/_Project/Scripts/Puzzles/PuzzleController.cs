@@ -29,6 +29,10 @@ namespace EnganoColorido.Puzzles
         public GameObject[] ocultarAlResolver;
         public BellCycle campana;                // P1: suena mientras falta la parte en el mundo
         public string[] objetosGuiado;           // objetos que el modo guiado entrega (P3, P1)
+        public PuzzleController requierePuzzle;  // Juicio: después del libreto
+        public string dialogoAlAbrir;            // se dice una vez antes de la ficha (Juicio)
+        public bool mundoDoradoAlAbrir;          // el Juicio ocurre en el Mundo Dorado
+        public bool tuVerso;                     // Tu verso: elegir entre armar (abba) o escribir
 
         public event Action OnSolved;
         public string Id => puzzleId;
@@ -72,15 +76,32 @@ namespace EnganoColorido.Puzzles
             if (Def == null) { UIManager.I.Toast("Falta el puzzle " + puzzleId + " en puzzles.json"); return; }
             if (Done) { UIManager.I.Toast($"«{Def.titulo}» ya está resuelto."); return; }
             if (PanelsDone) { UIManager.I.Toast(Objective); return; }
+            if (requierePuzzle != null && !requierePuzzle.Done) { UIManager.I.Toast(mensajeBloqueado, 4f); return; }
             if (flagsRequeridos != null)
                 foreach (var f in flagsRequeridos)
                     if (!S.Flag(f)) { UIManager.I.Toast(mensajeBloqueado, 4f); return; }
             if (openedAt < 0) openedAt = Time.time;
+            if (mundoDoradoAlAbrir && WorldManager.I != null && !WorldManager.I.Dorado) WorldManager.I.RingBell(true, 3f);
+            string said = puzzleId + ":dicho";
+            if (!string.IsNullOrEmpty(dialogoAlAbrir) && !S.Flag(said))
+            {
+                S.SetFlag(said);
+                UIManager.I.PlayDialogue(dialogoAlAbrir, () => Game.ShowFichas(Def.fichas, ShowPlaca));
+                return;
+            }
             Game.ShowFichas(Def.fichas, ShowPlaca);
         }
 
         void ShowPlaca()
         {
+            if (tuVerso && CurrentStep == 0)
+            {
+                UIManager.I.ShowChoice(Def.titulo,
+                    "Escribe una estrofa de cuatro versos sobre cómo percibes la vida (actividad 7, p. 85). Aparecerá en los créditos.",
+                    new[] { "Armar un cuarteto con rima abba (banco de versos)", "Escribir mis propios cuatro versos" },
+                    i => { if (i == 0) ShowStep(); else TuVersoWrite.Show(this); });
+                return;
+            }
             bool hasPoems = poemasPlaca != null && poemasPlaca.Length > 0;
             if (CurrentStep > 0 || (string.IsNullOrEmpty(placa) && !hasPoems)) { ShowStep(); return; }
             var sb = new System.Text.StringBuilder(placa ?? "");
@@ -191,9 +212,19 @@ namespace EnganoColorido.Puzzles
             if (campana) campana.Activate(false);
             foreach (var p in poemasAlResolver ?? new string[0]) S.AddUnique(S.poemas, p);
             ApplySolvedVisuals();
-            if (!string.IsNullOrEmpty(dialogoResuelto)) UIManager.I.PlayDialogue(dialogoResuelto);
-            else UIManager.I.Toast($"Resuelto: {Def.titulo}", 3f);
-            OnSolved?.Invoke();
+            if (!string.IsNullOrEmpty(dialogoResuelto)) UIManager.I.PlayDialogue(dialogoResuelto, () => OnSolved?.Invoke());
+            else { UIManager.I.Toast($"Resuelto: {Def.titulo}", 3f); OnSolved?.Invoke(); }
+        }
+
+        /// Tu verso escrito libremente: se guarda para la profesora, sin validación.
+        public void CompleteWritten(string[] lines)
+        {
+            S.verso.Clear();
+            S.verso.AddRange(lines);
+            S.versoModo = "escrito";
+            for (int i = 0; i < Def.pasos.Length; i++) S.SetFlag(StepFlag(i));
+            S.SetFlag(PanelsFlag);
+            Solve(false);
         }
 
         void ApplySolvedVisuals()
