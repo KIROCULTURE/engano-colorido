@@ -23,12 +23,32 @@ namespace EnganoColorido.UI
             UIKit.Button(col, $"Nueva sesión (modo {Settings.Modo} · {Settings.Curso})", NewSessionPanel.Show, 62, 26, UIKit.BotonSel);
             var cont = UIKit.Button(col, "Continuar partida guardada", () => { Close(root.gameObject); GameFlow.I.Continue(); }, 62, 26);
             cont.interactable = SaveSystem.HasSave();
-            UIKit.Button(col, "Recorrido libre: Camarín", () => { Close(root.gameObject); GameFlow.I.StartFreeRoam("Camarin"); }, 62, 26);
+            UIKit.Button(col, "Recorrido libre por zona (sin registro)", FreeRoamMenu, 62, 26);
             UIKit.Button(col, "Ajustes", () => PhoneUI.Open("Ajustes"), 62, 26);
             UIKit.Button(col, "Menú docente (PIN)", TeacherMenu.Ask, 62, 26);
             UIKit.Button(col, "Salir", Application.Quit, 62, 26);
             UIKit.Text(col, "Controles: WASD moverse · Mouse mirar · E interactuar · F linterna · C agacharse · Shift correr · Tab celular · Esc pausa", 20, TextAlignmentOptions.Left, UIKit.Tenue);
             ui.PushModal(root.gameObject);
+        }
+
+        static readonly (string escena, string nombre)[] Zonas =
+        {
+            ("Camarin", "Prólogo · Camarín"), ("Patio", "Patio de las rosas y radios"), ("Galeria", "Galería"),
+            ("Biblioteca", "Biblioteca"), ("Teatro", "Teatro · Juicio")
+        };
+
+        static void FreeRoamMenu()
+        {
+            var disponibles = System.Array.FindAll(Zonas, z => Application.CanStreamedLevelBeLoaded(z.escena));
+            var labels = new string[disponibles.Length + 1];
+            for (int i = 0; i < disponibles.Length; i++) labels[i] = disponibles[i].nombre;
+            labels[disponibles.Length] = "Volver";
+            UIManager.I.ShowChoice("Recorrido libre", "Para revisar una zona suelta. No se guarda ni se exporta nada.", labels, i =>
+            {
+                if (i >= disponibles.Length) return;
+                UIManager.I.CloseAllModals();
+                GameFlow.I.StartFreeRoam(disponibles[i].escena);
+            });
         }
 
         static void Locked(Transform col, string label)

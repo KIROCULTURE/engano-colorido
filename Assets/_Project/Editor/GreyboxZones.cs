@@ -15,6 +15,9 @@ namespace EnganoColorido.EditorTools
         static partial void BuildZonesImpl(List<string> built)
         {
             built.Add(BuildCamarin());
+            built.Add(BuildPatio());
+            built.Add(BuildGaleria());
+            built.Add(BuildBiblioteca());
         }
 
         // ------------------------------------------------------------ comunes

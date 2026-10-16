@@ -36,3 +36,12 @@
 - `BellCycle` (campana cada 20 s, para P1-B), `ProceduralAudio` (estática, campana y tono generados con `AudioClip.Create`), `PhoneStatic` + `StaticSource` (estática del celular cerca del espejo, el velo y las radios; en la Entrega 2 se suman Las Horas).
 - Camarín: la intro ocurre en el Mundo Dorado y la campana devuelve a la Niebla al leer las notas.
 - Las Horas no van en la Entrega 1.
+
+## M5 Zonas del modo 45 ✅ — `Builds/M5_Zonas/`
+- `PuzzleController` (datos de `puzzles.json`): ficha previa → placa (poemas al Cuaderno) → pasos (`AssignmentPanel` / preguntas) → parte en el mundo opcional → resuelto. Implementa `IPuzzle` (`Validate`, `GetHint`, `OnSolved`, `SolveGuided`) e `IHintable`; registra intentos, pistas, tiempo, con ayuda y `conceptTags`.
+- `AssignmentPanel`: clic en hueco → clic en opción; orden de opciones barajado y estable; estante con rótulos/colores según dificultad (Fácil: colores por rima + letra; Normal: letra; Difícil: nada); validación por repisa.
+- **Patio** (P1): candado de 4 diales + `RoseBush` (botón en Niebla, marchita en Dorado, florece 4 s en cada cambio; campana cada 20 s). **Radios** (H): `RadioTuner` con dial entre estática (`PhoneStatic`) → fragmento subtitulado → tablero de etiquetas. Puertas de Capilla y Torre cerradas ("modo 90").
+- **Galería** (P3, P4, velo): objetos en Laboratorio, Sala de profesores y Bodega de utilería (+ distractores), recreaciones de Pereda y Murillo, retratos que se cuelgan al resolver, `VeiledFigure` (velo → esqueleto, cambio de luz, tono grave, ficha de *El mágico prodigioso*).
+- **Biblioteca** (P5): estante 4/4/3/3, funciones de estrofa, preguntas de "dulce" y tópico; el soneto de Boscán entra al Cuaderno recién al resolver.
+- Sub-zonas en una escena (Patio → Radios) con presupuestos separados.
+- Verificado: `-autoplay` recorre Camarín → Patio/Radios → Galería → Biblioteca → prueba de salida → CSV sin excepciones.

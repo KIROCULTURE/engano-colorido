@@ -1,0 +1,10 @@
+ENGAÑO COLORIDO — Build M5 Zonas del modo 45
+Incluye: diagnóstico, Prólogo (Camarín), Patio de las rosas (P1: candado de connotaciones + cortar
+la rosa en el instante del cambio de mundo), Las tres radios (H: sintonizar y etiquetar actitudes),
+Galería (P3: bodegón vanitas con objetos de las salas; P4: retratos según el verso de Sor Juana;
+escena del esqueleto de El mágico prodigioso) y Biblioteca (P5: estante del soneto de Boscán).
+Fichas previas, 3 pistas (celular > Pensar) y modo guiado de Don Ruperto si se pasa el tiempo.
+Cómo se juega: Nueva sesión > alias > diagnóstico > zonas. Al salir de la Biblioteca se pasa a la
+prueba de salida y se exporta el CSV. También: Recorrido libre por zona.
+Falta: Teatro (P7, Juicio, Tu verso, finales). Duración: 25–35 minutos.
+Copia la carpeta a una ruta corta antes de abrir EnganoColorido.exe.

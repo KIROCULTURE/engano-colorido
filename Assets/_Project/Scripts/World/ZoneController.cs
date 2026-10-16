@@ -18,6 +18,15 @@ namespace EnganoColorido.World
         void Awake() { I = this; }
         void Start() { GameFlow.Ensure().OnZoneLoaded(this); }
 
+        /// Sub-zonas en la misma escena (Patio → Radios): al cerrar una, empieza el presupuesto de la siguiente.
+        void Update()
+        {
+            var p = GameFlow.I != null ? GameFlow.I.Pacer : null;
+            if (p == null || zonas.Length < 2) return;
+            for (int i = 0; i < zonas.Length - 1; i++)
+                if (p.Zone == zonas[i] && ZoneDone(zonas[i])) { GameFlow.I.AdvanceSubZone(zonas[i], zonas[i + 1]); break; }
+        }
+
         public bool ZoneDone(string z) => tasks.Where(t => t != null && t.zona == z).All(t => t.Done);
         public bool AllDone => tasks.All(t => t == null || t.Done);
         public ZoneTask CurrentTask => tasks.FirstOrDefault(t => t != null && !t.Done);

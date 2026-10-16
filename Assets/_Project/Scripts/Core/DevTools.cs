@@ -52,6 +52,14 @@ namespace EnganoColorido.Core
                 case "alias": UI.NewSessionPanel.Show(); break;
                 case "docente": UI.TeacherMenu.Show(); break;
                 case "celular": UI.PhoneUI.Open(Arg("-devtab") ?? "Mapa"); break;
+                case "puzzle":
+                    foreach (var pc in FindObjectsByType<Puzzles.PuzzleController>(FindObjectsSortMode.None))
+                        if (pc.puzzleId == Arg("-devpuzzle"))
+                        {
+                            int step = int.Parse(Arg("-devstep") ?? "0");
+                            Puzzles.AssignmentPanel.Show(pc, Game.DB.Puzzle(pc.puzzleId).pasos[step], step);
+                        }
+                    break;
                 case "pregunta":
                     var q = Game.DB.evaluacion.salida[5];
                     UI.UIManager.I.ShowQuestion("Repasa+ · Prueba de salida · pregunta 6 de 8", q.enunciado, Assessment.AssessmentRunner.Options(q),

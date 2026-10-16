@@ -1279,6 +1279,14 @@ MonoBehaviour:
       - quien: El Retrato
         texto: "Tres tesis. Resp\xF3ndeme con un conector, un verso de tu Cuaderno
           y otro conector. Si no puedes, te quedas aqu\xED, brillando conmigo."
+    - id: juicio_contra
+      lineas:
+      - quien: El Retrato
+        texto: "\xBFVes? Ni t\xFA te crees lo que dices. Qu\xE9date y brilla."
+      - quien: El Retrato
+        texto: Esas palabras no conectan. Como tus fotos sin filtro.
+      - quien: El Retrato
+        texto: "El tiempo se te escapa, Ale. Aqu\xED no pasar\xEDa eso."
     - id: juicio_fin
       lineas:
       - quien: El Retrato

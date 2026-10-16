@@ -53,6 +53,11 @@
       { "quien": "El Retrato", "texto": "Leíste harto esta noche, Ale. Ahora convénceme: ¿para qué despertar?" },
       { "quien": "El Retrato", "texto": "Tres tesis. Respóndeme con un conector, un verso de tu Cuaderno y otro conector. Si no puedes, te quedas aquí, brillando conmigo." }
     ]},
+    { "id": "juicio_contra", "lineas": [
+      { "quien": "El Retrato", "texto": "¿Ves? Ni tú te crees lo que dices. Quédate y brilla." },
+      { "quien": "El Retrato", "texto": "Esas palabras no conectan. Como tus fotos sin filtro." },
+      { "quien": "El Retrato", "texto": "El tiempo se te escapa, Ale. Aquí no pasaría eso." }
+    ]},
     { "id": "juicio_fin", "lineas": [
       { "quien": "El Retrato", "texto": "…Tus palabras pesan más que mi brillo." },
       { "quien": "El Retrato", "texto": "Antes de elegir, escribe algo tuyo. Un verso que no pase por ningún filtro." }

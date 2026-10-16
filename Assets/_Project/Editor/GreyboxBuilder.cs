@@ -214,34 +214,47 @@ namespace EnganoColorido.EditorTools
             return go;
         }
 
-        /// Sala rectangular: piso, techo y cuatro muros (con huecos de puerta opcionales en muros norte/sur).
+        /// Sala rectangular: piso, techo y cuatro muros con huecos de puerta (posiciones a lo largo de cada muro).
         public static GameObject Room(string name, Vector3 center, Vector3 size, Material wall = null, Material floor = null, bool ceiling = true, float doorNorthX = float.NaN, float doorSouthX = float.NaN, float doorEastZ = float.NaN, float doorWestZ = float.NaN)
+            => RoomX(name, center, size, D(doorNorthX), D(doorSouthX), D(doorEastZ), D(doorWestZ), wall, floor, ceiling);
+
+        static float[] D(float v) => float.IsNaN(v) ? new float[0] : new[] { v };
+
+        public static GameObject RoomX(string name, Vector3 center, Vector3 size, float[] north, float[] south, float[] east, float[] west,
+            Material wall = null, Material floor = null, bool ceiling = true, string skip = "")
         {
             wall ??= Muro; floor ??= Piso;
             var g = Group(name, null, center);
             var t = g.transform;
-            float w = size.x, h = size.y, d = size.z, th = 0.3f;
+            float w = size.x, h = size.y, d = size.z;
             Box("Piso", t, new Vector3(0, -0.05f, 0), new Vector3(w, 0.1f, d), floor);
             if (ceiling) Box("Techo", t, new Vector3(0, h, 0), new Vector3(w, 0.1f, d), Oscuro);
-            WallWithDoor(t, "MuroN", new Vector3(0, h / 2, d / 2), w, h, th, true, doorNorthX, wall);
-            WallWithDoor(t, "MuroS", new Vector3(0, h / 2, -d / 2), w, h, th, true, doorSouthX, wall);
-            WallWithDoor(t, "MuroE", new Vector3(w / 2, h / 2, 0), d, h, th, false, doorEastZ, wall);
-            WallWithDoor(t, "MuroO", new Vector3(-w / 2, h / 2, 0), d, h, th, false, doorWestZ, wall);
+            if (!skip.Contains("N")) Wall(t, "MuroN", new Vector3(0, h / 2, d / 2), w, h, true, north, wall);
+            if (!skip.Contains("S")) Wall(t, "MuroS", new Vector3(0, h / 2, -d / 2), w, h, true, south, wall);
+            if (!skip.Contains("E")) Wall(t, "MuroE", new Vector3(w / 2, h / 2, 0), d, h, false, east, wall);
+            if (!skip.Contains("O")) Wall(t, "MuroO", new Vector3(-w / 2, h / 2, 0), d, h, false, west, wall);
             return g;
         }
 
         const float DoorW = 1.8f, DoorH = 2.6f;
 
-        static void WallWithDoor(Transform t, string name, Vector3 pos, float len, float h, float th, bool alongX, float doorAt, Material mat)
+        /// Muro con huecos de puerta. pos.y = mitad de la altura. doors = posiciones a lo largo del muro.
+        public static void Wall(Transform t, string name, Vector3 pos, float len, float h, bool alongX, float[] doors, Material mat, float th = 0.3f)
         {
             Vector3 Sz(float l, float hh) => alongX ? new Vector3(l, hh, th) : new Vector3(th, hh, l);
             Vector3 Off(float a, float y) => alongX ? new Vector3(pos.x + a, y, pos.z) : new Vector3(pos.x, y, pos.z + a);
-            if (float.IsNaN(doorAt)) { Box(name, t, pos, Sz(len, h), mat); return; }
-            float left = doorAt - DoorW / 2 + len / 2;          // largo del tramo izquierdo
-            float right = len / 2 - (doorAt + DoorW / 2);       // largo del tramo derecho
-            if (left > 0.01f) Box(name + "_a", t, Off(-len / 2 + left / 2, pos.y), Sz(left, h), mat);
-            if (right > 0.01f) Box(name + "_b", t, Off(len / 2 - right / 2, pos.y), Sz(right, h), mat);
-            Box(name + "_dintel", t, Off(doorAt, DoorH + (h - DoorH) / 2), Sz(DoorW, h - DoorH), mat);
+            var sorted = new List<float>(doors ?? new float[0]);
+            sorted.Sort();
+            float from = -len / 2;
+            int k = 0;
+            foreach (var at in sorted)
+            {
+                float segEnd = at - DoorW / 2;
+                if (segEnd - from > 0.01f) Box($"{name}_{k++}", t, Off((from + segEnd) / 2, pos.y), Sz(segEnd - from, h), mat);
+                if (h > DoorH) Box($"{name}_dintel{k++}", t, Off(at, DoorH + (h - DoorH) / 2), Sz(DoorW, h - DoorH), mat);
+                from = at + DoorW / 2;
+            }
+            if (len / 2 - from > 0.01f) Box($"{name}_{k}", t, Off((from + len / 2) / 2, pos.y), Sz(len / 2 - from, h), mat);
         }
 
         public static TextMeshPro Text3D(string text, Transform parent, Vector3 pos, Vector3 euler, float size = 2f, Color? color = null, float width = 4f)
